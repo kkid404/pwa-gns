@@ -19,7 +19,7 @@ export default function Reviews({ amount }: ReviewsDataType) {
       {[...Array(amount)]
         .map((e, i) => i + 1)
         .map((item) => (
-          <Review reviewPrototype={reviewPrototype}></Review>
+          <Review key={item} reviewPrototype={reviewPrototype}></Review>
         ))}
       <div className="reviews-all">See all reviews</div>
       <h2 className="reviews-news">What's new</h2>
