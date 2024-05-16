@@ -1,0 +1,19 @@
+.slider {
+  margin: 0 auto;
+  display: flex;
+  width: calc(100% - 60px);
+  padding: 0;
+
+  &-image {
+    border-radius: 8px;
+    margin-right: 12px;
+    width: 115px;
+    height: 204px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .slider {
+    overflow-y: scroll;
+  }
+}

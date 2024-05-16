@@ -1,0 +1,106 @@
+@import "colors";
+
+.header {
+  font-family: "Google Sans";
+  padding: 0 28px;
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fefefe;
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      flex: 1 0 auto;
+      box-sizing: border-box;
+    }
+
+    &__logo {
+      width: 167px;
+      height: 64px;
+      margin-right: 14px;
+    }
+
+    &-item {
+      cursor: pointer;
+      background: none;
+      border: 0;
+      padding: 0;
+      position: relative;
+      text-decoration: none;
+      color: $text-secondary-color;
+      font-size: 0.875rem;
+      letter-spacing: 0.0178571em;
+      line-height: 1.25rem;
+      font-weight: 700;
+
+      &__text {
+        padding: 23.5px 17px;
+      }
+
+      &__pressed {
+        color: $current-link-color;
+      }
+    }
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      width: 24px;
+      height: 24px;
+      margin: 0 12px;
+      background: none;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    &-item:nth-last-child(1) {
+      width: 32px;
+      height: 32px;
+      margin: 0 8px;
+    }
+  }
+}
+
+.scroll {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+// Зеленая полосочка
+.check::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 25%;
+  width: 33px;
+  display: block;
+  border-top: 3px solid $current-link-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+@media screen and (max-width: 740px) {
+  .header {
+    padding: 0;
+    &-nav {
+      &__logo {
+        margin: 0 16px;
+      }
+      &-wrapper {
+        display: none;
+      }
+    }
+  }
+}

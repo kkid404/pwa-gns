@@ -1,0 +1,57 @@
+.about {
+  font-family: "Google Sans";
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  color: $text-primary-color;
+  font-weight: 500;
+  margin-top: 20px;
+
+  &-item {
+    &__title {
+      font-size: 18px;
+    }
+    &__text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: $text-secondary-color;
+      white-space: pre-wrap;
+    }
+    &__updated {
+      font-size: 14px;
+      margin-top: 24px;
+    }
+
+    &__date {
+      font-size: 14px;
+      margin-top: 4px;
+      color: $text-secondary-color;
+      margin-bottom: 48px;
+    }
+
+    &-data {
+      display: flex;
+      justify-content: space-between;
+      &-btn {
+        cursor: pointer;
+        background: none;
+        border: none;
+
+        &__img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  &-textarea {
+    padding: 20px 20px 0 20px;
+    margin-top: 20px;
+    resize: none;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    height: 98px;
+    font-size: 14px;
+  }
+}
