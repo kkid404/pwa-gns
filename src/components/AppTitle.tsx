@@ -21,6 +21,8 @@ export default function AppTitle({
 
   // Обработка события beforeinstallprompt
   useEffect(() => {
+    console.log(123)
+
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault(); // Предотвращаем браузерный диалог установки
       setDeferredPrompt(e); // Сохраняем событие для дальнейшего использования
@@ -29,12 +31,12 @@ export default function AppTitle({
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
-    return () => {
-      window.removeEventListener(
-        "beforeinstallprompt",
-        handleBeforeInstallPrompt
-      );
-    };
+    // return () => {
+    //   window.removeEventListener(
+    //     "beforeinstallprompt",
+    //     handleBeforeInstallPrompt
+    //   );
+    // };
   }, []);
 
   // Обработчик нажатия на кнопку установки
