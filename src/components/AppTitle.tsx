@@ -17,6 +17,8 @@ export default function AppTitle({
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [canInstall, setCanInstall] = useState(false);
 
+  console.log(canInstall);
+
   // Обработка события beforeinstallprompt
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: Event) => {
