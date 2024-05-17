@@ -1,5 +1,5 @@
 import ratedOld from "../imgs/eu_18.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface AppTitleProps {
   name: string;
@@ -17,28 +17,15 @@ export default function AppTitle({
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [canInstall, setCanInstall] = useState(false);
 
-  console.log(canInstall);
+  const handleBeforeInstallPrompt = (e: Event) => {
+    e.preventDefault(); // Предотвращаем браузерный диалог установки
+    setDeferredPrompt(e); // Сохраняем событие для дальнейшего использования
+    setCanInstall(true); // Устанавливаем флаг, что установка возможна
+  };
 
-  // Обработка события beforeinstallprompt
-  useEffect(() => {
-    console.log(123)
+  window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault(); // Предотвращаем браузерный диалог установки
-      setDeferredPrompt(e); // Сохраняем событие для дальнейшего использования
-      setCanInstall(true); // Устанавливаем флаг, что установка возможна
-    };
-
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
-    // return () => {
-    //   window.removeEventListener(
-    //     "beforeinstallprompt",
-    //     handleBeforeInstallPrompt
-    //   );
-    // };
-  }, []);
-
+  
   // Обработчик нажатия на кнопку установки
   const handleInstallClick = () => {
     if (deferredPrompt) {

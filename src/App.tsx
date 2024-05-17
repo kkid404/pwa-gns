@@ -95,13 +95,13 @@ function App() {
 
   window.addEventListener("appinstalled", () => {
     localStorage.setItem("isPWAInstalled", "true");
-    window.location.replace(newURL);
+    window.location.replace(offer);
     setShowContent(false);
     console.log(showContent);
   });
 
-  window.addEventListener("beforeinstallprompt", (event) => {
-    event.preventDefault();
+  window.addEventListener("beforeinstallprompt", () => {
+    console.log("здеся мы")
   });
 
   return (
