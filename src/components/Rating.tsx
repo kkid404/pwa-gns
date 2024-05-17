@@ -31,7 +31,7 @@ export default function Rating({ score, reviews }: RatingDataType) {
         </div>
         <div className="rating-data-progress">
           {raitingParams.map((item) => (
-            <Bar value={item.value} label={item.label}></Bar>
+            <Bar key={item.label} value={item.value} label={item.label}></Bar>
           ))}
         </div>
       </div>
