@@ -1,18 +1,23 @@
 import ratedOld from "../imgs/eu_18.png";
 import { useState, useEffect } from "react";
 
-
 interface AppTitleProps {
   name: string;
   author: string;
+  score: number;
+  reviews: number;
 }
 
-
-
-export default function AppTitle({ name, author }: AppTitleProps) {
-
+export default function AppTitle({
+  name,
+  author,
+  score,
+  reviews,
+}: AppTitleProps) {
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [canInstall, setCanInstall] = useState(false);
+
+  console.log(canInstall);
 
   // Обработка события beforeinstallprompt
   useEffect(() => {
@@ -51,8 +56,6 @@ export default function AppTitle({ name, author }: AppTitleProps) {
     }
   };
 
-
-
   return (
     <div className="main app-width">
       <div className="main__application-title">
@@ -77,9 +80,9 @@ export default function AppTitle({ name, author }: AppTitleProps) {
       <div className="app-title__additional">
         <div className="app-title__additional-container app-title__additional-reviews">
           <p className="app-title__additional-reviews-stars app-title__additional-top_heading">
-            4.8★
+            {score}★
           </p>
-          <p className="app-title__info-other">8K reviews</p>
+          <p className="app-title__info-other">{reviews} reviews</p>
         </div>
         <div className="app-title__additional-container app-title__additional-downloads">
           <p className="app-title__additional-downloads-count app-title__additional-top_heading">
@@ -98,9 +101,8 @@ export default function AppTitle({ name, author }: AppTitleProps) {
       </div>
 
       <div className="app-title__install-container">
-
         <div className="app-title__install__btn-container">
-        {canInstall ? (
+          {canInstall ? (
             <button
               className="app-title__install-btn"
               onClick={handleInstallClick}
@@ -108,9 +110,7 @@ export default function AppTitle({ name, author }: AppTitleProps) {
               Install
             </button>
           ) : (
-            <button
-              className="app-title__install-btn"
-            >
+            <button className="app-title__install-btn">
               <div className="loadingio-spinner-rolling-2by998twmg8">
                 <div className="ldio-yzaezf3dcmj">
                   <div></div>
@@ -121,22 +121,22 @@ export default function AppTitle({ name, author }: AppTitleProps) {
         </div>
 
         <div className="app-title__wishlist__btn-container">
-            <button className="app-title__wishlist__btn-btn">
-              <span
-                className="app-title__wishlist__icon-container"
-                aria-hidden="true"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M7 3H17C18.1045 3 19 3.8955 19 5V21L12 18L5 21L5.01075 5C5.01075 3.8955 5.8965 3 7 3ZM12 15.824L17 18V5H7V18L12 15.824ZM13 7V9H15V11H13V13H11V11H9V9H11V7H13Z"></path>
-                </svg>
-              </span>
-              <span
-                className="app-title__wishlist__text-container"
-                aria-hidden="true"
-              >
-                Add to wishlist
-              </span>
-            </button>
+          <button className="app-title__wishlist__btn-btn">
+            <span
+              className="app-title__wishlist__icon-container"
+              aria-hidden="true"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7 3H17C18.1045 3 19 3.8955 19 5V21L12 18L5 21L5.01075 5C5.01075 3.8955 5.8965 3 7 3ZM12 15.824L17 18V5H7V18L12 15.824ZM13 7V9H15V11H13V13H11V11H9V9H11V7H13Z"></path>
+              </svg>
+            </span>
+            <span
+              className="app-title__wishlist__text-container"
+              aria-hidden="true"
+            >
+              Add to wishlist
+            </span>
+          </button>
         </div>
       </div>
     </div>
