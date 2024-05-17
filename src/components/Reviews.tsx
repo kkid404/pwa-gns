@@ -17,7 +17,7 @@ export default function Reviews({ amount }: ReviewsDataType) {
   return (
     <div className="reviews app-width">
       {[...Array(amount)]
-        .map((e, i) => i + 1)
+        .map((_, i) => i + 1)
         .map((item) => (
           <Review key={item} reviewPrototype={reviewPrototype}></Review>
         ))}
