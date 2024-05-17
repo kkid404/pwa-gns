@@ -1,5 +1,7 @@
 import ratedOld from "../imgs/eu_18.png";
-import { useState } from "react";
+// import { useState } from "react";
+import PWAInstallerPrompt from 'react-pwa-installer-prompt';
+
 
 interface AppTitleProps {
   name: string;
@@ -8,42 +10,17 @@ interface AppTitleProps {
   reviews: number;
 }
 
+interface RenderProps {
+  onClick: () => void;
+}
+
 export default function AppTitle({
   name,
   author,
   score,
   reviews,
 }: AppTitleProps) {
-  const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
-  const [canInstall, setCanInstall] = useState(false);
 
-  const handleBeforeInstallPrompt = (e: Event) => {
-    e.preventDefault(); // Предотвращаем браузерный диалог установки
-    setDeferredPrompt(e); // Сохраняем событие для дальнейшего использования
-    setCanInstall(true); // Устанавливаем флаг, что установка возможна
-  };
-
-  window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
-  
-  // Обработчик нажатия на кнопку установки
-  const handleInstallClick = () => {
-    if (deferredPrompt) {
-      // Вызываем диалог установки
-      (deferredPrompt as any).prompt();
-
-      // Ожидаем результат диалога
-      (deferredPrompt as any).userChoice.then((choiceResult: any) => {
-        if (choiceResult.outcome === "accepted") {
-          console.log("Пользователь согласился на установку");
-        } else {
-          console.log("Пользователь отказался от установки");
-        }
-        setDeferredPrompt(null); // Сбрасываем объект deferredPrompt
-        setCanInstall(false); // Устанавливаем флаг, что установка больше невозможна
-      });
-    }
-  };
 
   return (
     <div className="main app-width">
@@ -91,7 +68,7 @@ export default function AppTitle({
 
       <div className="app-title__install-container">
         <div className="app-title__install__btn-container">
-          {canInstall ? (
+          {/* {canInstall ? (
             <button
               className="app-title__install-btn"
               onClick={handleInstallClick}
@@ -106,7 +83,15 @@ export default function AppTitle({
                 </div>
               </div>
             </button>
-          )}
+          )} */}
+          <PWAInstallerPrompt
+            render={({ onClick }: RenderProps) => (
+              <button className="app-title__install-btn" type="button" onClick={onClick}>
+                Install
+              </button>
+            )}
+            callback={(data: any) => console.log(data)}
+          />
         </div>
 
         <div className="app-title__wishlist__btn-container">

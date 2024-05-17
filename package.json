@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pwa-installer-prompt": "^1.0.8",
     "web-vitals": "^4.0.0"
   },
   "devDependencies": {

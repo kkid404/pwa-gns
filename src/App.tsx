@@ -100,9 +100,6 @@ function App() {
     console.log(showContent);
   });
 
-  window.addEventListener("beforeinstallprompt", () => {
-    console.log("здеся мы")
-  });
 
   return (
     <div className="App">
