@@ -1,6 +1,6 @@
 import React from "react";
 import googlePlayLogo from "../imgs/GooglePlayLogo.svg";
-import searchImg from "../assets/search.png";
+// import searchImg from "search.png";
 import questionImg from "../imgs/question.svg";
 import profileImg from "../imgs/profile.png";
 
@@ -42,7 +42,7 @@ export default function Header() {
       </div>
       <div className="header-menu">
         <button className="header-menu-item">
-          <img src={searchImg} alt=""></img>
+          <img src="./search.png" alt="Search" />
         </button>
         <button className="header-menu-item">
           <img src={questionImg} alt=""></img>
