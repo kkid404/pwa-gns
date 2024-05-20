@@ -19,10 +19,10 @@ function App() {
 
   //подтянуть иконку и тайтл динамически 
   useEffect(() => {
-    let link = document.querySelector("link[rel~='icon']");
+    let link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
     document.title = pwaParams.name;
     if (!link) {
-      link = document.createElement("link");
+      link = document.createElement("link") as HTMLLinkElement;
       link.rel = "icon";
       document.getElementsByTagName("head")[0].appendChild(link);
     }
