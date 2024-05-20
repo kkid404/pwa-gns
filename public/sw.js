@@ -1,11 +1,5 @@
 self.addEventListener('install', (event) => {
-    event.waitUntil(
-      self.clients.matchAll().then((clients) => {
-        clients.forEach((client) => {
-          // client.navigate('/');
-        });
-      })
-    );
+  console.log('[SW]: install')
   });
 
 self.addEventListener('activate', event => {
