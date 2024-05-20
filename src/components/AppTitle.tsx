@@ -8,6 +8,7 @@ interface AppTitleProps {
   author: string;
   score: number;
   reviews: number;
+  icon: string;
 }
 
 interface RenderProps {
@@ -19,6 +20,7 @@ export default function AppTitle({
   author,
   score,
   reviews,
+  icon
 }: AppTitleProps) {
 
 
@@ -27,7 +29,7 @@ export default function AppTitle({
       <div className="main__application-title">
         <div className="main__application-title__logo">
           <img
-            src="http://dummyimage.com/72"
+            src={icon}
             className="main__application-title__logo-image"
             alt="logo application"
           />
