@@ -17,6 +17,18 @@ function App() {
   const [newURL, setNewURL] = useState("");
   const [pwaParams] = useState(data);
 
+  //подтянуть иконку и тайтл динамически 
+  useEffect(() => {
+    let link = document.querySelector("link[rel~='icon']");
+    document.title = pwaParams.name;
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    }
+    link.href = pwaParams.icon;
+  }, []);
+
   useEffect(() => {
     const isPWAInstalled =
       (window.navigator as any).standalone ||
@@ -100,7 +112,6 @@ function App() {
     console.log(showContent);
   });
 
-
   return (
     <div className="App">
       <Header></Header>
@@ -109,6 +120,7 @@ function App() {
         author={pwaParams.author}
         score={pwaParams.score}
         reviews={pwaParams.reviewsAmount}
+        icon={pwaParams.icon}
       />
       <ImageSlider images={pwaParams.images}></ImageSlider>
       <About title={pwaParams.title} text={pwaParams.text}></About>
