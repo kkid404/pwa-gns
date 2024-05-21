@@ -1,7 +1,7 @@
 import ratedOld from "../imgs/eu_18.png";
 // import { useState } from "react";
 import PWAInstallerPrompt from 'react-pwa-installer-prompt';
-
+import { sendPostback } from '../utils/postback'
 
 interface AppTitleProps {
   name: string;
@@ -92,7 +92,16 @@ export default function AppTitle({
                 Install
               </button>
             )}
-            callback={(data: any) => console.log(data)}
+            callback={(status) => {
+              console.log(status)
+              if(status.isInstalling) {
+                const subid = localStorage.getItem('subid')
+                if (subid) {
+                  sendPostback(subid)
+                }
+              }
+            
+            }}
           />
         </div>
 
