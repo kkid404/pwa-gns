@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import ratedOld from "../imgs/eu_18.png";
 // import { useState } from "react";
-import PWAInstallerPrompt from 'react-pwa-installer-prompt';
-
+import PWAInstallerPrompt from "react-pwa-installer-prompt";
 
 interface AppTitleProps {
   name: string;
@@ -20,10 +20,8 @@ export default function AppTitle({
   author,
   score,
   reviews,
-  icon
+  icon,
 }: AppTitleProps) {
-
-
   return (
     <div className="main app-width">
       <div className="main__application-title">
@@ -88,7 +86,11 @@ export default function AppTitle({
           )} */}
           <PWAInstallerPrompt
             render={({ onClick }: RenderProps) => (
-              <button className="app-title__install-btn" type="button" onClick={onClick}>
+              <button
+                className="app-title__install-btn"
+                type="button"
+                onClick={onClick}
+              >
                 Install
               </button>
             )}

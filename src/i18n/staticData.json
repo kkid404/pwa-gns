@@ -1,0 +1,37 @@
+{
+  "about": {
+    "itemUpdated": "Updated on",
+    "itemSafety": "Data safety",
+    "itemSection": "In this section, developers can specify how applications collect and use data."
+  },
+  "appTitle": {
+    "infoOther": "Contains ads · In-app purchases",
+    "infoReviews": "reviews",
+    "infoDownloads": "Downloads",
+    "infoRated": "Rated for 18+",
+    "infoButton": "Install",
+    "infoWishlist": "Add to wishlist"
+  },
+  "header": {
+    "itemGames": "Games",
+    "itemApps": "Apps",
+    "itemMovies": "Movies",
+    "itemBooks": "Books",
+    "item": "Kids"
+  },
+  "rating": {
+    "itemTitle": "Ratings and reviews",
+    "itemReviews": "reviews"
+  },
+  "reviews": {
+    "itemAll": "See all reviews",
+    "itemNews": "What's new",
+    "itemDev": "Developer contact"
+  },
+  "review": {
+    "itemHelpful": "people found this review helpful",
+    "itemAsk": "Did you find this helpful?",
+    "itemYes": "Yes",
+    "itemNo": "No"
+  }
+}
