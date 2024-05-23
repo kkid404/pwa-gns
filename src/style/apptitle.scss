@@ -55,6 +55,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Добавлено */
+  position: relative;
+}
+
+.app-title__additional-container::after {
+  background-color: #e8eaed;
+  content: "";
+  display: block;
+  height: 24px;
+  right: 0;
+  position: absolute;
+  top: calc(50% - 12px);
+  width: 1px;
+}
+
+.app-title__additional-container:nth-last-of-type(1)::after {
+  background: none;
 }
 
 .app-title__additional-top_heading {
@@ -96,19 +112,11 @@
 }
 
 .app-title__additional-rated-image {
+  
+  height: 16px;
+  margin: 4px 0;
   background-size: contain;
   // height: 16px;
-}
-
-.app-title__additional-container::before {
-  background-color: #e8eaed;
-  content: "";
-  display: block;
-  height: 24px;
-  left: 0;
-  position: absolute;
-  top: calc(50% - 12px);
-  width: 1px;
 }
 
 .app-title__install-container {
@@ -226,10 +234,13 @@
   }
 }
 
-
 @keyframes ldio-yzaezf3dcmj {
-  0% { transform: translate(-50%,-50%) rotate(0deg); }
-  100% { transform: translate(-50%,-50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 .ldio-yzaezf3dcmj div {
   position: absolute;
@@ -242,7 +253,7 @@
 .ldio-yzaezf3dcmj div {
   animation: ldio-yzaezf3dcmj 1s linear infinite;
   top: 100px;
-  left: 100px
+  left: 100px;
 }
 .loadingio-spinner-rolling-2by998twmg8 {
   width: 200px;
@@ -258,4 +269,6 @@
   backface-visibility: hidden;
   transform-origin: 0 0; /* see note above */
 }
-.ldio-yzaezf3dcmj div { box-sizing: content-box; }
+.ldio-yzaezf3dcmj div {
+  box-sizing: content-box;
+}

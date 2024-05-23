@@ -10,14 +10,29 @@ import Rating from "./components/Rating";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
-import data from "./mock/params.json";
+import paramsData from "./mock/params.json";
+import staticParamsData from "./i18n/staticData.json";
 
 function App() {
   const [showContent, setShowContent] = useState(true);
   const [newURL, setNewURL] = useState("");
-  const [pwaParams] = useState(data);
+  const [pwaParams] = useState(paramsData);
+  const [staticParams, setStaticParams] = useState();
 
-  //подтянуть иконку и тайтл динамически 
+  //подтянуть язык для статики
+  useEffect(() => {
+    const lang = navigator.language || navigator.userLanguage;
+
+    for (const key in staticParamsData) {
+      if (key == lang.slice(0, 2)) {
+        setStaticParams(staticParamsData[key]);
+      } else {
+        setStaticParams(staticParamsData.en);
+      }
+    }
+  });
+
+  //подтянуть иконку и тайтл динамически
   useEffect(() => {
     let link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
     document.title = pwaParams.name;
@@ -114,23 +129,37 @@ function App() {
 
   return (
     <div className="App">
-      <Header></Header>
-      <AppTitle
-        name={pwaParams.name}
-        author={pwaParams.author}
-        score={pwaParams.score}
-        reviews={pwaParams.reviewsAmount}
-        icon={pwaParams.icon}
-      />
-      <ImageSlider images={pwaParams.images}></ImageSlider>
-      <About title={pwaParams.title} text={pwaParams.text}></About>
-      <Rating
-        score={pwaParams.score}
-        reviews={pwaParams.reviewsAmount}
-      ></Rating>
-      <Reviews reviews={pwaParams.reviews}></Reviews>
-      <Footer></Footer>
-      <Menu></Menu>
+      {staticParams && (
+        <div>
+          <Header staticParams={staticParams.header}></Header>
+          <AppTitle
+            staticParams={staticParams.appTitle}
+            name={pwaParams.name}
+            author={pwaParams.author}
+            score={pwaParams.score}
+            reviews={pwaParams.reviewsAmount}
+            icon={pwaParams.icon}
+          />
+          <ImageSlider images={pwaParams.images}></ImageSlider>
+          <About
+            staticParams={staticParams.about}
+            title={pwaParams.title}
+            text={pwaParams.text}
+          ></About>
+          <Rating
+            staticParams={staticParams.rating}
+            score={pwaParams.score}
+            reviews={pwaParams.reviewsAmount}
+          ></Rating>
+          <Reviews
+            review={staticParams.review}
+            staticParams={staticParams.reviews}
+            reviews={pwaParams.reviews}
+          ></Reviews>
+          <Footer></Footer>
+          <Menu staticParams={staticParams.header}></Menu>
+        </div>
+      )}
     </div>
   );
 }

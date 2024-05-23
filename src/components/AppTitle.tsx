@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import ratedOld from "../imgs/eu_18.png";
 // import { useState } from "react";
-import PWAInstallerPrompt from 'react-pwa-installer-prompt';
-
+import PWAInstallerPrompt from "react-pwa-installer-prompt";
 
 interface AppTitleProps {
   name: string;
@@ -9,6 +9,14 @@ interface AppTitleProps {
   score: number;
   reviews: number;
   icon: string;
+  staticParams: {
+    infoOther: string;
+    infoReviews: string;
+    infoDownloads: string;
+    infoRated: string;
+    infoButton: string;
+    infoWishlist: string;
+  };
 }
 
 interface RenderProps {
@@ -20,10 +28,9 @@ export default function AppTitle({
   author,
   score,
   reviews,
-  icon
+  icon,
+  staticParams,
 }: AppTitleProps) {
-
-
   return (
     <div className="main app-width">
       <div className="main__application-title">
@@ -39,7 +46,7 @@ export default function AppTitle({
           <div className="main__application-title__info-developer-container">
             <p className="main__application-title__info-developer">{author}</p>
             <p className="main__application-title__info-other">
-              Contains ads · In-app purchases
+              {staticParams.infoOther}
             </p>
           </div>
         </div>
@@ -50,13 +57,15 @@ export default function AppTitle({
           <p className="app-title__additional-reviews-stars app-title__additional-top_heading">
             {score}★
           </p>
-          <p className="app-title__info-other">{reviews} reviews</p>
+          <p className="app-title__info-other">
+            {reviews} {staticParams.infoReviews}
+          </p>
         </div>
         <div className="app-title__additional-container app-title__additional-downloads">
           <p className="app-title__additional-downloads-count app-title__additional-top_heading">
             100K+
           </p>
-          <p className="app-title__info-other">Downloads</p>
+          <p className="app-title__info-other">{staticParams.infoDownloads}</p>
         </div>
         <div className="app-title__additional-container app-title__additional-rated">
           <img
@@ -64,7 +73,7 @@ export default function AppTitle({
             alt=""
             className="app-title__additional-rated-image"
           />
-          <p className="app-title__info-other">Rated for 18+</p>
+          <p className="app-title__info-other">{staticParams.infoRated}</p>
         </div>
       </div>
 
@@ -88,8 +97,12 @@ export default function AppTitle({
           )} */}
           <PWAInstallerPrompt
             render={({ onClick }: RenderProps) => (
-              <button className="app-title__install-btn" type="button" onClick={onClick}>
-                Install
+              <button
+                className="app-title__install-btn"
+                type="button"
+                onClick={onClick}
+              >
+                {staticParams.infoButton}
               </button>
             )}
             callback={(data: any) => console.log(data)}
@@ -110,7 +123,7 @@ export default function AppTitle({
               className="app-title__wishlist__text-container"
               aria-hidden="true"
             >
-              Add to wishlist
+              {staticParams.infoWishlist}
             </span>
           </button>
         </div>
