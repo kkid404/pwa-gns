@@ -4,7 +4,17 @@ import googlePlayLogo from "../imgs/GooglePlayLogo.svg";
 import questionImg from "../imgs/question.svg";
 import profileImg from "../imgs/profile.png";
 
-export default function Header() {
+interface HeaderDataType {
+  staticParams: {
+    itemGames: string;
+    itemApps: string;
+    itemMovies: string;
+    itemBooks: string;
+    itemKids: string;
+  };
+}
+
+export default function Header({ staticParams }: HeaderDataType) {
   const [scroll, setScroll] = React.useState(0);
 
   const handleScroll = () => {
@@ -15,14 +25,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
   return (
     <header className={scroll < 100 ? "header" : "header scroll"}>
       <div className="header-nav">
         <img className="header-nav__logo" src={googlePlayLogo} alt="" />
         <div className="header-nav-wrapper">
           <button className="header-nav-item">
-            <span className="header-nav-item__text">Games</span>
+            <span className="header-nav-item__text">
+              {staticParams.itemGames}
+            </span>
           </button>
           <button className="header-nav-item check">
             <span className="header-nav-item__text header-nav-item__pressed">
@@ -30,13 +41,17 @@ export default function Header() {
             </span>
           </button>
           <button className="header-nav-item">
-            <span className="header-nav-item__text">Movies</span>
+            <span className="header-nav-item__text">
+              {staticParams.itemMovies}
+            </span>
           </button>
           <button className="header-nav-item">
-            <span className="header-nav-item__text">Books</span>
+            <span className="header-nav-item__text">
+              {staticParams.itemBooks}
+            </span>
           </button>
           <button className="header-nav-item">
-            <span className="header-nav-item__text">Kids</span>
+            <span className="header-nav-item__text">{staticParams.itemKids}</span>
           </button>
         </div>
       </div>

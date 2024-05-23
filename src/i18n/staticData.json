@@ -1,37 +1,154 @@
 {
-  "about": {
-    "itemUpdated": "Updated on",
-    "itemSafety": "Data safety",
-    "itemSection": "In this section, developers can specify how applications collect and use data."
+  "en": {
+    "about": {
+      "itemUpdated": "Updated on",
+      "itemSafety": "Data safety",
+      "itemSection": "In this section, developers can specify how applications collect and use data.",
+      "itemInformation": "No information."
+    },
+    "appTitle": {
+      "infoOther": "Contains ads · In-app purchases",
+      "infoReviews": "reviews",
+      "infoDownloads": "Downloads",
+      "infoRated": "Rated for 18+",
+      "infoButton": "Install",
+      "infoWishlist": "Add to wishlist"
+    },
+    "header": {
+      "itemGames": "Games",
+      "itemApps": "Apps",
+      "itemMovies": "Movies",
+      "itemBooks": "Books",
+      "itemKids": "Kids"
+    },
+    "rating": {
+      "itemTitle": "Ratings and reviews",
+      "itemReviews": "reviews"
+    },
+    "reviews": {
+      "itemAll": "See all reviews",
+      "itemNews": "What's new",
+      "itemDev": "Developer contact"
+    },
+    "review": {
+      "itemHelpful": "people found this review helpful",
+      "itemAsk": "Did you find this helpful?",
+      "itemYes": "Yes",
+      "itemNo": "No"
+    }
   },
-  "appTitle": {
-    "infoOther": "Contains ads · In-app purchases",
-    "infoReviews": "reviews",
-    "infoDownloads": "Downloads",
-    "infoRated": "Rated for 18+",
-    "infoButton": "Install",
-    "infoWishlist": "Add to wishlist"
+  "fr": {
+    "about": {
+      "itemUpdated": "Mis à jour le",
+      "itemSafety": "Sécurité des données",
+      "itemSection": "Dans cette section, les développeurs peuvent spécifier comment les applications collectent et utilisent les données.",
+      "itemInformation": "Aucune information."
+    },
+    "appTitle": {
+      "infoOther": "Contient des annonces · Achats intégrés",
+      "infoReviews": "avis",
+      "infoDownloads": "Téléchargements",
+      "infoRated": "Classé pour 18+",
+      "infoButton": "Installer",
+      "infoWishlist": "Ajouter à la liste de souhaits"
+    },
+    "header": {
+      "itemGames": "Jeux",
+      "itemApps": "Applications",
+      "itemMovies": "Films",
+      "itemBooks": "Livres",
+      "item": "Enfants"
+    },
+    "rating": {
+      "itemTitle": "Évaluations et avis",
+      "itemReviews": "avis"
+    },
+    "reviews": {
+      "itemAll": "Voir tous les avis",
+      "itemNews": "Quoi de neuf",
+      "itemDev": "Contact développeur"
+    },
+    "review": {
+      "itemHelpful": "personnes ont trouvé cet avis utile",
+      "itemAsk": "Avez-vous trouvé cela utile ?",
+      "itemYes": "Oui",
+      "itemNo": "Non"
+    }
   },
-  "header": {
-    "itemGames": "Games",
-    "itemApps": "Apps",
-    "itemMovies": "Movies",
-    "itemBooks": "Books",
-    "item": "Kids"
+  "es": {
+    "about": {
+      "itemUpdated": "Actualizado el",
+      "itemSafety": "Seguridad de datos",
+      "itemSection": "En esta sección, los desarrolladores pueden especificar cómo las aplicaciones recopilan y usan datos.",
+      "itemInformation": "Sin información."
+    },
+    "appTitle": {
+      "infoOther": "Contiene anuncios · Compras en la aplicación",
+      "infoReviews": "reseñas",
+      "infoDownloads": "Descargas",
+      "infoRated": "Clasificado para 18+",
+      "infoButton": "Instalar",
+      "infoWishlist": "Agregar a la lista de deseos"
+    },
+    "header": {
+      "itemGames": "Juegos",
+      "itemApps": "Aplicaciones",
+      "itemMovies": "Películas",
+      "itemBooks": "Libros",
+      "item": "Niños"
+    },
+    "rating": {
+      "itemTitle": "Calificaciones y reseñas",
+      "itemReviews": "reseñas"
+    },
+    "reviews": {
+      "itemAll": "Ver todas las reseñas",
+      "itemNews": "Qué hay de nuevo",
+      "itemDev": "Contacto del desarrollador"
+    },
+    "review": {
+      "itemHelpful": "personas encontraron útil esta reseña",
+      "itemAsk": "¿Te resultó útil?",
+      "itemYes": "Sí",
+      "itemNo": "No"
+    }
   },
-  "rating": {
-    "itemTitle": "Ratings and reviews",
-    "itemReviews": "reviews"
-  },
-  "reviews": {
-    "itemAll": "See all reviews",
-    "itemNews": "What's new",
-    "itemDev": "Developer contact"
-  },
-  "review": {
-    "itemHelpful": "people found this review helpful",
-    "itemAsk": "Did you find this helpful?",
-    "itemYes": "Yes",
-    "itemNo": "No"
+  "ar": {
+    "about": {
+      "itemUpdated": "تم التحديث في",
+      "itemSafety": "أمان البيانات",
+      "itemSection": "في هذا القسم، يمكن للمطورين تحديد كيفية جمع التطبيقات للبيانات واستخدامها.",
+      "itemInformation": "لا يوجد معلومات"
+    },
+    "appTitle": {
+      "infoOther": "يحتوي على إعلانات · عمليات شراء داخل التطبيق",
+      "infoReviews": "المراجعات",
+      "infoDownloads": "التنزيلات",
+      "infoRated": "مصنف لـ 18+",
+      "infoButton": "تثبيت",
+      "infoWishlist": "أضف إلى قائمة الرغبات"
+    },
+    "header": {
+      "itemGames": "ألعاب",
+      "itemApps": "تطبيقات",
+      "itemMovies": "أفلام",
+      "itemBooks": "كتب",
+      "item": "أطفال"
+    },
+    "rating": {
+      "itemTitle": "التقييمات والمراجعات",
+      "itemReviews": "المراجعات"
+    },
+    "reviews": {
+      "itemAll": "عرض جميع المراجعات",
+      "itemNews": "ما الجديد",
+      "itemDev": "اتصال المطور"
+    },
+    "review": {
+      "itemHelpful": "أشخاص وجدوا هذه المراجعة مفيدة",
+      "itemAsk": "هل وجدت هذا مفيدا؟",
+      "itemYes": "نعم",
+      "itemNo": "لا"
+    }
   }
 }

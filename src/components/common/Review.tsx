@@ -10,9 +10,18 @@ interface ReviewsPrototypeDataType {
     review: string;
     helpful: number;
   };
+  review: {
+    itemHelpful: string;
+    itemAsk: string;
+    itemYes: string;
+    itemNo: string;
+  };
 }
 
-export default function Review({ reviewPrototype }: ReviewsPrototypeDataType) {
+export default function Review({
+  reviewPrototype,
+  review,
+}: ReviewsPrototypeDataType) {
   return (
     <div className="review">
       <div className="review-profile">
@@ -34,12 +43,12 @@ export default function Review({ reviewPrototype }: ReviewsPrototypeDataType) {
       </div>
       <div className="review__text">{reviewPrototype.review}</div>
       <div className="review__helpfull">
-        {reviewPrototype.helpful} people found this review helpful
+        {reviewPrototype.helpful} {review.itemHelpful}
       </div>
       <div className="review-check">
-        <div className="review-check__title">Did you find this helpful?</div>
-        <button className="review-check__btn">Yes</button>
-        <button className="review-check__btn">No</button>
+        <div className="review-check__title">{review.itemAsk}</div>
+        <button className="review-check__btn">{review.itemYes}</button>
+        <button className="review-check__btn">{review.itemNo}</button>
       </div>
       <div className="review-answer">
         <div className="review-answer-head">
