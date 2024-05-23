@@ -8,6 +8,10 @@ interface ReviewsDataType {
     scoreDate: string;
     review: string;
     helpful: number;
+    answer: {
+      author: string;
+      authorAnswer: string;
+    };
   }[];
   staticParams: {
     itemAll: string;

@@ -9,6 +9,10 @@ interface ReviewsPrototypeDataType {
     scoreDate: string;
     review: string;
     helpful: number;
+    answer: {
+      author: string;
+      authorAnswer: string;
+    };
   };
   review: {
     itemHelpful: string;
@@ -50,18 +54,23 @@ export default function Review({
         <button className="review-check__btn">{review.itemYes}</button>
         <button className="review-check__btn">{review.itemNo}</button>
       </div>
-      <div className="review-answer">
-        <div className="review-answer-head">
-          <div className="review-answer-head__name">Casino</div>
-          <div className="review-answer-head__date">
-            {reviewPrototype.scoreDate}
+      {reviewPrototype.answer ? (
+        <div className="review-answer">
+          <div className="review-answer-head">
+            <div className="review-answer-head__name">
+              {reviewPrototype.answer.author}
+            </div>
+            <div className="review-answer-head__date">
+              {reviewPrototype.scoreDate}
+            </div>
+          </div>
+          <div className="review-answer__text">
+            {reviewPrototype.answer.authorAnswer}
           </div>
         </div>
-        <div className="review-answer__text">
-          We have taken your request into account and will forward it to the
-          technical department
-        </div>
-      </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
