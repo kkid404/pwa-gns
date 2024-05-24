@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import ratedOld from "../imgs/eu_18.png";
 // import { useState } from "react";
 import PWAInstallerPrompt from "react-pwa-installer-prompt";

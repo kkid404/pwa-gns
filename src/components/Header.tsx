@@ -3,15 +3,10 @@ import googlePlayLogo from "../imgs/GooglePlayLogo.svg";
 // import searchImg from "search.png";
 import questionImg from "../imgs/question.svg";
 import profileImg from "../imgs/profile.png";
+import { StaticParams } from "../i18n/StaticParams";
 
 interface HeaderDataType {
-  staticParams: {
-    itemGames: string;
-    itemApps: string;
-    itemMovies: string;
-    itemBooks: string;
-    itemKids: string;
-  };
+  staticParams: StaticParams["header"];
 }
 
 export default function Header({ staticParams }: HeaderDataType) {
