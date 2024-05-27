@@ -1,3 +1,4 @@
+// Reviews.tsx
 import Review from "./common/Review";
 
 interface ReviewsDataType {
@@ -8,7 +9,7 @@ interface ReviewsDataType {
     scoreDate: string;
     review: string;
     helpful: number;
-    answer: {
+    answer?: {
       author: string;
       authorAnswer: string;
     };
@@ -26,11 +27,7 @@ interface ReviewsDataType {
   };
 }
 
-export default function Reviews({
-  reviews,
-  staticParams,
-  review,
-}: ReviewsDataType) {
+export default function Reviews({ reviews, staticParams, review }: ReviewsDataType) {
   return (
     <div className="reviews app-width">
       {reviews.map((item) => (
