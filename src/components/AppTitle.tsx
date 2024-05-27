@@ -1,4 +1,4 @@
-
+import { sendPostback } from '../utils/postback'
 import ratedOld from "../imgs/eu_18.png";
 import { useAddToHomescreenPrompt } from "./UseAddToHomescreenPrompt";
 import CircularProgress, {
@@ -7,6 +7,7 @@ import CircularProgress, {
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
+
 
 interface AppTitleProps {
   name: string;
@@ -203,7 +204,6 @@ export default function AppTitle({
             >
               {showPercentage ? "Downloading..." : "Install"}
             </button>
-          )}
         </div>
 
         <div className="app-title__wishlist__btn-container">
