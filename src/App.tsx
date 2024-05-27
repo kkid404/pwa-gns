@@ -23,10 +23,6 @@ interface StaticParamsData {
 
 function App() {
 
-  const [pwaParams] = useState(data);
-
-  const [showContent, setShowContent] = useState(true);
-  const [newURL, setNewURL] = useState("");
   const [pwaParams] = useState(paramsData);
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
 

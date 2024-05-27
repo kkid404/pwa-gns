@@ -1,4 +1,4 @@
-import { sendPostback } from '../utils/postback'
+// import { sendPostback } from '../utils/postback'
 import ratedOld from "../imgs/eu_18.png";
 import { useAddToHomescreenPrompt } from "./UseAddToHomescreenPrompt";
 import CircularProgress, {
@@ -204,6 +204,7 @@ export default function AppTitle({
             >
               {showPercentage ? "Downloading..." : "Install"}
             </button>
+          )}
         </div>
 
         <div className="app-title__wishlist__btn-container">
