@@ -117,7 +117,6 @@ export default function AppTitle({
 
     setTimer(timerId);
 
-
     setTimeout(() => {
       promptToInstall();
       //Здесь заканчивается установка (поидее) можешь попробовать тут с постбеками почудить или в кнопку лезть
@@ -135,8 +134,13 @@ export default function AppTitle({
   }, [progress, timer]);
 
   useEffect(() => {
+    const button = document.getElementById("myButton");
+
     if (prompt) {
       setIsPromptVisible(true);
+      if (button) {
+        button.click();
+      }
     }
   }, [prompt]);
 
@@ -193,6 +197,7 @@ export default function AppTitle({
 
       <div className="app-title__install-container">
         <div className="app-title__install__btn-container">
+          <button id="myButton">Нажми меня</button>
           {isPromptVisible && (
             <button
               className={
