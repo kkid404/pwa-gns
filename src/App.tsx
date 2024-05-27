@@ -5,34 +5,40 @@ import AppTitle from "./components/AppTitle";
 import ImageSlider from "./components/ImageSlider";
 import About from "./components/About";
 import { checkPWAInstallation } from "./utils/checkPWAInstallation";
-import "./style/main.scss";
 import Rating from "./components/Rating";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import paramsData from "./mock/params.json";
-import staticParamsData from "./i18n/staticData.json";
+import { StaticParams } from './i18n/StaticParams'
+import staticParamsData from './i18n/staticData.json'; // Импортируем JSON-файл напрямую
+
+interface StaticParamsData {
+  en: StaticParams;
+  fr: StaticParams;
+  es: StaticParams;
+  ar: StaticParams;
+  [key: string]: StaticParams; 
+}
 
 function App() {
   const [showContent, setShowContent] = useState(true);
   const [newURL, setNewURL] = useState("");
   const [pwaParams] = useState(paramsData);
-  const [staticParams, setStaticParams] = useState();
+  const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
 
-  //подтянуть язык для статики
+  // подтянуть язык для статики
   useEffect(() => {
-    const lang = navigator.language || navigator.userLanguage;
-
-    for (const key in staticParamsData) {
-      if (key == lang.slice(0, 2)) {
-        setStaticParams(staticParamsData[key]);
-      } else {
-        setStaticParams(staticParamsData.en);
-      }
+    const lang = navigator.language.slice(0, 2); 
+    const data: StaticParamsData = staticParamsData as unknown as StaticParamsData;
+    if (data[lang]) {
+      setStaticParams(data[lang]);
+    } else {
+      setStaticParams(data.en);
     }
-  });
+  }, []);
 
-  //подтянуть иконку и тайтл динамически
+  // подтянуть иконку и тайтл динамически
   useEffect(() => {
     let link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
     document.title = pwaParams.name;
@@ -42,7 +48,7 @@ function App() {
       document.getElementsByTagName("head")[0].appendChild(link);
     }
     link.href = pwaParams.icon;
-  }, []);
+  }, [pwaParams]);
 
   useEffect(() => {
     const isPWAInstalled =
@@ -131,7 +137,7 @@ function App() {
     <div className="App">
       {staticParams && (
         <div>
-          <Header staticParams={staticParams.header}></Header>
+        {staticParams && <Header staticParams={staticParams.header}></Header>}
           <AppTitle
             staticParams={staticParams.appTitle}
             name={pwaParams.name}

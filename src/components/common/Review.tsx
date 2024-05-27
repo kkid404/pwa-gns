@@ -9,7 +9,7 @@ interface ReviewsPrototypeDataType {
     scoreDate: string;
     review: string;
     helpful: number;
-    answer: {
+    answer?: {
       author: string;
       authorAnswer: string;
     };
