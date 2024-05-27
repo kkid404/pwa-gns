@@ -57,7 +57,7 @@
       "itemApps": "Applications",
       "itemMovies": "Films",
       "itemBooks": "Livres",
-      "item": "Enfants"
+      "itemKids": "Enfants"
     },
     "rating": {
       "itemTitle": "Évaluations et avis",
@@ -95,7 +95,7 @@
       "itemApps": "Aplicaciones",
       "itemMovies": "Películas",
       "itemBooks": "Libros",
-      "item": "Niños"
+      "itemKids": "Niños"
     },
     "rating": {
       "itemTitle": "Calificaciones y reseñas",
@@ -133,7 +133,7 @@
       "itemApps": "تطبيقات",
       "itemMovies": "أفلام",
       "itemBooks": "كتب",
-      "item": "أطفال"
+      "itemKids": "أطفال"
     },
     "rating": {
       "itemTitle": "التقييمات والمراجعات",
