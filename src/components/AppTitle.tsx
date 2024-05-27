@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { sendPostback } from '../utils/postback'
 import ratedOld from "../imgs/eu_18.png";
 import { useAddToHomescreenPrompt } from "./UseAddToHomescreenPrompt";
 import CircularProgress, {
@@ -6,6 +6,8 @@ import CircularProgress, {
 } from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { useEffect, useState } from "react";
+
 
 interface AppTitleProps {
   name: string;
@@ -69,9 +71,7 @@ function CircularProgressWithLabel(
   );
 }
 
-interface RenderProps {
-  onClick: () => void;
-}
+
 
 //Функция рандома для процентов установки
 function getRandomNumber(min: number, max: number) {
@@ -95,7 +95,7 @@ export default function AppTitle({
   //Отображение прогресс бара
   const [showPercentage, setShowPercentage] = useState(false);
   //Интервал заполнения прогресс бара
-  const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
 
   //Обработка клика по кнопке инсталл
   async function handleClick() {
@@ -110,7 +110,7 @@ export default function AppTitle({
     }
 
     const timerId = setInterval(() => {
-      setProgress((prevProgress) =>
+      setProgress((prevProgress: number) =>
         prevProgress >= 60 ? 100 : prevProgress + getRandomNumber(10, 40)
       );
     }, 800);
@@ -126,12 +126,12 @@ export default function AppTitle({
 
   useEffect(() => {
     if (progress >= 100) {
-      clearInterval(timer);
-    }
-    if (progress >= 100) {
+      if (timer) {
+        clearInterval(timer);
+      }
       setShowPercentage(false);
     }
-  }, [timer]);
+  }, [progress, timer]);
 
   useEffect(() => {
     const button = document.getElementById("myButton");

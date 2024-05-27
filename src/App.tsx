@@ -22,8 +22,7 @@ interface StaticParamsData {
 }
 
 function App() {
-  const [showContent, setShowContent] = useState(true);
-  const [newURL, setNewURL] = useState("");
+
   const [pwaParams] = useState(paramsData);
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
 
@@ -38,6 +37,7 @@ function App() {
     }
   }, []);
 
+
   // подтянуть иконку и тайтл динамически
   useEffect(() => {
     let link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
@@ -50,29 +50,6 @@ function App() {
     link.href = pwaParams.icon;
   }, [pwaParams]);
 
-  useEffect(() => {
-    const isPWAInstalled =
-      (window.navigator as any).standalone ||
-      localStorage.getItem("isPWAInstalled") === "true";
-    setShowContent(!isPWAInstalled);
-
-    if (isPWAInstalled) {
-      const cachedURL = localStorage.getItem("cachedURL");
-      if (cachedURL) {
-        window.location.replace(cachedURL);
-      } else {
-        const url = `https://tersof.fun/4cbtzcyS?lead_id={lead_id}&sub1=${localStorage.getItem(
-          "sub1"
-        )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
-          "sub3"
-        )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
-          "sub5"
-        )}&sub6=${localStorage.getItem("sub6")}`;
-        setNewURL(url);
-        localStorage.setItem("cachedURL", url);
-      }
-    }
-  }, [newURL]);
 
   useEffect(() => {
     const sub1Value =
@@ -100,6 +77,7 @@ function App() {
       new URLSearchParams(window.location.search).get("sub6") ||
       "{sub6}";
 
+
     if (!localStorage.getItem("sub1")) localStorage.setItem("sub1", sub1Value);
     if (!localStorage.getItem("sub2")) localStorage.setItem("sub2", sub2Value);
     if (!localStorage.getItem("sub3")) localStorage.setItem("sub3", sub3Value);
@@ -110,27 +88,18 @@ function App() {
     checkPWAInstallation(offer);
   }, []);
 
-  useEffect(() => {
-    if (!showContent) {
-      return;
-    }
 
-    // Render content here
-  }, [showContent]);
-
-  const offer = `https://tersof.fun/4cbtzcyS?lead_id={lead_id}&sub1=${localStorage.getItem(
-    "sub1"
-  )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
-    "sub3"
-  )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
-    "sub5"
-  )}&sub6=${localStorage.getItem("sub6")}`;
+  const offer = `https://tersof.fun/4cbtzcyS?
+    &sub1=${localStorage.getItem("sub1")}
+    &sub2=${localStorage.getItem("sub2")}
+    &sub3=${localStorage.getItem("sub3")}
+    &sub4=${localStorage.getItem("sub4")}
+    &sub5=${localStorage.getItem("sub5")}
+    &sub6=${localStorage.getItem("sub6")}`;
 
   window.addEventListener("appinstalled", () => {
     localStorage.setItem("isPWAInstalled", "true");
     window.location.replace(offer);
-    setShowContent(false);
-    console.log(showContent);
   });
 
   return (
