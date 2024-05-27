@@ -3,9 +3,15 @@ import arrowRight from "../imgs/arrow-right.svg";
 interface AboutDataType {
   title: string;
   text: string;
+  staticParams: {
+    itemUpdated: string;
+    itemSafety: string;
+    itemSection: string;
+    itemInformation: string;
+  };
 }
 
-export default function About({ title, text }: AboutDataType) {
+export default function About({ title, text, staticParams }: AboutDataType) {
   //Чтобы можно было поставить дату обновления на сегодняшний день
   const now = new Date();
   const monthDate = now.toLocaleString("default", { month: "long" });
@@ -29,10 +35,10 @@ export default function About({ title, text }: AboutDataType) {
         </button>
       </div>
       <p className="about-item__text">{text}</p>
-      <h3 className="about-item__updated">Updated on</h3>
+      <h3 className="about-item__updated">{staticParams.itemUpdated}</h3>
       <p className="about-item__date">{currentDate}</p>
       <div className="about-item-data">
-        <h2 className="about-item__title">Data safety</h2>
+        <h2 className="about-item__title">{staticParams.itemSafety}</h2>
         <button className="about-item-data-btn">
           <img
             className="about-item-data-btn__img"
@@ -41,15 +47,12 @@ export default function About({ title, text }: AboutDataType) {
           ></img>
         </button>
       </div>
-      <p className="about-item__text">
-        In this section, developers can specify how applications collect and use
-        data.
-      </p>
+      <p className="about-item__text">{staticParams.itemSection}</p>
       <textarea
         disabled
         readOnly
         className="about-textarea"
-        value={"No information."}
+        value={staticParams.itemInformation}
       ></textarea>
     </div>
   );
