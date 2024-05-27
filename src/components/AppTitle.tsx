@@ -1,6 +1,5 @@
-
+import { useState, useEffect } from "react";
 import ratedOld from "../imgs/eu_18.png";
-import PWAInstallerPrompt from "react-pwa-installer-prompt";
 import { useAddToHomescreenPrompt } from "./UseAddToHomescreenPrompt";
 import CircularProgress, {
   CircularProgressProps,
