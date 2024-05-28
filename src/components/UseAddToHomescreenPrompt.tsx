@@ -1,30 +1,19 @@
 import { useEffect, useState } from "react";
 
-interface BeforeInstallPromptEvent extends Event {
-  /**
-   * Returns an array of DOMString items containing the platforms on which the event was dispatched.
-   * This is provided for user agents that want to present a choice of versions to the user such as,
-   * for example, "web" or "play" which would allow the user to chose between a web version or
-   * an Android version.
-   */
-  readonly platforms: Array<string>;
+declare global {
+  interface WindowEventMap {
+    beforeinstallprompt: BeforeInstallPromptEvent;
+  }
 
-  /**
-   * Returns a Promise that resolves to a DOMString containing either "accepted" or "dismissed".
-   */
-  readonly userChoice: Promise<{
-    outcome: "accepted" | "dismissed";
-    platform: string;
-  }>;
-
-  /**
-   * Allows a developer to show the install prompt at a time of their own choosing.
-   * This method returns a Promise.
-   */
-  prompt(): Promise<void>;
+  interface BeforeInstallPromptEvent extends Event {
+    readonly platforms: string[];
+    readonly userChoice: Promise<{
+      outcome: "accepted" | "dismissed";
+      platform: string;
+    }>;
+    prompt(): Promise<void>;
+  }
 }
-
-
 
 export function useAddToHomescreenPrompt(): [
   BeforeInstallPromptEvent | null,
@@ -49,10 +38,10 @@ export function useAddToHomescreenPrompt(): [
       setState(e);
     };
 
-    window.addEventListener("beforeinstallprompt", ready as any);
+    window.addEventListener("beforeinstallprompt", ready);
 
     return () => {
-      window.removeEventListener("beforeinstallprompt", ready as any);
+      window.removeEventListener("beforeinstallprompt", ready);
     };
   }, []);
 

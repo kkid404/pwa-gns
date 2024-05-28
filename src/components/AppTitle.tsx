@@ -7,7 +7,7 @@ import CircularProgress, {
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
-
+import CircularIndeterminate from "./common/CircularIndeterminate";
 
 interface AppTitleProps {
   name: string;
@@ -71,8 +71,6 @@ function CircularProgressWithLabel(
   );
 }
 
-
-
 //Функция рандома для процентов установки
 function getRandomNumber(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -134,13 +132,10 @@ export default function AppTitle({
   }, [progress, timer]);
 
   useEffect(() => {
-    const button = document.getElementById("myButton");
+    document.body.click();
 
     if (prompt) {
       setIsPromptVisible(true);
-      if (button) {
-        button.click();
-      }
     }
   }, [prompt]);
 
@@ -197,9 +192,8 @@ export default function AppTitle({
 
       <div className="app-title__install-container">
         <div className="app-title__install__btn-container">
-          <button id="myButton">Нажми меня</button>
-          {isPromptVisible && (
-            <button
+          {isPromptVisible ? (
+            <div
               className={
                 showPercentage
                   ? "app-title__install-btn-installing"
@@ -208,7 +202,11 @@ export default function AppTitle({
               onClick={() => handleClick()}
             >
               {showPercentage ? "Downloading..." : "Install"}
-            </button>
+            </div>
+          ) : (
+            <div className="app-title__install-btn">
+              <CircularIndeterminate />
+            </div>
           )}
         </div>
 
