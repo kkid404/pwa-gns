@@ -94,6 +94,10 @@ export default function AppTitle({
   const [showPercentage, setShowPercentage] = useState(false);
   //Интервал заполнения прогресс бара
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
+  //Можно ли открыть прилу
+  const [isOpen, setIsOpen] = useState(true);
+
+  console.log(isOpen);
 
   //Обработка клика по кнопке инсталл
   async function handleClick() {
@@ -120,6 +124,17 @@ export default function AppTitle({
       //Здесь заканчивается установка (поидее) можешь попробовать тут с постбеками почудить или в кнопку лезть
       setShowPercentage(false);
     }, 4000);
+
+    if (prompt) {
+      setIsOpen(false)
+      const choiceResult = await prompt.userChoice;
+
+      if (choiceResult.outcome === "accepted") {
+        setIsOpen(false)
+      } else {
+        setIsOpen(true)
+      }
+    }
   }
 
   useEffect(() => {
@@ -133,6 +148,7 @@ export default function AppTitle({
 
   useEffect(() => {
     document.body.click();
+    console.log(localStorage.getItem("isPWAInstalled"));
 
     if (prompt) {
       setIsPromptVisible(true);
@@ -201,7 +217,7 @@ export default function AppTitle({
               }
               onClick={() => handleClick()}
             >
-              {showPercentage ? "Downloading..." : "Install"}
+              {showPercentage ? "Downloading..." : !isOpen ? "Open" : "Install"}
             </div>
           ) : (
             <div className="app-title__install-btn">
