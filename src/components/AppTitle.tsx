@@ -7,7 +7,7 @@ import CircularProgress, {
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
-
+import InstallButton from "./InstallButton";
 
 interface AppTitleProps {
   name: string;
@@ -70,8 +70,6 @@ function CircularProgressWithLabel(
     </Box>
   );
 }
-
-
 
 //Функция рандома для процентов установки
 function getRandomNumber(min: number, max: number) {
@@ -199,7 +197,7 @@ export default function AppTitle({
         <div className="app-title__install__btn-container">
           <button id="myButton">Нажми меня</button>
           {isPromptVisible && (
-            <button
+            <div
               className={
                 showPercentage
                   ? "app-title__install-btn-installing"
@@ -208,8 +206,9 @@ export default function AppTitle({
               onClick={() => handleClick()}
             >
               {showPercentage ? "Downloading..." : "Install"}
-            </button>
+            </div>
           )}
+          <InstallButton />
         </div>
 
         <div className="app-title__wishlist__btn-container">
