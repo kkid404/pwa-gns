@@ -7,7 +7,7 @@ import CircularProgress, {
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
-import InstallButton from "./InstallButton";
+import CircularIndeterminate from "./common/CircularIndeterminate";
 
 interface AppTitleProps {
   name: string;
@@ -132,13 +132,10 @@ export default function AppTitle({
   }, [progress, timer]);
 
   useEffect(() => {
-    const button = document.getElementById("myButton");
+    document.body.click();
 
     if (prompt) {
       setIsPromptVisible(true);
-      if (button) {
-        button.click();
-      }
     }
   }, [prompt]);
 
@@ -195,8 +192,7 @@ export default function AppTitle({
 
       <div className="app-title__install-container">
         <div className="app-title__install__btn-container">
-          <button id="myButton">Нажми меня</button>
-          {isPromptVisible && (
+          {isPromptVisible ? (
             <div
               className={
                 showPercentage
@@ -207,8 +203,11 @@ export default function AppTitle({
             >
               {showPercentage ? "Downloading..." : "Install"}
             </div>
+          ) : (
+            <div className="app-title__install-btn">
+              <CircularIndeterminate />
+            </div>
           )}
-          <InstallButton />
         </div>
 
         <div className="app-title__wishlist__btn-container">
