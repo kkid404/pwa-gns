@@ -8,7 +8,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
 
-
 interface AppTitleProps {
   name: string;
   author: string;
@@ -125,6 +124,7 @@ export default function AppTitle({
     }, 4000);
   }
 
+ 
   useEffect(() => {
     if (progress >= 100) {
       if (timer) {

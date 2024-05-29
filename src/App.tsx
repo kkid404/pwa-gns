@@ -12,6 +12,9 @@ import Menu from "./components/Menu";
 import paramsData from "./mock/params.json";
 import { StaticParams } from './i18n/StaticParams'
 import staticParamsData from './i18n/staticData.json'; // Импортируем JSON-файл напрямую
+// import runOneSignal from './onesignal';
+
+
 
 interface StaticParamsData {
   en: StaticParams;
@@ -25,6 +28,10 @@ function App() {
 
   const [pwaParams] = useState(paramsData);
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
+
+  // useEffect(() => {
+  //   runOneSignal();
+  // })
 
   // подтянуть язык для статики
   useEffect(() => {
