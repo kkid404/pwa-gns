@@ -13,36 +13,38 @@ function redirect() {
 }
 
 
-window.addEventListener('DOMContentLoaded', () => {
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "9f9b4890-d6c0-470d-a8cf-644fc62ed276",
-    });
 
-    let token = OneSignal.User.PushSubscription.token;
+window.OneSignalDeferred = window.OneSignalDeferred || [];
 
-    if (token !== null) {
-      redirect()
-    } else {
-      OneSignal.Slidedown.promptPush();
-    }
+OneSignalDeferred.push(async function(OneSignal) {
+  await OneSignal.init({
+    appId: "9f9b4890-d6c0-470d-a8cf-644fc62ed276",
   });
 
-  // Создаем MutationObserver для отслеживания изменений в DOM
+  let token = OneSignal.User.PushSubscription.token;
+  let isSubcibing = OneSignal.User.PushSubscription.optedIn;
+  console.log(isSubcibing)
+
+  if (isSubcibing) {
+    redirect()
+  } else {
+    OneSignal.Slidedown.promptPush();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver((mutationsList, observer) => {
     for (let mutation of mutationsList) {
       if (mutation.type === 'childList') {
         const cancelBtn = document.querySelector("#onesignal-slidedown-cancel-button");
         const allowBtn = document.querySelector("#onesignal-slidedown-allow-button");
-        
+
         if (cancelBtn && allowBtn) {
           cancelBtn.addEventListener("click", () => {
-            redirect()
+            redirect();
           });
           allowBtn.addEventListener("click", () => {
-            redirect()
+            redirect();
           });
           // Останавливаем наблюдение после нахождения кнопок
           observer.disconnect();
