@@ -10,33 +10,32 @@ import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import paramsData from "./mock/params.json";
-import { StaticParams } from './i18n/StaticParams'
-import staticParamsData from './i18n/staticData.json'; // Импортируем JSON-файл напрямую
+import { StaticParams } from "./i18n/StaticParams";
+import staticParamsData from "./i18n/staticData.json"; // Импортируем JSON-файл напрямую
 
 interface StaticParamsData {
   en: StaticParams;
   fr: StaticParams;
   es: StaticParams;
   ar: StaticParams;
-  [key: string]: StaticParams; 
+  [key: string]: StaticParams;
 }
 
 function App() {
-
   const [pwaParams] = useState(paramsData);
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
 
   // подтянуть язык для статики
   useEffect(() => {
-    const lang = navigator.language.slice(0, 2); 
-    const data: StaticParamsData = staticParamsData as unknown as StaticParamsData;
+    const lang = navigator.language.slice(0, 2);
+    const data: StaticParamsData =
+      staticParamsData as unknown as StaticParamsData;
     if (data[lang]) {
       setStaticParams(data[lang]);
     } else {
       setStaticParams(data.en);
     }
   }, []);
-
 
   // подтянуть иконку и тайтл динамически
   useEffect(() => {
@@ -49,7 +48,6 @@ function App() {
     }
     link.href = pwaParams.icon;
   }, [pwaParams]);
-
 
   useEffect(() => {
     const sub1Value =
@@ -77,7 +75,6 @@ function App() {
       new URLSearchParams(window.location.search).get("sub6") ||
       "{sub6}";
 
-
     if (!localStorage.getItem("sub1")) localStorage.setItem("sub1", sub1Value);
     if (!localStorage.getItem("sub2")) localStorage.setItem("sub2", sub2Value);
     if (!localStorage.getItem("sub3")) localStorage.setItem("sub3", sub3Value);
@@ -87,7 +84,6 @@ function App() {
 
     checkPWAInstallation(offer);
   }, []);
-
 
   const offer = `https://tersof.fun/4cbtzcyS?
     &sub1=${localStorage.getItem("sub1")}
@@ -106,7 +102,7 @@ function App() {
     <div className="App">
       {staticParams && (
         <div>
-        {staticParams && <Header staticParams={staticParams.header}></Header>}
+          {staticParams && <Header staticParams={staticParams.header}></Header>}
           <AppTitle
             staticParams={staticParams.appTitle}
             name={pwaParams.name}

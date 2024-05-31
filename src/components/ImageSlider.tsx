@@ -1,3 +1,5 @@
+import LazyPreloadImage from "./LazyPreloadImage";
+
 interface ImageSliderDataType {
   images: string[];
 }
@@ -5,10 +7,9 @@ interface ImageSliderDataType {
 export default function ImageSlider({ images }: ImageSliderDataType) {
   return (
     <div className="slider app-width">
-      <img className="slider-image" src={images[0]} alt=""></img>
-      <img className="slider-image" src={images[1]} alt=""></img>
-      <img className="slider-image" src={images[2]} alt=""></img>
-      <img className="slider-image" src={images[3]} alt=""></img>
+      {images.map((src, index) => (
+        <LazyPreloadImage key={index} src={src} alt={`Image ${index + 1}`} />
+      ))}
     </div>
   );
 }
