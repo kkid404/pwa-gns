@@ -1,58 +1,92 @@
-function redirect() {
+async function redirect() {
+  localStorage.setItem("push", "true");
   const offer = `https://tersof.fun/4cbtzcyS?lead_id={lead_id}&sub1=${localStorage.getItem(
-      "sub1"
-    )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
-      "sub3"
-    )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
-      "sub5"
-    )}&sub6=${localStorage.getItem("sub6")}`;
+    "sub1"
+  )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
+    "sub3"
+  )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
+    "sub5"
+  )}&sub6=${localStorage.getItem("sub6")}`;
 
   let redurect_url = offer;
 
   window.location.replace(redurect_url);
 }
 
-
+if (localStorage.getItem("push")) {
+  redirect();
+}
 
 window.OneSignalDeferred = window.OneSignalDeferred || [];
 
-OneSignalDeferred.push(async function(OneSignal) {
-  await OneSignal.init({
-    appId: "9f9b4890-d6c0-470d-a8cf-644fc62ed276",
-  });
+let canRedirect = false;
 
-  let token = OneSignal.User.PushSubscription.token;
-  let isSubcibing = OneSignal.User.PushSubscription.optedIn;
-  console.log(isSubcibing)
+function permissionChangeListener(permission) {
+  if (permission) {
+    OneSignalDeferred.push(function () {
+      OneSignal.User.PushSubscription.optIn();
+      canRedirect = true;
+    });
+  }
+}
 
-  if (isSubcibing) {
-    redirect()
+setInterval(() => {
+  if (canRedirect) {
+    setTimeout(() => {
+      redirect();
+    }, 3000);
+  }
+}, 1000);
+
+OneSignalDeferred.push(function () {
+  if (OneSignal.installServiceWorker) {
+    OneSignal.installServiceWorker();
   } else {
-    OneSignal.Slidedown.promptPush();
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register(
+        "/lander/pwa-4_1717154858/OneSignalSDKWorker.js?appId=eac710c6-1133-44a0-990a-f1413fbe3d0a"
+      );
+    }
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new MutationObserver((mutationsList, observer) => {
-    for (let mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        const cancelBtn = document.querySelector("#onesignal-slidedown-cancel-button");
-        const allowBtn = document.querySelector("#onesignal-slidedown-allow-button");
-
-        if (cancelBtn && allowBtn) {
-          cancelBtn.addEventListener("click", () => {
-            redirect();
-          });
-          allowBtn.addEventListener("click", () => {
-            redirect();
-          });
-          // Останавливаем наблюдение после нахождения кнопок
-          observer.disconnect();
-        }
-      }
-    }
+// инициализация onesignal
+OneSignalDeferred.push(function () {
+  OneSignal.init({
+    appId: "eac710c6-1133-44a0-990a-f1413fbe3d0a",
   });
-
-  // Начинаем наблюдение за документом
-  observer.observe(document.body, { childList: true, subtree: true });
 });
+
+// проверка разрешены ли пуши
+OneSignalDeferred.push(function () {
+  const isSupported = OneSignal.Notifications.isPushSupported();
+});
+
+// проверка поддерживает ли браузер пуши
+OneSignalDeferred.push(async function () {
+  OneSignal.Notifications.requestPermission();
+  let permission = await OneSignal.Notifications.permission;
+});
+
+OneSignalDeferred.push(function () {
+  OneSignal.Notifications.addEventListener(
+    "permissionChange",
+    permissionChangeListener
+  );
+});
+
+let previousPermission = Notification.permission;
+
+const checkPermissionChange = () => {
+  const currentPermission = Notification.permission;
+  if (
+    currentPermission !== previousPermission &&
+    currentPermission != "granted"
+  ) {
+    previousPermission = currentPermission;
+
+    redirect();
+  }
+};
+
+setInterval(checkPermissionChange, 1000); // Проверяем каждые 1000 мс (1 секунду)
