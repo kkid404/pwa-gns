@@ -25,6 +25,10 @@ function App() {
   const [pwaParams] = useState(paramsData);
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
 
+  // useEffect(() => {
+  //   runOneSignal();
+  // })
+
   // подтянуть язык для статики
   useEffect(() => {
     const lang = navigator.language.slice(0, 2);
