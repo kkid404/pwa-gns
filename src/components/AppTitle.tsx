@@ -1,4 +1,4 @@
-// import { sendPostback } from '../utils/postback'
+import { sendPostback } from '../utils/postback'
 import ratedOld from "../imgs/eu_18.png";
 import { useAddToHomescreenPrompt } from "./UseAddToHomescreenPrompt";
 import CircularProgress, {
@@ -122,7 +122,6 @@ export default function AppTitle({
 
     setTimeout(() => {
       promptToInstall();
-      //Здесь заканчивается установка (поидее) можешь попробовать тут с постбеками почудить или в кнопку лезть
       setShowPercentage(false);
     }, 4000);
 
@@ -131,7 +130,12 @@ export default function AppTitle({
       const choiceResult = await prompt.userChoice;
 
       if (choiceResult.outcome === "accepted") {
+        const subid = localStorage.getItem("subid")
+        if (subid) {
+          sendPostback(subid)
+        }
         setIsOpen(false)
+        
       } else {
         setIsOpen(true)
       }
