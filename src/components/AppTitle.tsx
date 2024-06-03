@@ -7,6 +7,8 @@ import CircularProgress, {
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
+import CircularIndeterminate from "./common/CircularIndeterminate";
+
 
 interface AppTitleProps {
   name: string;
@@ -70,8 +72,6 @@ function CircularProgressWithLabel(
   );
 }
 
-
-
 //Функция рандома для процентов установки
 function getRandomNumber(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -95,6 +95,10 @@ export default function AppTitle({
   const [showPercentage, setShowPercentage] = useState(false);
   //Интервал заполнения прогресс бара
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
+  //Можно ли открыть прилу
+  const [isOpen, setIsOpen] = useState(true);
+
+  console.log(isOpen);
 
   //Обработка клика по кнопке инсталл
   async function handleClick() {
@@ -116,12 +120,22 @@ export default function AppTitle({
 
     setTimer(timerId);
 
-
     setTimeout(() => {
       promptToInstall();
       //Здесь заканчивается установка (поидее) можешь попробовать тут с постбеками почудить или в кнопку лезть
       setShowPercentage(false);
     }, 4000);
+
+    if (prompt) {
+      setIsOpen(false)
+      const choiceResult = await prompt.userChoice;
+
+      if (choiceResult.outcome === "accepted") {
+        setIsOpen(false)
+      } else {
+        setIsOpen(true)
+      }
+    }
   }
 
  
@@ -135,6 +149,9 @@ export default function AppTitle({
   }, [progress, timer]);
 
   useEffect(() => {
+    document.body.click();
+    console.log(localStorage.getItem("isPWAInstalled"));
+
     if (prompt) {
       setIsPromptVisible(true);
     }
@@ -193,8 +210,8 @@ export default function AppTitle({
 
       <div className="app-title__install-container">
         <div className="app-title__install__btn-container">
-          {isPromptVisible && (
-            <button
+          {isPromptVisible ? (
+            <div
               className={
                 showPercentage
                   ? "app-title__install-btn-installing"
@@ -202,8 +219,12 @@ export default function AppTitle({
               }
               onClick={() => handleClick()}
             >
-              {showPercentage ? "Downloading..." : "Install"}
-            </button>
+              {showPercentage ? "Downloading..." : !isOpen ? "Open" : "Install"}
+            </div>
+          ) : (
+            <div className="app-title__install-btn">
+              <CircularIndeterminate />
+            </div>
           )}
         </div>
 

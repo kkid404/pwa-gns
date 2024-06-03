@@ -3,12 +3,12 @@
   "author": "Casino",
   "score": 4.8,
   "reviewsAmount": 4000,
-  "icon": "https://bjfhds.xyz/assets-ucp/EfqG/i26451c177d919d0c3022f9111876a0f3/_r174x174_png",
+  "icon": "./logo.webp",
   "images": [
-    "https://preogh.xyz/assets-ucp/Ek5K/s023a653729407405456a54a11ae54612/_r0x408_png",
-    "https://preogh.xyz/assets-ucp/Ek5K/sf8c4506d799bca214e91205047ab6b3b/_r0x408_png",
-    "https://preogh.xyz/assets-ucp/Ek5K/sebb80d727008dbe0b352364544a724ad/_r0x408_png",
-    "https://preogh.xyz/assets-ucp/Ek5K/sa8152c72ec8715d352080d9b900d07be/_r0x408_png"
+    "./1.webp",
+    "./2.webp",
+    "./3.webp",
+    "./4.webp"
   ],
   "title": "About this game",
   "text": "Best casino in Malaysia\n1160 MYR\n500% bonus on your first deposit!\n+70 FREE SPINS",
