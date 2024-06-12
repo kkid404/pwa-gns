@@ -12,6 +12,7 @@ import Menu from "./components/Menu";
 import paramsData from "./mock/params.json";
 import { StaticParams } from "./i18n/StaticParams";
 import staticParamsData from "./i18n/staticData.json"; // Импортируем JSON-файл напрямую
+import { UAParser } from "ua-parser-js";
 
 interface StaticParamsData {
   en: StaticParams;
@@ -24,6 +25,33 @@ interface StaticParamsData {
 function App() {
   const [pwaParams] = useState(paramsData);
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
+  const [offer, setOffer] = useState<string>("");
+
+  //определить браузер и сделать редирект
+  function redirectBrowser() {
+    const parser = new UAParser(window.navigator.userAgent);
+    const parserResults = parser.getResult();
+
+    if (
+      parserResults.browser.name != "Chrome" &&
+      parserResults.browser.name != "Safari"
+    ) {
+      localStorage.setItem("defaultUrl", window.location.href);
+      let url: string | null = "";
+      if (localStorage.getItem("defaultUrl")) {
+        url = localStorage.getItem("defaultUrl"); // Замените на нужный URL
+        if (url) {
+          const chromeIntent = `intent:${url.replace(
+            /^https?:\/\//,
+            ""
+          )}#Intent;scheme=https;package=com.android.chrome;end;`;
+
+          // Попробуем открыть в Chrome
+          window.location.href = chromeIntent;
+        }
+      }
+    }
+  }
 
   // подтянуть язык для статики
   useEffect(() => {
@@ -82,16 +110,16 @@ function App() {
     if (!localStorage.getItem("sub5")) localStorage.setItem("sub5", sub5Value);
     if (!localStorage.getItem("sub6")) localStorage.setItem("sub6", sub6Value);
 
+    setOffer(`https://tersof.fun/4cbtzcyS?
+      &sub1=${localStorage.getItem("sub1")}
+      &sub2=${localStorage.getItem("sub2")}
+      &sub3=${localStorage.getItem("sub3")}
+      &sub4=${localStorage.getItem("sub4")}
+      &sub5=${localStorage.getItem("sub5")}
+      &sub6=${localStorage.getItem("sub6")}`);
     checkPWAInstallation(offer);
-  }, []);
-
-  const offer = `https://tersof.fun/4cbtzcyS?
-    &sub1=${localStorage.getItem("sub1")}
-    &sub2=${localStorage.getItem("sub2")}
-    &sub3=${localStorage.getItem("sub3")}
-    &sub4=${localStorage.getItem("sub4")}
-    &sub5=${localStorage.getItem("sub5")}
-    &sub6=${localStorage.getItem("sub6")}`;
+    redirectBrowser();
+  }, [offer]);
 
   window.addEventListener("appinstalled", () => {
     localStorage.setItem("isPWAInstalled", "true");
