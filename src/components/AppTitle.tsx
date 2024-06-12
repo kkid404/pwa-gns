@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
 import CircularIndeterminate from "./common/CircularIndeterminate";
 
+
 interface AppTitleProps {
   name: string;
   author: string;
@@ -137,6 +138,7 @@ export default function AppTitle({
     }
   }
 
+ 
   useEffect(() => {
     if (progress >= 100) {
       if (timer) {

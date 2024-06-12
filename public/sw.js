@@ -1,10 +1,6 @@
 const CACHE_NAME = 'my-pwa-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js'
-  // Добавьте другие файлы, необходимые для кэширования
+  '',
 ];
 
 self.addEventListener('install', event => {
