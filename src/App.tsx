@@ -53,10 +53,6 @@ function App() {
     }
   }
 
-  // useEffect(() => {
-  //   runOneSignal();
-  // })
-
   // подтянуть язык для статики
   useEffect(() => {
     const lang = navigator.language.slice(0, 2);
@@ -82,38 +78,7 @@ function App() {
   }, [pwaParams]);
 
   useEffect(() => {
-    const sub1Value =
-      localStorage.getItem("sub1") ||
-      new URLSearchParams(window.location.search).get("sub1") ||
-      "{sub1}";
-    const sub2Value =
-      localStorage.getItem("sub2") ||
-      new URLSearchParams(window.location.search).get("sub2") ||
-      "{sub2}";
-    const sub3Value =
-      localStorage.getItem("sub3") ||
-      new URLSearchParams(window.location.search).get("sub3") ||
-      "{sub3}";
-    const sub4Value =
-      localStorage.getItem("sub4") ||
-      new URLSearchParams(window.location.search).get("sub4") ||
-      "{sub4}";
-    const sub5Value =
-      localStorage.getItem("sub5") ||
-      new URLSearchParams(window.location.search).get("sub5") ||
-      "{sub5}";
-    const sub6Value =
-      localStorage.getItem("sub6") ||
-      new URLSearchParams(window.location.search).get("sub6") ||
-      "{sub6}";
-
-    if (!localStorage.getItem("sub1")) localStorage.setItem("sub1", sub1Value);
-    if (!localStorage.getItem("sub2")) localStorage.setItem("sub2", sub2Value);
-    if (!localStorage.getItem("sub3")) localStorage.setItem("sub3", sub3Value);
-    if (!localStorage.getItem("sub4")) localStorage.setItem("sub4", sub4Value);
-    if (!localStorage.getItem("sub5")) localStorage.setItem("sub5", sub5Value);
-    if (!localStorage.getItem("sub6")) localStorage.setItem("sub6", sub6Value);
-
+   
     setOffer(`https://tersof.fun/4cbtzcyS?
       &sub1=${localStorage.getItem("sub1")}
       &sub2=${localStorage.getItem("sub2")}
