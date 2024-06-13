@@ -78,22 +78,27 @@ function App() {
   }, [pwaParams]);
 
   useEffect(() => {
-   
-    setOffer(`https://tersof.fun/4cbtzcyS?
-      &sub1=${localStorage.getItem("sub1")}
-      &sub2=${localStorage.getItem("sub2")}
-      &sub3=${localStorage.getItem("sub3")}
-      &sub4=${localStorage.getItem("sub4")}
-      &sub5=${localStorage.getItem("sub5")}
-      &sub6=${localStorage.getItem("sub6")}`);
+    setOffer(
+      `${pwaParams.offer}?&sub1=${localStorage.getItem(
+        "sub1"
+      )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
+        "sub3"
+      )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
+        "sub5"
+      )}&sub6=${localStorage.getItem("sub6")}`
+    );
+
     checkPWAInstallation(offer);
     redirectBrowser();
   }, [offer]);
 
   window.addEventListener("appinstalled", () => {
     localStorage.setItem("isPWAInstalled", "true");
+
     window.location.replace(offer);
   });
+
+  localStorage.setItem("offer", offer);
 
   return (
     <div className="App">
