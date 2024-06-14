@@ -34,7 +34,7 @@ function App() {
 
     if (
       parserResults.browser.name != "Chrome" &&
-      parserResults.browser.name != "Safari"
+      parserResults.os.name == "Android"
     ) {
       localStorage.setItem("defaultUrl", window.location.href);
       let url: string | null = "";
@@ -52,7 +52,6 @@ function App() {
       }
     }
   }
-
 
   // подтянуть язык для статики
   useEffect(() => {
@@ -79,16 +78,24 @@ function App() {
   }, [pwaParams]);
 
   useEffect(() => {
-    setOffer(`${pwaParams.offer}?&sub1=${localStorage.getItem("sub1")}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem("sub3")}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem("sub5")}&sub6=${localStorage.getItem("sub6")}`);
+    setOffer(
+      `${pwaParams.offer}?&sub1=${localStorage.getItem(
+        "sub1"
+      )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
+        "sub3"
+      )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
+        "sub5"
+      )}&sub6=${localStorage.getItem("sub6")}`
+    );
+
     checkPWAInstallation(offer);
     redirectBrowser();
   }, [offer]);
 
   window.addEventListener("appinstalled", () => {
     localStorage.setItem("isPWAInstalled", "true");
-    
+
     window.location.replace(offer);
-    
   });
 
   localStorage.setItem("offer", offer);
@@ -105,6 +112,7 @@ function App() {
             score={pwaParams.score}
             reviews={pwaParams.reviewsAmount}
             icon={pwaParams.icon}
+            offer={pwaParams.offer}
           />
           <ImageSlider images={pwaParams.images}></ImageSlider>
           <About
