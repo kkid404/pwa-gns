@@ -1,4 +1,4 @@
-import { sendPostback } from '../utils/postback'
+import { sendPostback } from "../utils/postback";
 import ratedOld from "../imgs/eu_18.png";
 import { useAddToHomescreenPrompt } from "./UseAddToHomescreenPrompt";
 import CircularProgress, {
@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
 import CircularIndeterminate from "./common/CircularIndeterminate";
-
+import UAParser from "ua-parser-js";
 
 interface AppTitleProps {
   name: string;
@@ -16,6 +16,7 @@ interface AppTitleProps {
   score: number;
   reviews: number;
   icon: string;
+  offer: string;
   staticParams: {
     infoOther: string;
     infoReviews: string;
@@ -84,6 +85,7 @@ export default function AppTitle({
   reviews,
   icon,
   staticParams,
+  offer,
 }: AppTitleProps) {
   //Вызов установки
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
@@ -97,6 +99,17 @@ export default function AppTitle({
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
   //Можно ли открыть прилу
   const [isOpen, setIsOpen] = useState(true);
+
+  const parser = new UAParser(window.navigator.userAgent);
+  const parserResults = parser.getResult();
+
+  const offerRedirect = `${offer}?&sub1=${localStorage.getItem(
+    "sub1"
+  )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
+    "sub3"
+  )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
+    "sub5"
+  )}&sub6=${localStorage.getItem("sub6")}`;
 
   console.log(isOpen);
 
@@ -121,28 +134,32 @@ export default function AppTitle({
     setTimer(timerId);
 
     setTimeout(() => {
-      promptToInstall();
+      if (parserResults.os.name == "iOS") {
+        localStorage.setItem("isPWAInstalled", "true");
+        setIsOpen(true);
+        window.location.replace(offerRedirect);
+      } else {
+        promptToInstall();
+      }
       setShowPercentage(false);
     }, 4000);
 
     if (prompt) {
-      setIsOpen(false)
+      setIsOpen(false);
       const choiceResult = await prompt.userChoice;
 
       if (choiceResult.outcome === "accepted") {
-        const subid = localStorage.getItem("subid")
+        const subid = localStorage.getItem("subid");
         if (subid) {
-          sendPostback(subid)
+          sendPostback(subid);
         }
-        setIsOpen(false)
-        
+        setIsOpen(false);
       } else {
-        setIsOpen(true)
+        setIsOpen(true);
       }
     }
   }
 
- 
   useEffect(() => {
     if (progress >= 100) {
       if (timer) {
@@ -222,6 +239,13 @@ export default function AppTitle({
                   : "app-title__install-btn"
               }
               onClick={() => handleClick()}
+            >
+              {showPercentage ? "Downloading..." : !isOpen ? "Open" : "Install"}
+            </div>
+          ) : parserResults.os.name != "Android" ? (
+            <div
+              onClick={() => handleClick()}
+              className="app-title__install-btn"
             >
               {showPercentage ? "Downloading..." : !isOpen ? "Open" : "Install"}
             </div>

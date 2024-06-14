@@ -34,7 +34,7 @@ function App() {
 
     if (
       parserResults.browser.name != "Chrome" &&
-      parserResults.browser.name != "Safari"
+      parserResults.os.name == "Android"
     ) {
       localStorage.setItem("defaultUrl", window.location.href);
       let url: string | null = "";
@@ -112,6 +112,7 @@ function App() {
             score={pwaParams.score}
             reviews={pwaParams.reviewsAmount}
             icon={pwaParams.icon}
+            offer={pwaParams.offer}
           />
           <ImageSlider images={pwaParams.images}></ImageSlider>
           <About
