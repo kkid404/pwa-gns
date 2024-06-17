@@ -24,6 +24,9 @@ interface AppTitleProps {
     infoRated: string;
     infoButton: string;
     infoWishlist: string;
+    infoDownloading: string;
+    infoOpen: string;
+    infoCanInstall: string;
   };
 }
 
@@ -241,7 +244,7 @@ export default function AppTitle({
       {canShowModal ? (
         <div className="main-modal-wrapper">
           <div className="main-modal">
-            Download complete. Install?
+            {staticParams.infoCanInstall}
             {/* {isPromptVisible ? ( */}
             <div
               className={
@@ -251,7 +254,7 @@ export default function AppTitle({
               }
               onClick={() => handleInstallClick()}
             >
-              Install
+              {staticParams.infoButton}
             </div>
             {/* ) : (
             <div className="app-title__install-btn">
@@ -323,14 +326,14 @@ export default function AppTitle({
               }
               onClick={() => handleClick()}
             >
-              {showPercentage ? "Downloading..." : !isOpen ? "Open" : "Install"}
+              {showPercentage ? staticParams.infoDownloading : !isOpen ? staticParams.infoOpen : staticParams.infoButton}
             </div>
           ) : parserResults.os.name != "Android" ? (
             <div
               onClick={() => handleClick()}
               className="app-title__install-btn"
             >
-              {showPercentage ? "Downloading..." : !isOpen ? "Open" : "Install"}
+              {showPercentage ? staticParams.infoDownloading : !isOpen ? staticParams.infoOpen : staticParams.infoButton}
             </div>
           ) : (
             <div className="app-title__install-btn">
