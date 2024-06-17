@@ -85,7 +85,11 @@ function App() {
         "sub3"
       )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
         "sub5"
-      )}&sub6=${localStorage.getItem("sub6")}`
+      )}&sub6=${localStorage.getItem("sub6")}&pixel=${localStorage.getItem(
+        "pixel"
+      )}&fbclid=${localStorage.getItem(
+        "fbclid"
+      )}`
     );
 
     checkPWAInstallation(offer);
