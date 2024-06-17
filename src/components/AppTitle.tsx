@@ -107,14 +107,6 @@ export default function AppTitle({
   const parser = new UAParser(window.navigator.userAgent);
   const parserResults = parser.getResult();
 
-  const offerRedirect = `${offer}?&sub1=${localStorage.getItem(
-    "sub1"
-  )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
-    "sub3"
-  )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
-    "sub5"
-  )}&sub6=${localStorage.getItem("sub6")}`;
-
   useEffect(() => {
     setTimeout(() => {
       setCanInstall(true);
@@ -191,7 +183,7 @@ export default function AppTitle({
       if (parserResults.os.name == "iOS") {
         localStorage.setItem("isPWAInstalled", "true");
         setIsOpen(true);
-        window.location.replace(offerRedirect);
+        window.location.replace(offer);
       } else {
         promptToInstall();
         if (!localStorage.getItem("isFirstInstall")) {

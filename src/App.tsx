@@ -113,7 +113,7 @@ function App() {
             score={pwaParams.score}
             reviews={pwaParams.reviewsAmount}
             icon={pwaParams.icon}
-            offer={pwaParams.offer}
+            offer={offer}
           />
           <ImageSlider images={pwaParams.images}></ImageSlider>
           <About
