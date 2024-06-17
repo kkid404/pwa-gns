@@ -90,7 +90,7 @@ export default function AppTitle({
   //Вызов установки
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
   //Проверка на готовность установки
-  const [isPromptVisible, setIsPromptVisible] = useState(false);
+  const [, setIsPromptVisible] = useState(false);
   //Счетчик процентов
   const [progress, setProgress] = useState(10);
   //Отображение прогресс бара
@@ -99,6 +99,10 @@ export default function AppTitle({
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
   //Можно ли открыть прилу
   const [isOpen, setIsOpen] = useState(true);
+  //Можно ли установить прилу на Андроиде после нажатия
+  const [canInstall, setCanInstall] = useState(false);
+  //Можно ли отобразить модалку
+  const [canShowModal, setCanShowModal] = useState(false);
 
   const parser = new UAParser(window.navigator.userAgent);
   const parserResults = parser.getResult();
@@ -111,20 +115,70 @@ export default function AppTitle({
     "sub5"
   )}&sub6=${localStorage.getItem("sub6")}`;
 
-  console.log(isOpen);
+  useEffect(() => {
+    setTimeout(() => {
+      setCanInstall(true);
+    }, 4000);
+  }, []);
+
+  async function handleInstallClick() {
+    localStorage.setItem("isFirstInstall", "true");
+    changeBackgroundForModal(false);
+    promptToInstall();
+
+    if (prompt) {
+      setIsOpen(false);
+      const choiceResult = await prompt.userChoice;
+
+      if (choiceResult.outcome === "accepted") {
+        const subid = localStorage.getItem("subid");
+        if (subid) {
+          sendPostback(subid);
+        }
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    }
+  }
+
+  function changeBackgroundForModal(check: boolean) {
+    if (check) {
+      window.scrollTo(0, 0);
+      document.body.style.overflow = "hidden";
+
+      const modal = document.querySelector<HTMLDivElement>(
+        ".main-modal-background"
+      );
+      if (modal) {
+        modal.style.display = "block";
+      }
+    }
+    if (!check) {
+      document.body.style.overflow = "";
+      const modal = document.querySelector<HTMLDivElement>(
+        ".main-modal-background"
+      );
+      if (modal) {
+        console.log(123);
+
+        modal.style.display = "none";
+      }
+      setCanShowModal(false);
+    }
+  }
 
   //Обработка клика по кнопке инсталл
   async function handleClick() {
-    setShowPercentage(true);
-
-    if (progress < 100) {
+    if (localStorage.getItem("isFirstInstall")) {
+      promptToInstall();
+    }
+    if (progress < 100 && !localStorage.getItem("isFirstInstall")) {
       setShowPercentage(true);
     }
-
     if (progress >= 100) {
       promptToInstall();
     }
-
     const timerId = setInterval(() => {
       setProgress((prevProgress: number) =>
         prevProgress >= 60 ? 100 : prevProgress + getRandomNumber(10, 40)
@@ -140,6 +194,10 @@ export default function AppTitle({
         window.location.replace(offerRedirect);
       } else {
         promptToInstall();
+        if (!localStorage.getItem("isFirstInstall")) {
+          changeBackgroundForModal(true);
+          setCanShowModal(true);
+        }
       }
       setShowPercentage(false);
     }, 4000);
@@ -180,6 +238,31 @@ export default function AppTitle({
 
   return (
     <div className="main app-width">
+      {canShowModal ? (
+        <div className="main-modal-wrapper">
+          <div className="main-modal">
+            Download complete. Install?
+            {/* {isPromptVisible ? ( */}
+            <div
+              className={
+                showPercentage
+                  ? "app-title__install-btn-installing"
+                  : "app-title__install-btn"
+              }
+              onClick={() => handleInstallClick()}
+            >
+              Install
+            </div>
+            {/* ) : (
+            <div className="app-title__install-btn">
+              <CircularIndeterminate />
+            </div>
+          )} */}
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="main__application-title">
         <div className="main__application-title__logo">
           {showPercentage ? <CircularProgressWithLabel value={progress} /> : ""}
@@ -231,7 +314,7 @@ export default function AppTitle({
 
       <div className="app-title__install-container">
         <div className="app-title__install__btn-container">
-          {isPromptVisible ? (
+          {canInstall ? (
             <div
               className={
                 showPercentage

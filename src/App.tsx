@@ -104,6 +104,7 @@ function App() {
     <div className="App">
       {staticParams && (
         <div>
+          <div className="main-modal-background"></div>
           {staticParams && <Header staticParams={staticParams.header}></Header>}
           <AppTitle
             staticParams={staticParams.appTitle}
