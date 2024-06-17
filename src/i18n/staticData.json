@@ -12,6 +12,9 @@
       "infoDownloads": "Downloads",
       "infoRated": "Rated for 18+",
       "infoButton": "Install",
+      "infoDownloading": "Downloading",
+      "infoOpen":"Open",
+      "infoCanInstall": "Download complete. Install?",
       "infoWishlist": "Add to wishlist"
     },
     "header": {
@@ -50,6 +53,9 @@
       "infoDownloads": "Téléchargements",
       "infoRated": "Classé pour 18+",
       "infoButton": "Installer",
+      "infoDownloading": "Téléchargement en cours",
+      "infoOpen":"Ouvrir",
+      "infoCanInstall": "Téléchargement terminé. Installer ?",
       "infoWishlist": "Ajouter à la liste de souhaits"
     },
     "header": {
@@ -88,6 +94,9 @@
       "infoDownloads": "Descargas",
       "infoRated": "Clasificado para 18+",
       "infoButton": "Instalar",
+      "infoDownloading": "Descargando",
+      "infoOpen":"Abrir",
+      "infoCanInstall": "Descarga completa. ¿Instalar?",
       "infoWishlist": "Agregar a la lista de deseos"
     },
     "header": {
@@ -126,6 +135,9 @@
       "infoDownloads": "التنزيلات",
       "infoRated": "مصنف لـ 18+",
       "infoButton": "تثبيت",
+      "infoDownloading": "جارٍ التنزيل",
+      "infoOpen":"فتح",
+      "infoCanInstall": "اكتمل التنزيل. هل تريد التثبيت؟",
       "infoWishlist": "أضف إلى قائمة الرغبات"
     },
     "header": {
