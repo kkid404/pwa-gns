@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <script defer>
+  <!-- <script defer>
     const firebaseConfig = {
       apiKey: "AIzaSyDhU-9otOc4xlQlRzSXGGHXC4R4hoFPphU",
       authDomain: "gns-pwa.firebaseapp.com",
@@ -26,6 +26,23 @@
   <script src="https://web.push.express/v1.0.1/push-express-sdk.js"></script>
   <script>
     initPushExpressSdk();
+  </script> -->
+  
+  <script>
+    async function redirect() {
+      // localStorage.setItem("push", "true");
+
+      const offer = localStorage.getItem('offer')
+
+      let redurect_url = offer;
+
+      window.location.replace(redurect_url);
+    }
+
+    
+      redirect();
+    
+
   </script>
   <body>
     <div class="loader-wrapper">
