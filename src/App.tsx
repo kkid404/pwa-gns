@@ -87,8 +87,8 @@ function App() {
         "sub5"
       )}&sub6=${localStorage.getItem("sub6")}&pixel=${localStorage.getItem(
         "pixel"
-      )}&fbclid=${localStorage.getItem(
-        "fbclid"
+      )}&fbclid=${localStorage.getItem("fbclid")}&sub18=${localStorage.getItem(
+        "subid"
       )}`
     );
 
