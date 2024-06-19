@@ -119,7 +119,7 @@ function App() {
             icon={pwaParams.icon}
             offer={offer}
           />
-          <ImageSlider images={pwaParams.images}></ImageSlider>
+          <ImageSlider video={pwaParams.video} images={pwaParams.images}></ImageSlider>
           <About
             staticParams={staticParams.about}
             title={pwaParams.title}
