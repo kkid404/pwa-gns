@@ -5,7 +5,7 @@ interface ReviewsDataType {
   reviews: {
     photo: string;
     name: string;
-    score: string;
+    score: number;
     scoreDate: string;
     review: string;
     helpful: number;

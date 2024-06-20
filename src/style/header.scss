@@ -47,7 +47,7 @@
       }
 
       &__pressed {
-        color: $current-link-color;
+        color: var( --primary-color);
       }
     }
   }
@@ -86,7 +86,7 @@
   left: 25%;
   width: 33px;
   display: block;
-  border-top: 3px solid $current-link-color;
+  border-top: 3px solid var( --primary-color);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }

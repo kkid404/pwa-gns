@@ -1,3 +1,11 @@
 $text-primary-color: #202124;
 $text-secondary-color: #5f6368;
-$current-link-color: #01875f;
+$current-link-color: #0b57cf;
+
+:root {
+  --primary-color: #0b57cf;
+}
+
+:root {
+  --current-link-color: #{$current-link-color};
+}
