@@ -5,7 +5,7 @@ interface ReviewsPrototypeDataType {
   reviewPrototype: {
     photo: string;
     name: string;
-    score: string;
+    score: number;
     scoreDate: string;
     review: string;
     helpful: number;
@@ -42,7 +42,7 @@ export default function Review({
         </button>
       </div>
       <div className="review-score">
-        <Stars width={12}></Stars>
+        <Stars score={reviewPrototype.score} width={12}></Stars>
         <div className="review-score__date">{reviewPrototype.scoreDate}</div>
       </div>
       <div className="review__text">{reviewPrototype.review}</div>

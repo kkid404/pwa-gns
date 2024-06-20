@@ -24,7 +24,7 @@
     }
 
     &-developer {
-      color: $current-link-color;
+      color: var( --primary-color);
       font-size: 1rem;
     }
 
@@ -134,7 +134,7 @@
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
-  color: #01875f;
+  color: var( --primary-color);
   cursor: default;
   display: inline-flex;
   font: inherit;
@@ -182,9 +182,9 @@
 }
 
 .app-title__wishlist__icon-container svg {
-  fill: #01875f;
-  stop-color: #01875f;
-  color: #01875f;
+  fill: var( --primary-color);
+  stop-color: var( --primary-color);
+  color: var( --primary-color);
 }
 
 .app-title__install-btn {
@@ -195,7 +195,7 @@
   -webkit-font-smoothing: antialiased;
   align-items: center;
   background: #0000;
-  background-color: #01875f;
+  background-color: var( --primary-color);
   border: none;
   border-radius: 8px;
   box-shadow: none;
@@ -229,7 +229,8 @@
   will-change: transform, opacity;
 
   &:hover {
-    background-color: #017653;
+    filter: brightness(80%);
+    transition: 0.5s;
   }
 }
 

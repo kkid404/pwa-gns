@@ -4,10 +4,14 @@
   width: calc(100% - 60px);
   padding: 0;
 
+  &-video {
+    margin-right: 12px;
+    border-radius: 8px;
+  }
+
   &-image {
     border-radius: 8px;
     margin-right: 12px;
-    width: 115px;
     height: 204px;
     object-fit: contain;
   }

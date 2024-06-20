@@ -34,7 +34,7 @@ export default function Rating({
       <div className="rating-data">
         <div className="rating-data-scores">
           <span className="rating-data-scores__number">{score}</span>
-          <Stars width={16}></Stars>
+          <Stars score={score} width={16}></Stars>
           <div className="rating-data-scores__reviews">
             {reviews} {staticParams.itemReviews}
           </div>

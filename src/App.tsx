@@ -27,6 +27,21 @@ function App() {
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
   const [offer, setOffer] = useState<string>("");
 
+  //функция смены цвет
+  function setPrimaryColor(color: string) {
+    document.documentElement.style.setProperty("--primary-color", color);
+  }
+
+  //Эффект для смены цвета прилы
+  useEffect(() => {
+    if (pwaParams.color == "blue") {
+      setPrimaryColor("#0b57cf");
+    }
+    if (pwaParams.color == "green") {
+      setPrimaryColor("#01875f");
+    }
+  }, []);
+
   //определить браузер и сделать редирект
   function redirectBrowser() {
     const parser = new UAParser(window.navigator.userAgent);
@@ -119,7 +134,10 @@ function App() {
             icon={pwaParams.icon}
             offer={offer}
           />
-          <ImageSlider images={pwaParams.images}></ImageSlider>
+          <ImageSlider
+            video={pwaParams.video}
+            images={pwaParams.images}
+          ></ImageSlider>
           <About
             staticParams={staticParams.about}
             title={pwaParams.title}
