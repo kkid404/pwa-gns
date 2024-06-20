@@ -122,7 +122,6 @@ function App() {
           <ImageSlider images={pwaParams.images}></ImageSlider>
           <About
             staticParams={staticParams.about}
-            title={pwaParams.title}
             text={pwaParams.text}
           ></About>
           <Rating
