@@ -56,7 +56,8 @@
         &__item {
           width: 16px;
           height: 16px;
-          color: #01875f;
+          color: var( --primary-color);
+          fill: var( --primary-color);
         }
       }
     }
@@ -89,7 +90,7 @@
 
           &__filled {
             width: var(--current-width);
-            background-color: #01875f;
+            background-color: var( --primary-color);
             border-radius: 9999px;
             height: 100%;
           }
@@ -97,4 +98,8 @@
       }
     }
   }
+}
+
+#star {
+  fill: var( --primary-color);
 }
