@@ -13,6 +13,7 @@ import paramsData from "./mock/params.json";
 import { StaticParams } from "./i18n/StaticParams";
 import staticParamsData from "./i18n/staticData.json"; // Импортируем JSON-файл напрямую
 import { UAParser } from "ua-parser-js";
+import resizeImage from "./utils/resizeImage";
 
 interface StaticParamsData {
   en: StaticParams;
@@ -27,10 +28,15 @@ function App() {
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
   const [offer, setOffer] = useState<string>("");
 
-  //функция смены цвет
+  //функция смены цвета
   function setPrimaryColor(color: string) {
     document.documentElement.style.setProperty("--primary-color", color);
   }
+
+  //Эффект для изменения картинок под манифест
+  useEffect(() => {
+    resizeImage();
+  });
 
   //Эффект для смены цвета прилы
   useEffect(() => {
