@@ -27,7 +27,7 @@ function App() {
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
   const [offer, setOffer] = useState<string>("");
 
-  //функция смены цвет
+  //функция смены цвета
   function setPrimaryColor(color: string) {
     document.documentElement.style.setProperty("--primary-color", color);
   }
