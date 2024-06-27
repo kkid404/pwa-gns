@@ -38,7 +38,7 @@
   "display": "standalone",
   "dir": "auto",
   "lang": "ru-RU",
-  "name": "YesPlay",
-  "short_name": "YesPlay",
+  "name": "1 WIN TEST PWA",
+  "short_name": "1 WIN TEST PWA",
   "start_url": "pwa.html"
 }
