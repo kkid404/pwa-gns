@@ -4,7 +4,8 @@
       "itemUpdated": "Updated on",
       "itemSafety": "Data safety",
       "itemSection": "In this section, developers can specify how applications collect and use data.",
-      "itemInformation": "No information."
+      "itemInformation": "No information.",
+      "aboutGame" : "About this game"
     },
     "appTitle": {
       "infoOther": "Contains ads · In-app purchases",
@@ -16,6 +17,7 @@
       "infoOpen":"Open",
       "infoCanInstall": "Download complete. Install?",
       "infoWishlist": "Add to wishlist"
+      
     },
     "header": {
       "itemGames": "Games",
@@ -45,7 +47,8 @@
       "itemUpdated": "Mis à jour le",
       "itemSafety": "Sécurité des données",
       "itemSection": "Dans cette section, les développeurs peuvent spécifier comment les applications collectent et utilisent les données.",
-      "itemInformation": "Aucune information."
+      "itemInformation": "Aucune information.",
+      "aboutGame" : "A propos de ce jeu"
     },
     "appTitle": {
       "infoOther": "Contient des annonces · Achats intégrés",
@@ -57,6 +60,7 @@
       "infoOpen":"Ouvrir",
       "infoCanInstall": "Téléchargement terminé. Installer ?",
       "infoWishlist": "Ajouter à la liste de souhaits"
+      
     },
     "header": {
       "itemGames": "Jeux",
@@ -86,7 +90,8 @@
       "itemUpdated": "Actualizado el",
       "itemSafety": "Seguridad de datos",
       "itemSection": "En esta sección, los desarrolladores pueden especificar cómo las aplicaciones recopilan y usan datos.",
-      "itemInformation": "Sin información."
+      "itemInformation": "Sin información.",
+      "aboutGame" : "Acerca de este juego"
     },
     "appTitle": {
       "infoOther": "Contiene anuncios · Compras en la aplicación",
@@ -98,6 +103,7 @@
       "infoOpen":"Abrir",
       "infoCanInstall": "Descarga completa. ¿Instalar?",
       "infoWishlist": "Agregar a la lista de deseos"
+      
     },
     "header": {
       "itemGames": "Juegos",
@@ -127,7 +133,8 @@
       "itemUpdated": "تم التحديث في",
       "itemSafety": "أمان البيانات",
       "itemSection": "في هذا القسم، يمكن للمطورين تحديد كيفية جمع التطبيقات للبيانات واستخدامها.",
-      "itemInformation": "لا يوجد معلومات"
+      "itemInformation": "لا يوجد معلومات",
+      "aboutGame" : "حول هذه اللعبة"
     },
     "appTitle": {
       "infoOther": "يحتوي على إعلانات · عمليات شراء داخل التطبيق",
@@ -139,6 +146,7 @@
       "infoOpen":"فتح",
       "infoCanInstall": "اكتمل التنزيل. هل تريد التثبيت؟",
       "infoWishlist": "أضف إلى قائمة الرغبات"
+      
     },
     "header": {
       "itemGames": "ألعاب",
