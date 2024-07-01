@@ -1,7 +1,5 @@
 import { Plugin, defineConfig, mergeConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import * as fs from "fs";
-import * as path from "path";
 import sharp from "sharp";
 import { rimrafSync } from "rimraf";
 

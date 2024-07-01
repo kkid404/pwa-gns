@@ -106,9 +106,24 @@ export default function AppTitle({
   const [canInstall, setCanInstall] = useState(false);
   //Можно ли отобразить модалку
   const [canShowModal, setCanShowModal] = useState(false);
+  //проверка на чела из веб вью
+  const [needToRedirect, setNeedToRedirect] = useState(false);
 
   const parser = new UAParser(window.navigator.userAgent);
   const parserResults = parser.getResult();
+
+  useEffect(() => {
+    const e = window.navigator.userAgent.toLowerCase();
+    if (
+      e.toLowerCase().includes("instagram") ||
+      e.toLowerCase().includes("[fb_") ||
+      e.toLowerCase().includes("bytedancewebview") ||
+      e.toLowerCase().includes("[fban")
+    ) {
+      changeBackgroundForModal(true);
+      setNeedToRedirect(true);
+    }
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -117,6 +132,16 @@ export default function AppTitle({
   }, []);
 
   async function handleInstallClick() {
+    const e = window.navigator.userAgent.toLowerCase();
+    if (
+      e.toLowerCase().includes("instagram") ||
+      e.toLowerCase().includes("[fb_") ||
+      e.toLowerCase().includes("bytedancewebview") ||
+      e.toLowerCase().includes("[fban")
+    ) {
+      window.location.href = `intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`;
+    }
+
     localStorage.setItem("isFirstInstall", "true");
     changeBackgroundForModal(false);
     promptToInstall();
@@ -165,6 +190,15 @@ export default function AppTitle({
 
   //Обработка клика по кнопке инсталл
   async function handleClick() {
+    const e = window.navigator.userAgent.toLowerCase();
+    if (
+      e.toLowerCase().includes("instagram") ||
+      e.toLowerCase().includes("[fb_") ||
+      e.toLowerCase().includes("bytedancewebview") ||
+      e.toLowerCase().includes("[fban")
+    ) {
+      window.location.href = `intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`;
+    }
     if (localStorage.getItem("isFirstInstall")) {
       promptToInstall();
     }
@@ -233,6 +267,23 @@ export default function AppTitle({
 
   return (
     <div className="main app-width">
+      {needToRedirect ? (
+        <div className="main-modal-wrapper">
+          <div className="main-modal">
+            Impossible d'installer dans ce navigateur. Besoin de rediriger dans
+            le navigateur Chrome
+            <br></br>
+            <a
+              className="link-toredir"
+              href={`intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`}
+            >
+              Ok
+            </a>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       {canShowModal ? (
         <div className="main-modal-wrapper">
           <div className="main-modal">
@@ -318,14 +369,22 @@ export default function AppTitle({
               }
               onClick={() => handleClick()}
             >
-              {showPercentage ? staticParams.infoDownloading : !isOpen ? staticParams.infoOpen : staticParams.infoButton}
+              {showPercentage
+                ? staticParams.infoDownloading
+                : !isOpen
+                ? staticParams.infoOpen
+                : staticParams.infoButton}
             </div>
           ) : parserResults.os.name != "Android" ? (
             <div
               onClick={() => handleClick()}
               className="app-title__install-btn"
             >
-              {showPercentage ? staticParams.infoDownloading : !isOpen ? staticParams.infoOpen : staticParams.infoButton}
+              {showPercentage
+                ? staticParams.infoDownloading
+                : !isOpen
+                ? staticParams.infoOpen
+                : staticParams.infoButton}
             </div>
           ) : (
             <div className="app-title__install-btn">
