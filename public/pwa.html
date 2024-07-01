@@ -5,45 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="./pwa.js"></script>
   </head>
-
-  <!-- <script defer>
-    const firebaseConfig = {
-      apiKey: "AIzaSyDhU-9otOc4xlQlRzSXGGHXC4R4hoFPphU",
-      authDomain: "gns-pwa.firebaseapp.com",
-      projectId: "gns-pwa",
-      storageBucket: "gns-pwa.appspot.com",
-      messagingSenderId: "607838939821",
-      appId: "1:607838939821:web:1c9d5008a1d89f5b4cb424"
-    };
-    const vapidKey =
-      "BBfq_FMxioSNthEgUp1XSo0uXUU7WeCj1Paslp9pd29kSI3NsbAGHJeNfoxtxktZMvI1w3kfSuWYdoGhJZUegAc";
-    const push_express_app_id = "20978-1224";
-
-    const sw_path = "/lander/pwa-nasha/";
-    const external_id = localStorage.getItem("subid");
-  </script>
-  <script src="https://web.push.express/v1.0.1/push-express-sdk.js"></script>
-  <script>
-    initPushExpressSdk();
-  </script> -->
-  
-  <script>
-    async function redirect() {
-      // localStorage.setItem("push", "true");
-
-      const offer = localStorage.getItem('offer')
-
-      let redurect_url = offer;
-
-      window.location.replace(redurect_url);
-    }
-
-    
-      redirect();
-    
-
-  </script>
   <body>
     <div class="loader-wrapper">
       <span class="loader"></span>

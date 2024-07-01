@@ -1,12 +1,6 @@
 async function redirect() {
   localStorage.setItem("push", "true");
-  const offer = `https://tersof.fun/4cbtzcyS?lead_id={lead_id}&sub1=${localStorage.getItem(
-    "sub1"
-  )}&sub2=${localStorage.getItem("sub2")}&sub3=${localStorage.getItem(
-    "sub3"
-  )}&sub4=${localStorage.getItem("sub4")}&sub5=${localStorage.getItem(
-    "sub5"
-  )}&sub6=${localStorage.getItem("sub6")}`;
+  const offer = localStorage.getItem("offer");
 
   let redurect_url = offer;
 
@@ -23,8 +17,15 @@ let canRedirect = false;
 
 function permissionChangeListener(permission) {
   if (permission) {
-    OneSignalDeferred.push(function () {
-      OneSignal.User.PushSubscription.optIn();
+    OneSignalDeferred.push(async function () {
+      await OneSignal.User.PushSubscription.optIn();
+      const userId = localStorage.getItem("subid");
+      try {
+        await OneSignal.login(userId);
+        console.log("External ID has been set to:", userId);
+      } catch (error) {
+        console.error("Error setting External ID:", error);
+      }
       canRedirect = true;
     });
   }
@@ -44,7 +45,7 @@ OneSignalDeferred.push(function () {
   } else {
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register(
-        "/lander/pwa-4_1717154858/OneSignalSDKWorker.js?appId=eac710c6-1133-44a0-990a-f1413fbe3d0a"
+        "/lander/pwa-4_1717154858/OneSignalSDKWorker.js?appId=961a5c7c-8dc9-4245-844d-02cd6b1ebce6"
       );
     }
   }
@@ -53,9 +54,12 @@ OneSignalDeferred.push(function () {
 // инициализация onesignal
 OneSignalDeferred.push(function () {
   OneSignal.init({
-    appId: "eac710c6-1133-44a0-990a-f1413fbe3d0a",
+    appId: "961a5c7c-8dc9-4245-844d-02cd6b1ebce6",
   });
+
 });
+
+
 
 // проверка разрешены ли пуши
 OneSignalDeferred.push(function () {

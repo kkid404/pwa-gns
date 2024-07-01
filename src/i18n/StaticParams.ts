@@ -4,6 +4,7 @@ export interface StaticParams {
     itemSafety: string;
     itemSection: string;
     itemInformation: string;
+    aboutGame: string;
   };
   appTitle: {
     infoOther: string;
@@ -15,6 +16,7 @@ export interface StaticParams {
     infoOpen: string;
     infoCanInstall: string;
     infoWishlist: string;
+
   };
   header: {
     itemGames: string;

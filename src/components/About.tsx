@@ -1,17 +1,17 @@
 import arrowRight from "../imgs/arrow-right.svg";
 
 interface AboutDataType {
-  title: string;
   text: string;
   staticParams: {
     itemUpdated: string;
     itemSafety: string;
     itemSection: string;
     itemInformation: string;
+    aboutGame: string;
   };
 }
 
-export default function About({ title, text, staticParams }: AboutDataType) {
+export default function About({ text, staticParams }: AboutDataType) {
   //Чтобы можно было поставить дату обновления на сегодняшний день
   const now = new Date();
   const monthDate = now.toLocaleString("default", { month: "long" });
@@ -25,7 +25,7 @@ export default function About({ title, text, staticParams }: AboutDataType) {
   return (
     <div className="about app-width">
       <div className="about-item-data">
-        <h2 className="about-item__title">{title}</h2>
+        <h2 className="about-item__title">{staticParams.aboutGame}</h2>
         <button className="about-item-data-btn">
           <img
             className="about-item-data-btn__img"
