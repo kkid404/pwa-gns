@@ -37,8 +37,8 @@
   "orientation": "any",
   "display": "standalone",
   "dir": "auto",
-  "lang": "ru-RU",
-  "name": "YesPlay",
-  "short_name": "YesPlay",
+  "lang": "fr-FR",
+  "name": "Sébastien Haller Casino",
+  "short_name": "Sébastien Haller Casino",
   "start_url": "pwa.html"
 }

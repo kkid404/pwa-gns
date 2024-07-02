@@ -1,26 +1,26 @@
 {
-  "name": "YesPlay South Africa",
+  "name": "Sébastien Haller Casino",
   "author": "Casino",
   "score": 4.6,
   "reviewsAmount": 4421,
-  "icon": "./yesplay/logo.png",
-  "color":"green",
-  "video": "https://www.youtube.com/embed/d6uN9xYUMxE?si=DbJ-v0Cwj8Y_IMww",
+  "icon": "./img/logo.png",
+  "color":"blue",
+  "video": "",
   "images": [
-    "./yesplay/1.png",
-    "./yesplay/2.png",
-    "./yesplay/3.png",
-    "./yesplay/4.png"
+    "./img/1.png",
+    "./img/2.png",
+    "./img/3.png",
+    "./img/4.png"
   ],
-  "offer" : "https://tersof.fun/2qrf1wSX",
-  "text": "🎰Best casino in South Africa with license\n🎁100% welcome bonus up to 3000 ZAR\n💝+100 FREE SPINS\n\n💵 🔙 Instant deposit / withdrawal to any bank card\n📱Mobile accessibility: wherever you are, our mobile app allows you to play on your smartphone or tablet.",
+  "offer" : "https://tersof.fun/49Lv9fGn",
+  "text": "Casino by Sébastien Haller, il y a des jeux pour tous les goûts, plongez dans un monde passionnant et joueur, vos gains vous attendent !\n\nLe meilleur casino de Côte d'Ivoire.\n150000 XOF\n500% de bonus de bienvenue sur votre premier dépôt !\n+70 FREESPIN",
   "reviews": [
     {
       "photo": "https://beta.arktiton.xyz/assets-ucp/EkCr/c6626474c2e813e06b1963fdb278dfdf2e9c654d886ac7/_r64x64_png",
       "name": "Jean",
       "score": 4,
       "scoreDate": "March 15, 2024",
-      "review": "Convenient, withdrawal of winnings to the card in 2 minutes.",
+      "review": "Je joue à ma machine à sous préférée depuis une semaine",
       "helpful": 521
 
     },
@@ -28,49 +28,33 @@
       "photo": "https://beta.arktiton.xyz/assets-ucp/EkCr/c662647584d276f7e079020c9d9d0fdae5f67bd016215b/_r64x64_png",
       "name": "Joseph",
       "score": 5,
-      "scoreDate": "March 21, 2024",
-      "review": "My favorite game aviator has finally found where you can bet on your favorite team",
-      "helpful": 501,
-      "answer": {
-        "author": "Casino",
-        "authorAnswer": "Yes, this game was loved by many. Our casino also has more than 200 licensed slots."
-      }
+      "scoreDate": "June 21, 2024",
+      "review": "C'est pratique, le retrait des gains sur la carte en 2 minutes.",
+      "helpful": 501
     },
     {
       "photo": "https://beta.arktiton.xyz/assets-ucp/EkCr/c6626475ea7546950aebaeae2dc396d016be80a016c1e6/_r64x64_png",
       "name": "Emmanuel",
       "score": 5,
       "scoreDate": "June 16, 2024",
-      "review": "Yesterday I won 12,000 ZAR, today I will also play, one of the best casinos.",
-      "helpful": 154,
-      "answer": {
-        "author": "Casino",
-        "authorAnswer": "May luck smile on you."
-      }
+      "review": "Mon jeu préféré, Zeus, j'ai finalement réussi à le trouver.",
+      "helpful": 154
     },
     {
       "photo": "https://beta.arktiton.xyz/assets-ucp/EkCr/c6626476c6173e5cb1980a0c262161e57600d8e35484d1/_r64x64_png",
       "name": "Stéphane",
       "score": 5,
-      "scoreDate": "Jume 12, 2024",
+      "scoreDate": "June 12, 2024",
       "review": "Hier, j'ai gagné 2 000 $, je jouerai aussi aujourd'hui, c'est l'un des meilleurs casinos.",
-      "helpful": 521,
-      "answer": {
-        "author": "Casino",
-        "authorAnswer": "Que la chance vous sourie"
-      }
+      "helpful": 521
     },
     {
       "photo": "https://beta.arktiton.xyz/assets-ucp/EkCr/c662647cc38dc12ea4cb00ac10332212591b457cacedbe/_r64x64_png",
       "name": "Kael",
       "score": 5,
       "scoreDate": "June 6, 2024",
-      "review": "You can add optimization for IOS? please contact support.",
-      "helpful": 321,
-      "answer": {
-        "author": "Casino",
-        "authorAnswer": "We have accepted your request and will forward it to the technical department."
-      }
+      "review": "Pourriez-vous ajouter une optimisation pour iOS ? Je contacte le support.",
+      "helpful": 321
     }
   ]
 }
