@@ -5,7 +5,7 @@
       "itemSafety": "Data safety",
       "itemSection": "In this section, developers can specify how applications collect and use data.",
       "itemInformation": "No information.",
-      "aboutGame" : "About this game"
+      "aboutGame": "About this game"
     },
     "appTitle": {
       "infoOther": "Contains ads · In-app purchases",
@@ -14,10 +14,9 @@
       "infoRated": "Rated for 18+",
       "infoButton": "Install",
       "infoDownloading": "Downloading",
-      "infoOpen":"Open",
+      "infoOpen": "Open",
       "infoCanInstall": "Download complete. Install?",
       "infoWishlist": "Add to wishlist"
-      
     },
     "header": {
       "itemGames": "Games",
@@ -48,7 +47,7 @@
       "itemSafety": "Sécurité des données",
       "itemSection": "Dans cette section, les développeurs peuvent spécifier comment les applications collectent et utilisent les données.",
       "itemInformation": "Aucune information.",
-      "aboutGame" : "A propos de ce jeu"
+      "aboutGame": "A propos de ce jeu"
     },
     "appTitle": {
       "infoOther": "Contient des annonces · Achats intégrés",
@@ -57,10 +56,9 @@
       "infoRated": "Classé pour 18+",
       "infoButton": "Installer",
       "infoDownloading": "Téléchargement en cours",
-      "infoOpen":"Ouvrir",
+      "infoOpen": "Ouvrir",
       "infoCanInstall": "Téléchargement terminé. Installer ?",
       "infoWishlist": "Ajouter à la liste de souhaits"
-      
     },
     "header": {
       "itemGames": "Jeux",
@@ -91,7 +89,7 @@
       "itemSafety": "Seguridad de datos",
       "itemSection": "En esta sección, los desarrolladores pueden especificar cómo las aplicaciones recopilan y usan datos.",
       "itemInformation": "Sin información.",
-      "aboutGame" : "Acerca de este juego"
+      "aboutGame": "Acerca de este juego"
     },
     "appTitle": {
       "infoOther": "Contiene anuncios · Compras en la aplicación",
@@ -100,10 +98,9 @@
       "infoRated": "Clasificado para 18+",
       "infoButton": "Instalar",
       "infoDownloading": "Descargando",
-      "infoOpen":"Abrir",
+      "infoOpen": "Abrir",
       "infoCanInstall": "Descarga completa. ¿Instalar?",
       "infoWishlist": "Agregar a la lista de deseos"
-      
     },
     "header": {
       "itemGames": "Juegos",
@@ -134,7 +131,7 @@
       "itemSafety": "أمان البيانات",
       "itemSection": "في هذا القسم، يمكن للمطورين تحديد كيفية جمع التطبيقات للبيانات واستخدامها.",
       "itemInformation": "لا يوجد معلومات",
-      "aboutGame" : "حول هذه اللعبة"
+      "aboutGame": "حول هذه اللعبة"
     },
     "appTitle": {
       "infoOther": "يحتوي على إعلانات · عمليات شراء داخل التطبيق",
@@ -143,10 +140,9 @@
       "infoRated": "مصنف لـ 18+",
       "infoButton": "تثبيت",
       "infoDownloading": "جارٍ التنزيل",
-      "infoOpen":"فتح",
+      "infoOpen": "فتح",
       "infoCanInstall": "اكتمل التنزيل. هل تريد التثبيت؟",
       "infoWishlist": "أضف إلى قائمة الرغبات"
-      
     },
     "header": {
       "itemGames": "ألعاب",
@@ -172,6 +168,48 @@
     }
   },
 
+  "hi": {
+    "about": {
+      "itemUpdated": "अपडेट किया गया",
+      "itemSafety": "डेटा सुरक्षा",
+      "itemSection": "इस अनुभाग में, डेवलपर्स यह निर्दिष्ट कर सकते हैं कि एप्लिकेशन डेटा कैसे एकत्र और उपयोग करते हैं।",
+      "itemInformation": "कोई जानकारी नहीं।",
+      "aboutGame": "इस खेल के बारे में"
+    },
+    "appTitle": {
+      "infoOther": "विज्ञापन शामिल हैं · इन-ऐप खरीदारी",
+      "infoReviews": "समीक्षाएं",
+      "infoDownloads": "डाउनलोड",
+      "infoRated": "18+ के लिए रेटेड",
+      "infoButton": "इंस्टॉल करें",
+      "infoDownloading": "डाउनलोड हो रहा है",
+      "infoOpen": "खोलें",
+      "infoCanInstall": "डाउनलोड पूर्ण। इंस्टॉल करें?",
+      "infoWishlist": "विशलिस्ट में जोड़ें"
+    },
+    "header": {
+      "itemGames": "खेल",
+      "itemApps": "ऐप्स",
+      "itemMovies": "फिल्में",
+      "itemBooks": "किताबें",
+      "itemKids": "बच्चे"
+    },
+    "rating": {
+      "itemTitle": "रेटिंग और समीक्षाएं",
+      "itemReviews": "समीक्षाएं"
+    },
+    "reviews": {
+      "itemAll": "सभी समीक्षाएं देखें",
+      "itemNews": "नया क्या है",
+      "itemDev": "डेवलपर संपर्क"
+    },
+    "review": {
+      "itemHelpful": "लोगों ने इस समीक्षा को सहायक पाया",
+      "itemAsk": "क्या आपको यह सहायक लगा?",
+      "itemYes": "हाँ",
+      "itemNo": "नहीं"
+    }
+  },
   "pt": {
     "about": {
       "itemUpdated": "Atualizado em",
@@ -213,6 +251,49 @@
       "itemAsk": "Você achou isso útil?",
       "itemYes": "Sim",
       "itemNo": "Não"
+    }
+
+  },
+  "bn": {
+    "about": {
+      "itemUpdated": "আপডেট করা হয়েছে",
+      "itemSafety": "ডেটা সুরক্ষা",
+      "itemSection": "এই বিভাগে, ডেভেলপাররা উল্লেখ করতে পারেন কিভাবে অ্যাপ্লিকেশনগুলি ডেটা সংগ্রহ এবং ব্যবহার করে।",
+      "itemInformation": "কোন তথ্য নেই।",
+      "aboutGame": "এই গেম সম্পর্কে"
+    },
+    "appTitle": {
+      "infoOther": "বিজ্ঞাপন রয়েছে · ইন-অ্যাপ ক্রয়",
+      "infoReviews": "রিভিউ",
+      "infoDownloads": "ডাউনলোড",
+      "infoRated": "১৮+ এর জন্য রেটেড",
+      "infoButton": "ইনস্টল করুন",
+      "infoDownloading": "ডাউনলোড হচ্ছে",
+      "infoOpen": "খুলুন",
+      "infoCanInstall": "ডাউনলোড সম্পন্ন। ইনস্টল করবেন?",
+      "infoWishlist": "উইশলিস্টে যোগ করুন"
+    },
+    "header": {
+      "itemGames": "গেমস",
+      "itemApps": "অ্যাপস",
+      "itemMovies": "মুভি",
+      "itemBooks": "বই",
+      "itemKids": "বাচ্চারা"
+    },
+    "rating": {
+      "itemTitle": "রেটিং এবং রিভিউ",
+      "itemReviews": "রিভিউ"
+    },
+    "reviews": {
+      "itemAll": "সমস্ত রিভিউ দেখুন",
+      "itemNews": "নতুন কি আছে",
+      "itemDev": "ডেভেলপার যোগাযোগ"
+    },
+    "review": {
+      "itemHelpful": "লোকেরা এই রিভিউটি সহায়ক বলে মনে করেছে",
+      "itemAsk": "আপনার কি এটি সহায়ক লেগেছে?",
+      "itemYes": "হ্যাঁ",
+      "itemNo": "না"
     }
   }
 }
