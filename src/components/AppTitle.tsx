@@ -107,6 +107,9 @@ export default function AppTitle({
   //Можно ли отобразить модалку
   const [canShowModal, setCanShowModal] = useState(false);
 
+    //счетчик кликов на кнопку установки
+  const [_, setInstallAttempts] = useState(0);
+
   const parser = new UAParser(window.navigator.userAgent);
   const parserResults = parser.getResult();
 
@@ -241,15 +244,34 @@ export default function AppTitle({
         } else {
           setIsOpen(true);
         }
-      }
-    } catch {
-      const subid = localStorage.getItem("subid");
-      if (subid) {
-        sendPostback(subid, "reject", "error_install");
-      }
-      if(offer){
-        window.location.replace(offer);
-      }
+      } else {
+        setInstallAttempts(prev => {
+          const newAttempts = prev + 1;
+          if (newAttempts >= 2) {
+            const isIntaled = localStorage.getItem('isInstale')
+            
+            openClick();
+            if (!isIntaled){
+              const subid = localStorage.getItem('subid');
+              localStorage.setItem('isInstale', 'true')
+              if (subid) {
+                sendPostback(subid, "reject", "lazy");
+              }
+            }
+  
+          }
+          return newAttempts;
+        });
+      } 
+    } catch (error) {
+        console.error(error);
+        const subid = localStorage.getItem("subid");
+        if (subid) {
+          sendPostback(subid, "reject", "error_install");
+        }
+        if(offer){
+          window.location.replace(offer);
+        }
     }
 
   }
