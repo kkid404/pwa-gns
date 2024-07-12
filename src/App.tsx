@@ -4,7 +4,6 @@ import "./style/main.scss";
 import AppTitle from "./components/AppTitle";
 import ImageSlider from "./components/ImageSlider";
 import About from "./components/About";
-import { checkPWAInstallation } from "./utils/checkPWAInstallation";
 import Rating from "./components/Rating";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
@@ -12,7 +11,6 @@ import Menu from "./components/Menu";
 import paramsData from "./mock/params.json";
 import { StaticParams } from "./i18n/StaticParams";
 import staticParamsData from "./i18n/staticData.json"; // Импортируем JSON-файл напрямую
-import { UAParser } from "ua-parser-js";
 
 interface StaticParamsData {
   en: StaticParams;
@@ -42,31 +40,6 @@ function App() {
     }
   }, []);
 
-  //определить браузер и сделать редирект
-  function redirectBrowser() {
-    const parser = new UAParser(window.navigator.userAgent);
-    const parserResults = parser.getResult();
-
-    if (
-      parserResults.browser.name != "Chrome" &&
-      parserResults.os.name == "Android"
-    ) {
-      localStorage.setItem("defaultUrl", window.location.href);
-      let url: string | null = "";
-      if (localStorage.getItem("defaultUrl")) {
-        url = localStorage.getItem("defaultUrl"); // Замените на нужный URL
-        if (url) {
-          const chromeIntent = `intent:${url.replace(
-            /^https?:\/\//,
-            ""
-          )}#Intent;scheme=https;package=com.android.chrome;end;`;
-
-          // Попробуем открыть в Chrome
-          window.location.href = chromeIntent;
-        }
-      }
-    }
-  }
 
   // подтянуть язык для статики
   useEffect(() => {
@@ -107,15 +80,7 @@ function App() {
       )}`
     );
 
-    checkPWAInstallation(offer);
-    redirectBrowser();
   }, [offer]);
-
-  window.addEventListener("appinstalled", () => {
-    localStorage.setItem("isPWAInstalled", "true");
-
-    window.location.replace(offer);
-  });
 
   localStorage.setItem("offer", offer);
 

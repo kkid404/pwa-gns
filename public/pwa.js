@@ -1,3 +1,6 @@
+const appId = "961a5c7c-8dc9-4245-844d-02cd6b1ebce6"
+
+
 async function redirect() {
   localStorage.setItem("push", "true");
   const offer = localStorage.getItem("offer");
@@ -45,7 +48,7 @@ OneSignalDeferred.push(function () {
   } else {
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register(
-        "/lander/pwa-4_1717154858/OneSignalSDKWorker.js?appId=961a5c7c-8dc9-4245-844d-02cd6b1ebce6"
+        `/lander/pwa-gns-test-006/OneSignalSDKWorker.js?appId=${appId}`
       );
     }
   }
@@ -54,7 +57,7 @@ OneSignalDeferred.push(function () {
 // инициализация onesignal
 OneSignalDeferred.push(function () {
   OneSignal.init({
-    appId: "961a5c7c-8dc9-4245-844d-02cd6b1ebce6",
+    appId: appId,
   });
 
 });
