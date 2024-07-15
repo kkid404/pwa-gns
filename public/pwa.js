@@ -1,4 +1,4 @@
-const appId = "961a5c7c-8dc9-4245-844d-02cd6b1ebce6"
+const appId = "aec722b2-19ef-48bf-8aff-c93db3833080"
 
 
 async function redirect() {
@@ -48,7 +48,7 @@ OneSignalDeferred.push(function () {
   } else {
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register(
-        `/lander/pwa-gns-test-006/OneSignalSDKWorker.js?appId=${appId}`
+        `/OneSignalSDKWorker.js?appId=${appId}`
       );
     }
   }

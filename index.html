@@ -64,15 +64,36 @@
 
     redirectFacebookToBrowser();
 
-    localStorage.setItem("subid", "{subid}")
-    localStorage.setItem("sub1", "{sub1}")
-    localStorage.setItem("sub2", "{sub2}")
-    localStorage.setItem("sub3", "{sub3}")
-    localStorage.setItem("sub4", "{sub4}")
-    localStorage.setItem("sub5", "{sub5}")
-    localStorage.setItem("sub6", "{sub6}")
-    localStorage.setItem("pixel", "{pixel}")
-    localStorage.setItem("fbclid", "{fbclid}")
+    // localStorage.setItem("subid", "{subid}")
+    // localStorage.setItem("sub1", "{sub1}")
+    // localStorage.setItem("sub2", "{sub2}")
+    // localStorage.setItem("sub3", "{sub3}")
+    // localStorage.setItem("sub4", "{sub4}")
+    // localStorage.setItem("sub5", "{sub5}")
+    // localStorage.setItem("sub6", "{sub6}")
+    // localStorage.setItem("pixel", "{pixel}")
+    // localStorage.setItem("fbclid", "{fbclid}")
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var url = window.location.href;
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    // Сохранение параметров в localStorage
+    localStorage.setItem("subid", getParameterByName("subid"));
+    localStorage.setItem("sub1", getParameterByName("sub1"));
+    localStorage.setItem("sub2", getParameterByName("sub2"));
+    localStorage.setItem("sub3", getParameterByName("sub3"));
+    localStorage.setItem("sub4", getParameterByName("sub4"));
+    localStorage.setItem("sub5", getParameterByName("sub5"));
+    localStorage.setItem("sub6", getParameterByName("sub6"));
+    localStorage.setItem("pixel", getParameterByName("pixel"));
+    localStorage.setItem("fbclid", getParameterByName("fbclid"));
 
     </script>
 

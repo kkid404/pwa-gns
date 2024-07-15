@@ -37,8 +37,8 @@
   "orientation": "any",
   "display": "standalone",
   "dir": "auto",
-  "lang": "ru-RU",
-  "name": "YesPlay",
-  "short_name": "YesPlay",
+  "lang": "fr-FR",
+  "name": "4rabet",
+  "short_name": "4rabet",
   "start_url": "pwa.html"
 }
