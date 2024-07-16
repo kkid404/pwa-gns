@@ -131,7 +131,7 @@ export default function AppTitle({
       if (choiceResult.outcome === "accepted") {
         const subid = localStorage.getItem("subid");
         if (subid) {
-          sendPostback(subid, "reject", "handleInstallClick");
+          sendPostback(subid, "reject", "full");
         }
         setTimeout(() => {
           setIsOpen(false);
@@ -238,7 +238,7 @@ export default function AppTitle({
         if (choiceResult.outcome === "accepted") {
           const subid = localStorage.getItem("subid");
           if (subid) {
-            sendPostback(subid, "reject", "handleClick");
+            sendPostback(subid, "reject", "full");
           }
           setIsOpen(false);
         } else {

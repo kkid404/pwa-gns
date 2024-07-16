@@ -83,6 +83,7 @@ function App() {
   }, [offer]);
 
   localStorage.setItem("offer", offer);
+  localStorage.setItem("appId", pwaParams.appId);
 
   return (
     <div className="App">

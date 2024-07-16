@@ -1,4 +1,4 @@
-const appId = "aec722b2-19ef-48bf-8aff-c93db3833080"
+const appId = localStorage.getItem("appId");
 
 
 async function redirect() {
