@@ -167,6 +167,7 @@
       "itemNo": "لا"
     }
   },
+
   "hi": {
     "about": {
       "itemUpdated": "अपडेट किया गया",
@@ -214,42 +215,44 @@
       "itemUpdated": "Atualizado em",
       "itemSafety": "Segurança de dados",
       "itemSection": "Nesta seção, os desenvolvedores podem especificar como os aplicativos coletam e usam dados.",
-      "itemInformation": "Sem informações.",
-      "aboutGame": "Sobre este jogo"
+      "itemInformation": "Nenhuma informação.",
+      "aboutGame" : "Sobre este jogo"
     },
     "appTitle": {
-      "infoOther": "Contém anúncios · Compras no app",
+      "infoOther": "Contém anúncios · Compras no aplicativo",
       "infoReviews": "avaliações",
-      "infoDownloads": "Downloads",
-      "infoRated": "Classificado para 18+",
+      "infoDownloads": "Transferências",
+      "infoRated": "Classificado para maiores de 18 anos",
       "infoButton": "Instalar",
       "infoDownloading": "Baixando",
-      "infoOpen": "Abrir",
-      "infoCanInstall": "Download concluído. Instalar?",
-      "infoWishlist": "Adicionar à lista de desejos"
+      "infoOpen":"Abrir",
+      "infoCanInstall": "Download completo. Instalar?",
+      "infoWishlist": "Adicionar a lista de desejos"
+      
     },
     "header": {
       "itemGames": "Jogos",
-      "itemApps": "Apps",
+      "itemApps": "Aplicativas",
       "itemMovies": "Filmes",
       "itemBooks": "Livros",
       "itemKids": "Crianças"
     },
     "rating": {
       "itemTitle": "Avaliações e comentários",
-      "itemReviews": "comentários"
+      "itemReviews": "avaliações"
     },
     "reviews": {
-      "itemAll": "Ver todos os comentários",
+      "itemAll": "Ver todas as avaliações",
       "itemNews": "O que há de novo",
       "itemDev": "Contato do desenvolvedor"
     },
     "review": {
-      "itemHelpful": "pessoas acharam este comentário útil",
+      "itemHelpful": "as pessoas acharam esta avaliação útil",
       "itemAsk": "Você achou isso útil?",
       "itemYes": "Sim",
       "itemNo": "Não"
     }
+
   },
   "bn": {
     "about": {
