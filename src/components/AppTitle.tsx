@@ -44,7 +44,7 @@ function CircularProgressWithLabel(
       }}
     >
       <CircularProgress
-        style={{ color: "#01875f" }}
+        style={{ color: "var(--primary-color)" }}
         size="80px"
         variant="determinate"
         {...props}
