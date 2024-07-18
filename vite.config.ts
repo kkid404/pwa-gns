@@ -41,7 +41,7 @@ function changeManifestNamePlugin(): Plugin {
 
         // Изменение параметра name в manifest.json
         manifestData.name = newName;
-        manifestData.name = newShortName;
+        manifestData.short_name = newShortName;
 
         // Запись изменений обратно в manifest.json
         writeFileSync(
