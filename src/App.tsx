@@ -78,7 +78,6 @@ function App() {
         "subid"
       )}`
     );
-
   }, [offer]);
 
   localStorage.setItem("offer", offer);
@@ -113,6 +112,7 @@ function App() {
             reviews={pwaParams.reviewsAmount}
           ></Rating>
           <Reviews
+            author={pwaParams.author}
             review={staticParams.review}
             staticParams={staticParams.reviews}
             reviews={pwaParams.reviews}

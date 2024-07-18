@@ -2,6 +2,7 @@ import Stars from "./Stars";
 import points from "../../imgs/points.svg";
 
 interface ReviewsPrototypeDataType {
+  author: string;
   reviewPrototype: {
     photo: string;
     name: string;
@@ -23,6 +24,7 @@ interface ReviewsPrototypeDataType {
 }
 
 export default function Review({
+  author,
   reviewPrototype,
   review,
 }: ReviewsPrototypeDataType) {
@@ -57,9 +59,7 @@ export default function Review({
       {reviewPrototype.answer ? (
         <div className="review-answer">
           <div className="review-answer-head">
-            <div className="review-answer-head__name">
-              {reviewPrototype.answer.author}
-            </div>
+            <div className="review-answer-head__name">{author}</div>
             <div className="review-answer-head__date">
               {reviewPrototype.scoreDate}
             </div>

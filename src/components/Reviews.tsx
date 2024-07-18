@@ -2,6 +2,7 @@
 import Review from "./common/Review";
 
 interface ReviewsDataType {
+  author: string;
   reviews: {
     photo: string;
     name: string;
@@ -27,11 +28,17 @@ interface ReviewsDataType {
   };
 }
 
-export default function Reviews({ reviews, staticParams, review }: ReviewsDataType) {
+export default function Reviews({
+  author,
+  reviews,
+  staticParams,
+  review,
+}: ReviewsDataType) {
   return (
     <div className="reviews app-width">
       {reviews.map((item) => (
         <Review
+          author={author}
           review={review}
           key={item.photo}
           reviewPrototype={item}
