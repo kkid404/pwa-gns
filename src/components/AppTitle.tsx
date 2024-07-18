@@ -92,8 +92,6 @@ export default function AppTitle({
 }: AppTitleProps) {
   //Вызов установки
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
-  //Проверка на готовность установки
-  const [, setIsPromptVisible] = useState(false);
   //Счетчик процентов
   const [progress, setProgress] = useState(10);
   //Отображение прогресс бара
@@ -107,7 +105,6 @@ export default function AppTitle({
   //Можно ли отобразить модалку
   const [canShowModal, setCanShowModal] = useState(false);
   //проверка на чела из веб вью
-  const [needToRedirect, setNeedToRedirect] = useState(false);
 
     //счетчик кликов на кнопку установки
   const [_, setInstallAttempts] = useState(0);
@@ -115,35 +112,14 @@ export default function AppTitle({
   const parser = new UAParser(window.navigator.userAgent);
   const parserResults = parser.getResult();
 
-  useEffect(() => {
-    const e = window.navigator.userAgent.toLowerCase();
-    if (
-      e.toLowerCase().includes("instagram") ||
-      e.toLowerCase().includes("[fb_") ||
-      e.toLowerCase().includes("bytedancewebview") ||
-      e.toLowerCase().includes("[fban")
-    ) {
-      changeBackgroundForModal(true);
-      setNeedToRedirect(true);
-    }
-  }, []);
-
+  // меняет лоадер на кнопку установки
   useEffect(() => {
     setTimeout(() => {
       setCanInstall(true);
-    }, 4000);
+    }, 1000);
   }, []);
 
   async function handleInstallClick() {
-    const e = window.navigator.userAgent.toLowerCase();
-    if (
-      e.toLowerCase().includes("instagram") ||
-      e.toLowerCase().includes("[fb_") ||
-      e.toLowerCase().includes("bytedancewebview") ||
-      e.toLowerCase().includes("[fban")
-    ) {
-      window.location.href = `intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`;
-    }
 
     localStorage.setItem("isFirstInstall", "true");
     changeBackgroundForModal(false);
@@ -158,6 +134,7 @@ export default function AppTitle({
         if (subid) {
           sendPostback(subid, "reject", "full");
         }
+        localStorage.setItem("isInstalled", "true");
         setTimeout(() => {
           setIsOpen(false);
         }, 6000);
@@ -213,8 +190,8 @@ export default function AppTitle({
         const subid = localStorage.getItem("subid");
         if (subid) {
           sendPostback(subid, "reject", "cancel_redirect");
+          localStorage.setItem("isInstalled", "true");
         }
-        localStorage.setItem("isPWAInstalled", "true");
         setIsOpen(true);  
       }
   
@@ -241,7 +218,7 @@ export default function AppTitle({
           if (subid) {
             sendPostback(subid, "reject", "IOS");
           }
-          localStorage.setItem("isPWAInstalled", "true");
+          localStorage.setItem("isInstalled", "true");
           setIsOpen(true);
           if(offer){
             window.location.replace(offer);
@@ -261,6 +238,7 @@ export default function AppTitle({
         const choiceResult = await prompt.userChoice;
   
         if (choiceResult.outcome === "accepted") {
+          localStorage.setItem("isInstalled", "true");
           const subid = localStorage.getItem("subid");
           if (subid) {
             sendPostback(subid, "reject", "full");
@@ -281,6 +259,7 @@ export default function AppTitle({
               localStorage.setItem('isInstale', 'true')
               if (subid) {
                 sendPostback(subid, "reject", "lazy");
+                localStorage.setItem("isInstalled", "true");
               }
             }
   
@@ -293,6 +272,7 @@ export default function AppTitle({
         const subid = localStorage.getItem("subid");
         if (subid) {
           sendPostback(subid, "reject", "error_install");
+          localStorage.setItem("isInstalled", "true");
         }
         if(offer){
           window.location.replace(offer);
@@ -310,39 +290,14 @@ export default function AppTitle({
     }
   }, [progress, timer]);
 
-  useEffect(() => {
-    document.body.click();
-    console.log(localStorage.getItem("isPWAInstalled"));
 
-    if (prompt) {
-      setIsPromptVisible(true);
-    }
-  }, [prompt]);
 
   return (
     <div className="main app-width">
-      {needToRedirect ? (
-        <div className="main-modal-wrapper">
-          <div className="main-modal">
-            Impossible d'installer dans ce navigateur. Besoin de rediriger dans
-            le navigateur Chrome
-            <br></br>
-            <a
-              className="link-toredir"
-              href={`intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`}
-            >
-              Ok
-            </a>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
       {canShowModal ? (
         <div className="main-modal-wrapper">
           <div className="main-modal">
             {staticParams.infoCanInstall}
-            {/* {isPromptVisible ? ( */}
             <div
               className={
                 showPercentage
@@ -353,11 +308,6 @@ export default function AppTitle({
             >
               {staticParams.infoButton}
             </div>
-            {/* ) : (
-            <div className="app-title__install-btn">
-              <CircularIndeterminate />
-            </div>
-          )} */}
           </div>
         </div>
       ) : (
@@ -422,7 +372,7 @@ export default function AppTitle({
                   : "app-title__install-btn"
               }
               onClick={() => {
-                const isInstalled = localStorage.getItem('isPWAInstalled') === 'true';
+                const isInstalled = localStorage.getItem('isInstalled') === 'true';
                 if (isInstalled) {
                   openClick();
                 } else if (!isOpen) {
@@ -443,7 +393,7 @@ export default function AppTitle({
           ) : parserResults.os.name != "Android" ? (
             <div
             onClick={() => {
-              const isInstalled = localStorage.getItem('isPWAInstalled') === 'true';
+              const isInstalled = localStorage.getItem('isInstalled') === 'true';
               if (isInstalled) {
                 openClick();
               } else if (!isOpen) {
