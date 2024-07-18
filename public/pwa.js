@@ -1,4 +1,5 @@
-const appToken = "e3a1a818-97b1-4eb1-87b6-1f6daf89c1e4";
+const appId = localStorage.getItem("appId");
+
 
 async function redirect() {
   localStorage.setItem("push", "true");
@@ -47,7 +48,7 @@ OneSignalDeferred.push(function () {
   } else {
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register(
-        `/lander/pwa-4_1717154858/OneSignalSDKWorker.js?appId=${appToken}`
+        `/OneSignalSDKWorker.js?appId=${appId}`
       );
     }
   }
@@ -56,7 +57,7 @@ OneSignalDeferred.push(function () {
 // инициализация onesignal
 OneSignalDeferred.push(function () {
   OneSignal.init({
-    appId: appToken,
+    appId: appId,
   });
 
 });

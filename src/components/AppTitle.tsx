@@ -109,6 +109,9 @@ export default function AppTitle({
   //проверка на чела из веб вью
   const [needToRedirect, setNeedToRedirect] = useState(false);
 
+    //счетчик кликов на кнопку установки
+  const [_, setInstallAttempts] = useState(0);
+
   const parser = new UAParser(window.navigator.userAgent);
   const parserResults = parser.getResult();
 
@@ -153,9 +156,11 @@ export default function AppTitle({
       if (choiceResult.outcome === "accepted") {
         const subid = localStorage.getItem("subid");
         if (subid) {
-          sendPostback(subid);
+          sendPostback(subid, "reject", "full");
         }
-        setIsOpen(false);
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 6000);
       } else {
         setIsOpen(true);
       }
@@ -188,63 +193,112 @@ export default function AppTitle({
     }
   }
 
+  function openClick() {
+    if (parserResults.browser.name == "Chrome") {
+      window.open('./pwa.html')
+    }else{
+      if(offer){
+        window.open(offer)
+      }
+    }
+  }
+
+
   //Обработка клика по кнопке инсталл
   async function handleClick() {
-    const e = window.navigator.userAgent.toLowerCase();
-    if (
-      e.toLowerCase().includes("instagram") ||
-      e.toLowerCase().includes("[fb_") ||
-      e.toLowerCase().includes("bytedancewebview") ||
-      e.toLowerCase().includes("[fban")
-    ) {
-      window.location.href = `intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`;
-    }
-    if (localStorage.getItem("isFirstInstall")) {
-      promptToInstall();
-    }
-    if (progress < 100 && !localStorage.getItem("isFirstInstall")) {
-      setShowPercentage(true);
-    }
-    if (progress >= 100) {
-      promptToInstall();
-    }
-    const timerId = setInterval(() => {
-      setProgress((prevProgress: number) =>
-        prevProgress >= 60 ? 100 : prevProgress + getRandomNumber(10, 40)
-      );
-    }, 800);
+    try{
+      const cancel_redirect = localStorage.getItem("cancel_redirect")
 
-    setTimer(timerId);
-
-    setTimeout(() => {
-      if (parserResults.os.name == "iOS") {
-        localStorage.setItem("isPWAInstalled", "true");
-        setIsOpen(true);
-        window.location.replace(offer);
-      } else {
-        promptToInstall();
-        if (!localStorage.getItem("isFirstInstall")) {
-          changeBackgroundForModal(true);
-          setCanShowModal(true);
-        }
-      }
-      setShowPercentage(false);
-    }, 4000);
-
-    if (prompt) {
-      setIsOpen(false);
-      const choiceResult = await prompt.userChoice;
-
-      if (choiceResult.outcome === "accepted") {
+      if(cancel_redirect) {
         const subid = localStorage.getItem("subid");
         if (subid) {
-          sendPostback(subid);
+          sendPostback(subid, "reject", "cancel_redirect");
         }
-        setIsOpen(false);
-      } else {
-        setIsOpen(true);
+        localStorage.setItem("isPWAInstalled", "true");
+        setIsOpen(true);  
       }
+  
+      if (localStorage.getItem("isFirstInstall")) {
+        promptToInstall();
+      }
+      if (progress < 100 && !localStorage.getItem("isFirstInstall")) {
+        setShowPercentage(true);
+      }
+      if (progress >= 100) {
+        promptToInstall();
+      }
+      const timerId = setInterval(() => {
+        setProgress((prevProgress: number) =>
+          prevProgress >= 60 ? 100 : prevProgress + getRandomNumber(10, 40)
+        );
+      }, 800);
+  
+      setTimer(timerId);
+  
+      setTimeout(() => {
+        if (parserResults.os.name == "iOS") {
+          const subid = localStorage.getItem("subid");
+          if (subid) {
+            sendPostback(subid, "reject", "IOS");
+          }
+          localStorage.setItem("isPWAInstalled", "true");
+          setIsOpen(true);
+          if(offer){
+            window.location.replace(offer);
+          }
+        } else {
+          promptToInstall();
+          if (!localStorage.getItem("isFirstInstall")) {
+            changeBackgroundForModal(true);
+            setCanShowModal(true);
+          }
+        }
+        setShowPercentage(false);
+      }, 4000);
+  
+      if (prompt) {
+        setIsOpen(false);
+        const choiceResult = await prompt.userChoice;
+  
+        if (choiceResult.outcome === "accepted") {
+          const subid = localStorage.getItem("subid");
+          if (subid) {
+            sendPostback(subid, "reject", "full");
+          }
+          setIsOpen(false);
+        } else {
+          setIsOpen(true);
+        }
+      } else {
+        setInstallAttempts(prev => {
+          const newAttempts = prev + 1;
+          if (newAttempts >= 2) {
+            const isIntaled = localStorage.getItem('isInstale')
+            
+            openClick();
+            if (!isIntaled){
+              const subid = localStorage.getItem('subid');
+              localStorage.setItem('isInstale', 'true')
+              if (subid) {
+                sendPostback(subid, "reject", "lazy");
+              }
+            }
+  
+          }
+          return newAttempts;
+        });
+      } 
+    } catch (error) {
+        console.error(error);
+        const subid = localStorage.getItem("subid");
+        if (subid) {
+          sendPostback(subid, "reject", "error_install");
+        }
+        if(offer){
+          window.location.replace(offer);
+        }
     }
+
   }
 
   useEffect(() => {
@@ -367,25 +421,48 @@ export default function AppTitle({
                   ? "app-title__install-btn-installing"
                   : "app-title__install-btn"
               }
-              onClick={() => handleClick()}
+              onClick={() => {
+                const isInstalled = localStorage.getItem('isPWAInstalled') === 'true';
+                if (isInstalled) {
+                  openClick();
+                } else if (!isOpen) {
+                  openClick();
+                } else {
+                  handleClick();
+                } 
+              }
+            }             
             >
-              {showPercentage
-                ? staticParams.infoDownloading
-                : !isOpen
-                ? staticParams.infoOpen
-                : staticParams.infoButton}
-            </div>
+          {showPercentage 
+            ? staticParams.infoDownloading 
+            : localStorage.getItem('isInstalled') === 'true'
+              ? staticParams.infoOpen
+              : !isOpen 
+                ? staticParams.infoOpen 
+                : staticParams.infoButton}            </div>
           ) : parserResults.os.name != "Android" ? (
             <div
-              onClick={() => handleClick()}
-              className="app-title__install-btn"
-            >
-              {showPercentage
-                ? staticParams.infoDownloading
-                : !isOpen
-                ? staticParams.infoOpen
+            onClick={() => {
+              const isInstalled = localStorage.getItem('isPWAInstalled') === 'true';
+              if (isInstalled) {
+                openClick();
+              } else if (!isOpen) {
+                openClick();
+              } else {
+                handleClick();
+              } 
+            }
+          }            
+          className="app-title__install-btn"
+                      >
+          {showPercentage 
+            ? staticParams.infoDownloading 
+            : localStorage.getItem('isInstalled') === 'true'
+              ? staticParams.infoOpen
+              : !isOpen 
+                ? staticParams.infoOpen 
                 : staticParams.infoButton}
-            </div>
+                  </div>
           ) : (
             <div className="app-title__install-btn">
               <CircularIndeterminate />
