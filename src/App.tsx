@@ -40,7 +40,6 @@ function App() {
     }
   }, []);
 
-
   // подтянуть язык для статики
   useEffect(() => {
     const lang = navigator.language.slice(0, 2);

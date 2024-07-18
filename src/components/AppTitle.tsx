@@ -106,6 +106,8 @@ export default function AppTitle({
   const [canInstall, setCanInstall] = useState(false);
   //Можно ли отобразить модалку
   const [canShowModal, setCanShowModal] = useState(false);
+  //проверка на чела из веб вью
+  const [needToRedirect, setNeedToRedirect] = useState(false);
 
     //счетчик кликов на кнопку установки
   const [_, setInstallAttempts] = useState(0);
@@ -114,12 +116,35 @@ export default function AppTitle({
   const parserResults = parser.getResult();
 
   useEffect(() => {
+    const e = window.navigator.userAgent.toLowerCase();
+    if (
+      e.toLowerCase().includes("instagram") ||
+      e.toLowerCase().includes("[fb_") ||
+      e.toLowerCase().includes("bytedancewebview") ||
+      e.toLowerCase().includes("[fban")
+    ) {
+      changeBackgroundForModal(true);
+      setNeedToRedirect(true);
+    }
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => {
       setCanInstall(true);
     }, 4000);
   }, []);
 
   async function handleInstallClick() {
+    const e = window.navigator.userAgent.toLowerCase();
+    if (
+      e.toLowerCase().includes("instagram") ||
+      e.toLowerCase().includes("[fb_") ||
+      e.toLowerCase().includes("bytedancewebview") ||
+      e.toLowerCase().includes("[fban")
+    ) {
+      window.location.href = `intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`;
+    }
+
     localStorage.setItem("isFirstInstall", "true");
     changeBackgroundForModal(false);
     promptToInstall();
@@ -296,6 +321,23 @@ export default function AppTitle({
 
   return (
     <div className="main app-width">
+      {needToRedirect ? (
+        <div className="main-modal-wrapper">
+          <div className="main-modal">
+            Impossible d'installer dans ce navigateur. Besoin de rediriger dans
+            le navigateur Chrome
+            <br></br>
+            <a
+              className="link-toredir"
+              href={`intent://navigate?url=${window.location.href}#Intent;scheme=googlechrome;end;`}
+            >
+              Ok
+            </a>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       {canShowModal ? (
         <div className="main-modal-wrapper">
           <div className="main-modal">
