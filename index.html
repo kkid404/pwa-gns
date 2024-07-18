@@ -24,44 +24,14 @@
     -->
     <title class="title"></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.20/ua-parser.min.js" integrity="sha512-70OZ+iUuudMmd7ikkUWcEogIw/+MIE17z17bboHhj56voxuy+OPB71GWef47xDEt5+MxFdrigC1tRDmuvIVrCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Redirect Example</title>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
   </head>
   <body>
     <script>
 
 
-    function redirectFacebookToBrowser() {
-        let userBrowser = new UAParser();
-        let currentLink = location.href;
-        const cancel_redirect = localStorage.getItem("cancel_redirect")
-
-        if(userBrowser.getResult().os.name !== "iOS") {
-          if (userBrowser.getBrowser().name !== "Chrome") {
-            if(!cancel_redirect){
-            // Создание пользовательского промпта
-            let userResponse = confirm("We recommend opening this link in Chrome for the best experience. Would you like to open it in Chrome?");
-            if (userResponse) {
-                if (currentLink.indexOf('https') > -1) {
-                    currentLink = currentLink.replace('https://', '');
-                    currentLink = currentLink.replace('www.', '');
-                    let chromeLink = "intent://" + currentLink + "#Intent;scheme=https;package=com.android.chrome;end";
-                    window.location.href = chromeLink;
-                } else if (currentLink.indexOf('http') > -1) {
-                    currentLink = currentLink.replace('http://', '');
-                    currentLink = currentLink.replace('www.', '');
-                    let chromeLink = "intent://" + currentLink + "#Intent;scheme=http;package=com.android.chrome;end";
-                    window.location.href = chromeLink;
-                }
-            }  else {
-                // Пользователь отказался от редиректа
-                localStorage.setItem("cancel_redirect", "true");
-            }
-        }
-    }
-        }
-
-  }
-
-    redirectFacebookToBrowser();
+    
 
     // localStorage.setItem("subid", "{subid}")
     // localStorage.setItem("sub1", "{sub1}")
@@ -73,26 +43,7 @@
     // localStorage.setItem("pixel", "{pixel}")
     // localStorage.setItem("fbclid", "{fbclid}")
 
-    function getParameterByName(name) {
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var url = window.location.href;
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
 
-    // Сохранение параметров в localStorage
-    localStorage.setItem("subid", getParameterByName("subid"));
-    localStorage.setItem("sub1", getParameterByName("sub1"));
-    localStorage.setItem("sub2", getParameterByName("sub2"));
-    localStorage.setItem("sub3", getParameterByName("sub3"));
-    localStorage.setItem("sub4", getParameterByName("sub4"));
-    localStorage.setItem("sub5", getParameterByName("sub5"));
-    localStorage.setItem("sub6", getParameterByName("sub6"));
-    localStorage.setItem("pixel", getParameterByName("pixel"));
-    localStorage.setItem("fbclid", getParameterByName("fbclid"));
 
     </script>
 
