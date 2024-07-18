@@ -2,6 +2,8 @@ import { Plugin, defineConfig, mergeConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import sharp from "sharp";
 import { rimrafSync } from "rimraf";
+import { readFileSync, writeFileSync } from "fs";
+import { resolve } from "path";
 
 // Расширяем тип ServerOptions, добавляя свойство middleware
 interface ExtendedServerOptions {
@@ -18,6 +20,43 @@ const serverOptions: ExtendedServerOptions = {
     },
   ],
 };
+
+function changeManifestNamePlugin(): Plugin {
+  return {
+    name: "change-manifest-name",
+    apply: "build",
+    closeBundle() {
+      const distDir = resolve(__dirname, "dist");
+      const manifestPath = resolve(distDir, "manifest.json");
+      const customJsonPath = resolve(__dirname, "./src/mock/params.json"); // путь к вашему JSON файлу
+
+      try {
+        // Чтение файла manifest.json
+        const manifestData = JSON.parse(readFileSync(manifestPath, "utf-8"));
+
+        // Чтение значения name из custom.json
+        const customData = JSON.parse(readFileSync(customJsonPath, "utf-8"));
+        const newName = customData.name;
+        const newShortName = customData.name;
+
+        // Изменение параметра name в manifest.json
+        manifestData.name = newName;
+        manifestData.name = newShortName;
+
+        // Запись изменений обратно в manifest.json
+        writeFileSync(
+          manifestPath,
+          JSON.stringify(manifestData, null, 2),
+          "utf-8"
+        );
+
+        console.log(`Successfully updated name in manifest.json to ${newName}`);
+      } catch (error) {
+        console.error("Error updating manifest.json:", error);
+      }
+    },
+  };
+}
 
 function imageResizePlugin(): Plugin {
   return {
@@ -84,7 +123,7 @@ function imageResizePlugin(): Plugin {
 
 export default mergeConfig(
   defineConfig({
-    plugins: [imageResizePlugin(), react()],
+    plugins: [imageResizePlugin(), changeManifestNamePlugin(), react()],
   }),
   {
     server: serverOptions,
