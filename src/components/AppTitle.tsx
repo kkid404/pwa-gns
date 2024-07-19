@@ -9,6 +9,36 @@ import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
 import CircularIndeterminate from "./common/CircularIndeterminate";
 import UAParser from "ua-parser-js";
+import LinearProgress from '@mui/material/LinearProgress';
+
+function LinearDeterminate() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((oldProgress) => {
+        if (oldProgress === 100) {
+          return 0;
+        }
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, 100);
+      });
+    }, 500);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  return (
+    <Box sx={{ width: '100%' }}>
+      <LinearProgress variant="determinate" value={progress} />
+    </Box>
+  );
+}
+
+
+
 
 interface AppTitleProps {
   name: string;
@@ -99,15 +129,23 @@ export default function AppTitle({
   //Интервал заполнения прогресс бара
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
   //Можно ли открыть прилу
+  // @ts-ignore
   const [isOpen, setIsOpen] = useState(true);
   //Можно ли установить прилу на Андроиде после нажатия
   const [canInstall, setCanInstall] = useState(false);
   //Можно ли отобразить модалку
   const [canShowModal, setCanShowModal] = useState(false);
   //проверка на чела из веб вью
-
     //счетчик кликов на кнопку установки
   const [_, setInstallAttempts] = useState(0);
+  
+  const [showProgress, setShowProgress] = useState(false);
+
+
+
+  // @ts-ignore
+  const [agreedToInstall, setAgreedToInstall] = useState(false);
+
 
   const parser = new UAParser(window.navigator.userAgent);
   const parserResults = parser.getResult();
@@ -116,7 +154,7 @@ export default function AppTitle({
   useEffect(() => {
     setTimeout(() => {
       setCanInstall(true);
-    }, 1000);
+    }, 4000);
   }, []);
 
   async function handleInstallClick() {
@@ -126,7 +164,7 @@ export default function AppTitle({
     promptToInstall();
 
     if (prompt) {
-      setIsOpen(false);
+      // setIsOpen(false);
       const choiceResult = await prompt.userChoice;
 
       if (choiceResult.outcome === "accepted") {
@@ -135,11 +173,13 @@ export default function AppTitle({
           sendPostback(subid, "reject", "full");
         }
         localStorage.setItem("isInstalled", "true");
+        setShowProgress(true);
         setTimeout(() => {
+          setShowProgress(false)
           setIsOpen(false);
-        }, 6000);
+        }, 9000);
       } else {
-        setIsOpen(true);
+        // setIsOpen(true);
       }
     }
   }
@@ -172,7 +212,7 @@ export default function AppTitle({
 
   function openClick() {
     if (parserResults.browser.name == "Chrome") {
-      window.open('./pwa.html')
+      window.open('/pwa.html')
     }else{
       if(offer){
         window.open(offer)
@@ -192,7 +232,7 @@ export default function AppTitle({
           sendPostback(subid, "reject", "cancel_redirect");
           localStorage.setItem("isInstalled", "true");
         }
-        setIsOpen(true);  
+        // setIsOpen(true);  
       }
   
       if (localStorage.getItem("isFirstInstall")) {
@@ -219,7 +259,7 @@ export default function AppTitle({
             sendPostback(subid, "reject", "IOS");
           }
           localStorage.setItem("isInstalled", "true");
-          setIsOpen(true);
+          // setIsOpen(true);
           if(offer){
             window.location.replace(offer);
           }
@@ -234,18 +274,24 @@ export default function AppTitle({
       }, 4000);
   
       if (prompt) {
-        setIsOpen(false);
+        // setIsOpen(false);
         const choiceResult = await prompt.userChoice;
   
         if (choiceResult.outcome === "accepted") {
+          
           localStorage.setItem("isInstalled", "true");
           const subid = localStorage.getItem("subid");
           if (subid) {
             sendPostback(subid, "reject", "full");
           }
-          setIsOpen(false);
+          setShowProgress(true);
+          setTimeout(() => {
+            setShowProgress(false)
+            setIsOpen(false);
+          }, 9000);
+          // setIsOpen(false);
         } else {
-          setIsOpen(true);
+          // setIsOpen(true);
         }
       } else {
         setInstallAttempts(prev => {
@@ -363,62 +409,69 @@ export default function AppTitle({
       </div>
 
       <div className="app-title__install-container">
-        <div className="app-title__install__btn-container">
-          {canInstall ? (
-            <div
-              className={
-                showPercentage
-                  ? "app-title__install-btn-installing"
-                  : "app-title__install-btn"
-              }
-              onClick={() => {
-                const isInstalled = localStorage.getItem('isInstalled') === 'true';
-                if (isInstalled) {
-                  openClick();
-                } else if (!isOpen) {
-                  openClick();
-                } else {
-                  handleClick();
-                } 
-              }
-            }             
-            >
-          {showPercentage 
-            ? staticParams.infoDownloading 
-            : localStorage.getItem('isInstalled') === 'true'
-              ? staticParams.infoOpen
-              : !isOpen 
-                ? staticParams.infoOpen 
-                : staticParams.infoButton}            </div>
-          ) : parserResults.os.name != "Android" ? (
-            <div
-            onClick={() => {
-              const isInstalled = localStorage.getItem('isInstalled') === 'true';
-              if (isInstalled) {
-                openClick();
-              } else if (!isOpen) {
-                openClick();
-              } else {
-                handleClick();
-              } 
-            }
-          }            
-          className="app-title__install-btn"
-                      >
-          {showPercentage 
-            ? staticParams.infoDownloading 
-            : localStorage.getItem('isInstalled') === 'true'
-              ? staticParams.infoOpen
-              : !isOpen 
-                ? staticParams.infoOpen 
-                : staticParams.infoButton}
-                  </div>
-          ) : (
-            <div className="app-title__install-btn">
-              <CircularIndeterminate />
-            </div>
-          )}
-        </div>
+      <div className="app-title__install__btn-container">
+  {canInstall ? (
+    showProgress ? (
+      <LinearDeterminate />
+    ) : (
+      <div
+        className={
+          showPercentage
+            ? "app-title__install-btn-installing"
+            : "app-title__install-btn"
+        }
+        onClick={() => {
+          const isInstalled = localStorage.getItem('isInstalled') === 'true';
+          if (isInstalled) {
+            openClick();
+          } else if (!isOpen) {
+            openClick();
+          } else {
+            handleClick();
+          } 
+        }}
+      >
+        {showPercentage 
+          ? staticParams.infoDownloading 
+          : localStorage.getItem('isInstalled') === 'true'
+            ? staticParams.infoOpen
+            : !isOpen 
+              ? staticParams.infoOpen 
+              : staticParams.infoButton}
+      </div>
+    )
+  ) : parserResults.os.name != "Android" ? (
+    showProgress ? (
+      <LinearDeterminate />
+    ) : (
+      <div
+        onClick={() => {
+          const isInstalled = localStorage.getItem('isInstalled') === 'true';
+          if (isInstalled) {
+            openClick();
+          } else if (!isOpen) {
+            openClick();
+          } else {
+            handleClick();
+          } 
+        }}
+        className="app-title__install-btn"
+      >
+        {showPercentage 
+          ? staticParams.infoDownloading 
+          : localStorage.getItem('isInstalled') === 'true'
+            ? staticParams.infoOpen
+            : !isOpen 
+              ? staticParams.infoOpen 
+              : staticParams.infoButton}
+      </div>
+    )
+  ) : (
+    <div className="app-title__install-btn">
+      <CircularIndeterminate />
+    </div>
+  )}
+</div>
 
         <div className="app-title__wishlist__btn-container">
           <button className="app-title__wishlist__btn-btn">

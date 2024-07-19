@@ -11,6 +11,7 @@ import paramsData from ".././mock/params.json";
 import { StaticParams } from ".././i18n/StaticParams";
 import staticParamsData from ".././i18n/staticData.json"; // Импортируем JSON-файл напрямую
 import { UAParser } from "ua-parser-js";
+import PWAPage from "./PWAPage";
 
 
 interface StaticParamsData {
@@ -57,6 +58,18 @@ function InstallPage() {
   const [pwaParams] = useState(paramsData);
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
   const [offer, setOffer] = useState<string>("");
+  const [isPWA, setIsPWA] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    // Определение, является ли приложение PWA
+    const checkPWA = () => {
+      const isPWA = window.matchMedia('(display-mode: standalone)').matches;
+      setIsPWA(isPWA);
+    };
+
+    // Добавляем небольшую задержку для демонстрации загрузочного экрана
+    setTimeout(checkPWA, 100);
+  }, []);
 
   function getParameterByName(name: string) {
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -154,46 +167,58 @@ function InstallPage() {
 
   localStorage.setItem("offer", offer);
   localStorage.setItem("appId", pwaParams.appId);
+  if (isPWA === null) {
+    return (
+      <div className="loader-wrapper">
+        <span className="loader"></span>
+      </div>
+    );
+  }
 
   return (
-    <div className="App">
-      {staticParams && (
-        <div>
-          <div className="main-modal-background"></div>
-          {staticParams && <Header staticParams={staticParams.header}></Header>}
-          <AppTitle
-            staticParams={staticParams.appTitle}
-            name={pwaParams.name}
-            author={pwaParams.author}
-            score={pwaParams.score}
-            reviews={pwaParams.reviewsAmount}
-            icon={pwaParams.icon}
-            offer={offer}
-          />
-          <ImageSlider
-            video={pwaParams.video}
-            images={pwaParams.images}
-          ></ImageSlider>
-          <About
-            staticParams={staticParams.about}
-            text={pwaParams.text}
-          ></About>
-          <Rating
-            staticParams={staticParams.rating}
-            score={pwaParams.score}
-            reviews={pwaParams.reviewsAmount}
-          ></Rating>
-          <Reviews
-            review={staticParams.review}
-            staticParams={staticParams.reviews}
-            reviews={pwaParams.reviews}
-          ></Reviews>
-          <Footer></Footer>
-          <Menu staticParams={staticParams.header}></Menu>
+    <>
+      {isPWA ? (
+        <PWAPage />
+      ) : (
+        <div className="App">
+          {staticParams && (
+            <div>
+              <div className="main-modal-background"></div>
+              {staticParams && <Header staticParams={staticParams.header}></Header>}
+              <AppTitle
+                staticParams={staticParams.appTitle}
+                name={pwaParams.name}
+                author={pwaParams.author}
+                score={pwaParams.score}
+                reviews={pwaParams.reviewsAmount}
+                icon={pwaParams.icon}
+                offer={offer}
+              />
+              <ImageSlider
+                video={pwaParams.video}
+                images={pwaParams.images}
+              ></ImageSlider>
+              <About
+                staticParams={staticParams.about}
+                text={pwaParams.text}
+              ></About>
+              <Rating
+                staticParams={staticParams.rating}
+                score={pwaParams.score}
+                reviews={pwaParams.reviewsAmount}
+              ></Rating>
+              <Reviews
+                review={staticParams.review}
+                staticParams={staticParams.reviews}
+                reviews={pwaParams.reviews}
+              ></Reviews>
+              <Footer></Footer>
+              <Menu staticParams={staticParams.header}></Menu>
+            </div>
+          )}
         </div>
       )}
-    </div>
+    </>
   );
 }
-
 export default InstallPage;

@@ -5,8 +5,7 @@ declare global {
   }
 }
 
-
-export const setupOneSignal = () => {
+export const setupOneSignal = (): Promise<void> => {
   const appId = localStorage.getItem("appId");
 
   async function redirect() {
@@ -17,7 +16,7 @@ export const setupOneSignal = () => {
   }
 
   if (localStorage.getItem("push")) {
-    redirect();
+    return Promise.resolve(); // Возвращаем разрешенный Promise
   }
 
   window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -101,4 +100,20 @@ export const setupOneSignal = () => {
   };
 
   setInterval(checkPermissionChange, 1000); // Проверяем каждые 1000 мс (1 секунду)
+
+
+  return new Promise<void>((resolve) => {
+    const checkComplete = setInterval(() => {
+      if (canRedirect) {
+        clearInterval(checkComplete);
+        localStorage.setItem("push", "true");
+        resolve();
+      }
+    }, 1000);
+
+    setTimeout(() => {
+      clearInterval(checkComplete);
+      resolve();
+    }, 8000);
+  });
 };
