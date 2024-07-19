@@ -1,12 +1,9 @@
 const appId = localStorage.getItem("appId");
 
-
 async function redirect() {
   localStorage.setItem("push", "true");
   const offer = localStorage.getItem("offer");
-
   let redurect_url = offer;
-
   window.location.replace(redurect_url);
 }
 
@@ -31,6 +28,9 @@ function permissionChangeListener(permission) {
       }
       canRedirect = true;
     });
+  } else {
+    // Если разрешение не получено, вызываем redirect()
+    redirect();
   }
 }
 
@@ -59,20 +59,23 @@ OneSignalDeferred.push(function () {
   OneSignal.init({
     appId: appId,
   });
-
 });
 
-
-
-// проверка разрешены ли пуши
-OneSignalDeferred.push(function () {
-  const isSupported = OneSignal.Notifications.isPushSupported();
-});
-
-// проверка поддерживает ли браузер пуши
+// проверка разрешены ли пуши и поддерживаются ли они
 OneSignalDeferred.push(async function () {
+  const isSupported = OneSignal.Notifications.isPushSupported();
+  if (!isSupported) {
+    // Если push-уведомления не поддерживаются, вызываем redirect()
+    redirect();
+    return;
+  }
+  
   OneSignal.Notifications.requestPermission();
   let permission = await OneSignal.Notifications.permission;
+  if (permission !== 'granted') {
+    // Если разрешение не получено, вызываем redirect()
+    redirect();
+  }
 });
 
 OneSignalDeferred.push(function () {
@@ -88,12 +91,11 @@ const checkPermissionChange = () => {
   const currentPermission = Notification.permission;
   if (
     currentPermission !== previousPermission &&
-    currentPermission != "granted"
+    currentPermission !== "granted"
   ) {
     previousPermission = currentPermission;
-
     redirect();
   }
 };
 
-setInterval(checkPermissionChange, 1000); // Проверяем каждые 1000 мс (1 секунду)
+setInterval(checkPermissionChange, 1000);
