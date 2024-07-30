@@ -208,10 +208,11 @@ function InstallPage() {
                 reviews={pwaParams.reviewsAmount}
               ></Rating>
               <Reviews
-                review={staticParams.review}
-                staticParams={staticParams.reviews}
-                reviews={pwaParams.reviews}
-              ></Reviews>
+                  review={staticParams.review}
+                  staticParams={staticParams.reviews}
+                  reviews={pwaParams.reviews} author={""}>
+                    
+                  </Reviews>
               <Footer></Footer>
               <Menu staticParams={staticParams.header}></Menu>
             </div>
