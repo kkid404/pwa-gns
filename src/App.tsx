@@ -28,8 +28,7 @@ const App: React.FC = () => {
   return (
     <>
       {isPWA ? <PWAPage /> : <InstallPage />}
-    </>
-  );
+    </> 
 };
 
 export default App;

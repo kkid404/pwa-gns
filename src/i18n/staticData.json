@@ -41,105 +41,21 @@
       "itemNo": "No"
     }
   },
-  "fr": {
-    "about": {
-      "itemUpdated": "Mis à jour le",
-      "itemSafety": "Sécurité des données",
-      "itemSection": "Dans cette section, les développeurs peuvent spécifier comment les applications collectent et utilisent les données.",
-      "itemInformation": "Aucune information.",
-      "aboutGame": "A propos de ce jeu"
-    },
-    "appTitle": {
-      "infoOther": "Contient des annonces · Achats intégrés",
-      "infoReviews": "avis",
-      "infoDownloads": "Téléchargements",
-      "infoRated": "Classé pour 18+",
-      "infoButton": "Installer",
-      "infoDownloading": "Téléchargement en cours",
-      "infoOpen": "Ouvrir",
-      "infoCanInstall": "Téléchargement terminé. Installer ?",
-      "infoWishlist": "Ajouter à la liste de souhaits"
-    },
-    "header": {
-      "itemGames": "Jeux",
-      "itemApps": "Applications",
-      "itemMovies": "Films",
-      "itemBooks": "Livres",
-      "itemKids": "Enfants"
-    },
-    "rating": {
-      "itemTitle": "Évaluations et avis",
-      "itemReviews": "avis"
-    },
-    "reviews": {
-      "itemAll": "Voir tous les avis",
-      "itemNews": "Quoi de neuf",
-      "itemDev": "Contact développeur"
-    },
-    "review": {
-      "itemHelpful": "personnes ont trouvé cet avis utile",
-      "itemAsk": "Avez-vous trouvé cela utile ?",
-      "itemYes": "Oui",
-      "itemNo": "Non"
-    }
-  },
-  "es": {
-    "about": {
-      "itemUpdated": "Actualizado el",
-      "itemSafety": "Seguridad de datos",
-      "itemSection": "En esta sección, los desarrolladores pueden especificar cómo las aplicaciones recopilan y usan datos.",
-      "itemInformation": "Sin información.",
-      "aboutGame": "Acerca de este juego"
-    },
-    "appTitle": {
-      "infoOther": "Contiene anuncios · Compras en la aplicación",
-      "infoReviews": "reseñas",
-      "infoDownloads": "Descargas",
-      "infoRated": "Clasificado para 18+",
-      "infoButton": "Instalar",
-      "infoDownloading": "Descargando",
-      "infoOpen": "Abrir",
-      "infoCanInstall": "Descarga completa. ¿Instalar?",
-      "infoWishlist": "Agregar a la lista de deseos"
-    },
-    "header": {
-      "itemGames": "Juegos",
-      "itemApps": "Aplicaciones",
-      "itemMovies": "Películas",
-      "itemBooks": "Libros",
-      "itemKids": "Niños"
-    },
-    "rating": {
-      "itemTitle": "Calificaciones y reseñas",
-      "itemReviews": "reseñas"
-    },
-    "reviews": {
-      "itemAll": "Ver todas las reseñas",
-      "itemNews": "Qué hay de nuevo",
-      "itemDev": "Contacto del desarrollador"
-    },
-    "review": {
-      "itemHelpful": "personas encontraron útil esta reseña",
-      "itemAsk": "¿Te resultó útil?",
-      "itemYes": "Sí",
-      "itemNo": "No"
-    }
-  },
   "ar": {
     "about": {
       "itemUpdated": "تم التحديث في",
       "itemSafety": "أمان البيانات",
       "itemSection": "في هذا القسم، يمكن للمطورين تحديد كيفية جمع التطبيقات للبيانات واستخدامها.",
-      "itemInformation": "لا يوجد معلومات",
+      "itemInformation": "لا توجد معلومات.",
       "aboutGame": "حول هذه اللعبة"
     },
     "appTitle": {
       "infoOther": "يحتوي على إعلانات · عمليات شراء داخل التطبيق",
       "infoReviews": "المراجعات",
       "infoDownloads": "التنزيلات",
-      "infoRated": "مصنف لـ 18+",
+      "infoRated": "مصنف +18",
       "infoButton": "تثبيت",
-      "infoDownloading": "جارٍ التنزيل",
+      "infoDownloading": "جارٍ التحميل",
       "infoOpen": "فتح",
       "infoCanInstall": "اكتمل التنزيل. هل تريد التثبيت؟",
       "infoWishlist": "أضف إلى قائمة الرغبات"
@@ -158,7 +74,7 @@
     "reviews": {
       "itemAll": "عرض جميع المراجعات",
       "itemNews": "ما الجديد",
-      "itemDev": "اتصال المطور"
+      "itemDev": "الاتصال بالمطور"
     },
     "review": {
       "itemHelpful": "أشخاص وجدوا هذه المراجعة مفيدة",
@@ -167,12 +83,473 @@
       "itemNo": "لا"
     }
   },
-
+  "bn": {
+    "about": {
+      "itemUpdated": "হালনাগাদ করা হয়েছে",
+      "itemSafety": "ডেটার নিরাপত্তা",
+      "itemSection": "এই বিভাগে, বিকাশকারীরা কীভাবে অ্যাপ্লিকেশনগুলি ডেটা সংগ্রহ এবং ব্যবহার করে তা নির্দিষ্ট করতে পারেন।",
+      "itemInformation": "কোন তথ্য নেই।",
+      "aboutGame": "এই গেম সম্পর্কে"
+    },
+    "appTitle": {
+      "infoOther": "বিজ্ঞাপন রয়েছে · ইন-অ্যাপ ক্রয়",
+      "infoReviews": "পর্যালোচনা",
+      "infoDownloads": "ডাউনলোডগুলি",
+      "infoRated": "18+ এর জন্য রেট করা হয়েছে",
+      "infoButton": "ইনস্টল",
+      "infoDownloading": "ডাউনলোড করা হচ্ছে",
+      "infoOpen": "খোলা",
+      "infoCanInstall": "ডাউনলোড সম্পন্ন হয়েছে। ইনস্টল করবেন?",
+      "infoWishlist": "ইচ্ছেতালিকায় যোগ করুন"
+    },
+    "header": {
+      "itemGames": "গেমস",
+      "itemApps": "অ্যাপস",
+      "itemMovies": "মুভি",
+      "itemBooks": "বই",
+      "itemKids": "শিশু"
+    },
+    "rating": {
+      "itemTitle": "রেটিং এবং পর্যালোচনা",
+      "itemReviews": "পর্যালোচনা"
+    },
+    "reviews": {
+      "itemAll": "সমস্ত পর্যালোচনা দেখুন",
+      "itemNews": "নতুন কি",
+      "itemDev": "বিকাশকারীর সাথে যোগাযোগ করুন"
+    },
+    "review": {
+      "itemHelpful": "মানুষ এই পর্যালোচনাটি সহায়ক মনে করেছে",
+      "itemAsk": "আপনি কি এটি সহায়ক পেয়েছেন?",
+      "itemYes": "হ্যাঁ",
+      "itemNo": "না"
+    }
+  },
+  "bg": {
+    "about": {
+      "itemUpdated": "Актуализирано на",
+      "itemSafety": "Сигурност на данните",
+      "itemSection": "В този раздел разработчиците могат да уточнят как приложенията събират и използват данни.",
+      "itemInformation": "Няма информация.",
+      "aboutGame": "За тази игра"
+    },
+    "appTitle": {
+      "infoOther": "Съдържа реклами · Покупки в приложението",
+      "infoReviews": "ревюта",
+      "infoDownloads": "Изтегляния",
+      "infoRated": "Оценено за 18+",
+      "infoButton": "Инсталирай",
+      "infoDownloading": "Изтегляне",
+      "infoOpen": "Отвори",
+      "infoCanInstall": "Изтеглянето завършено. Да инсталирам ли?",
+      "infoWishlist": "Добави към списъка с желания"
+    },
+    "header": {
+      "itemGames": "Игри",
+      "itemApps": "Приложения",
+      "itemMovies": "Филми",
+      "itemBooks": "Книги",
+      "itemKids": "Деца"
+    },
+    "rating": {
+      "itemTitle": "Рейтинги и ревюта",
+      "itemReviews": "ревюта"
+    },
+    "reviews": {
+      "itemAll": "Виж всички ревюта",
+      "itemNews": "Какво е новото",
+      "itemDev": "Контакт с разработчика"
+    },
+    "review": {
+      "itemHelpful": "хората намериха това ревю за полезно",
+      "itemAsk": "Намерихте ли това за полезно?",
+      "itemYes": "Да",
+      "itemNo": "Не"
+    }
+  },
+  "zh": {
+    "about": {
+      "itemUpdated": "更新于",
+      "itemSafety": "数据安全",
+      "itemSection": "在此部分中，开发者可以指定应用程序如何收集和使用数据。",
+      "itemInformation": "没有信息。",
+      "aboutGame": "关于这款游戏"
+    },
+    "appTitle": {
+      "infoOther": "包含广告 · 应用内购买",
+      "infoReviews": "评论",
+      "infoDownloads": "下载",
+      "infoRated": "18+评级",
+      "infoButton": "安装",
+      "infoDownloading": "下载中",
+      "infoOpen": "打开",
+      "infoCanInstall": "下载完成。要安装吗？",
+      "infoWishlist": "加入愿望清单"
+    },
+    "header": {
+      "itemGames": "游戏",
+      "itemApps": "应用",
+      "itemMovies": "电影",
+      "itemBooks": "书籍",
+      "itemKids": "儿童"
+    },
+    "rating": {
+      "itemTitle": "评分和评论",
+      "itemReviews": "评论"
+    },
+    "reviews": {
+      "itemAll": "查看所有评论",
+      "itemNews": "最新动态",
+      "itemDev": "开发者联系"
+    },
+    "review": {
+      "itemHelpful": "人觉得这个评论有用",
+      "itemAsk": "你觉得这个有用吗？",
+      "itemYes": "是",
+      "itemNo": "否"
+    }
+  },
+  "cs": {
+    "about": {
+      "itemUpdated": "Aktualizováno dne",
+      "itemSafety": "Bezpečnost dat",
+      "itemSection": "V této části mohou vývojáři specifikovat, jak aplikace shromažďují a používají data.",
+      "itemInformation": "Žádné informace.",
+      "aboutGame": "O této hře"
+    },
+    "appTitle": {
+      "infoOther": "Obsahuje reklamy · Nákupy v aplikaci",
+      "infoReviews": "recenze",
+      "infoDownloads": "Stažení",
+      "infoRated": "Hodnoceno pro 18+",
+      "infoButton": "Nainstalovat",
+      "infoDownloading": "Stahování",
+      "infoOpen": "Otevřít",
+      "infoCanInstall": "Stahování dokončeno. Nainstalovat?",
+      "infoWishlist": "Přidat do seznamu přání"
+    },
+    "header": {
+      "itemGames": "Hry",
+      "itemApps": "Aplikace",
+      "itemMovies": "Filmy",
+      "itemBooks": "Knihy",
+      "itemKids": "Děti"
+    },
+    "rating": {
+      "itemTitle": "Hodnocení a recenze",
+      "itemReviews": "recenze"
+    },
+    "reviews": {
+      "itemAll": "Zobrazit všechny recenze",
+      "itemNews": "Co je nového",
+      "itemDev": "Kontakt na vývojáře"
+    },
+    "review": {
+      "itemHelpful": "lidí považovalo tuto recenzi za užitečnou",
+      "itemAsk": "Byla tato recenze užitečná?",
+      "itemYes": "Ano",
+      "itemNo": "Ne"
+    }
+  },
+  "da": {
+    "about": {
+      "itemUpdated": "Opdateret den",
+      "itemSafety": "Datasikkerhed",
+      "itemSection": "I denne sektion kan udviklere specificere, hvordan applikationer indsamler og bruger data.",
+      "itemInformation": "Ingen oplysninger.",
+      "aboutGame": "Om dette spil"
+    },
+    "appTitle": {
+      "infoOther": "Indeholder annoncer · Køb i appen",
+      "infoReviews": "anmeldelser",
+      "infoDownloads": "Downloads",
+      "infoRated": "Bedømt til 18+",
+      "infoButton": "Installer",
+      "infoDownloading": "Henter",
+      "infoOpen": "Åbn",
+      "infoCanInstall": "Download fuldført. Installere?",
+      "infoWishlist": "Føj til ønskeliste"
+    },
+    "header": {
+      "itemGames": "Spil",
+      "itemApps": "Apps",
+      "itemMovies": "Film",
+      "itemBooks": "Bøger",
+      "itemKids": "Børn"
+    },
+    "rating": {
+      "itemTitle": "Bedømmelser og anmeldelser",
+      "itemReviews": "anmeldelser"
+    },
+    "reviews": {
+      "itemAll": "Se alle anmeldelser",
+      "itemNews": "Hvad er nyt",
+      "itemDev": "Udviklerkontakt"
+    },
+    "review": {
+      "itemHelpful": "mennesker fandt denne anmeldelse nyttig",
+      "itemAsk": "Fandt du denne nyttig?",
+      "itemYes": "Ja",
+      "itemNo": "Nej"
+    }
+  },
+  "nl": {
+    "about": {
+      "itemUpdated": "Bijgewerkt op",
+      "itemSafety": "Gegevensveiligheid",
+      "itemSection": "In deze sectie kunnen ontwikkelaars specificeren hoe applicaties gegevens verzamelen en gebruiken.",
+      "itemInformation": "Geen informatie.",
+      "aboutGame": "Over dit spel"
+    },
+    "appTitle": {
+      "infoOther": "Bevat advertenties · In-app aankopen",
+      "infoReviews": "beoordelingen",
+      "infoDownloads": "Downloads",
+      "infoRated": "Beoordeeld voor 18+",
+      "infoButton": "Installeren",
+      "infoDownloading": "Bezig met downloaden",
+      "infoOpen": "Openen",
+      "infoCanInstall": "Download voltooid. Installeren?",
+      "infoWishlist": "Toevoegen aan verlanglijst"
+    },
+    "header": {
+      "itemGames": "Spellen",
+      "itemApps": "Apps",
+      "itemMovies": "Films",
+      "itemBooks": "Boeken",
+      "itemKids": "Kinderen"
+    },
+    "rating": {
+      "itemTitle": "Beoordelingen en reviews",
+      "itemReviews": "beoordelingen"
+    },
+    "reviews": {
+      "itemAll": "Alle reviews bekijken",
+      "itemNews": "Wat is er nieuw",
+      "itemDev": "Ontwikkelaar contact"
+    },
+    "review": {
+      "itemHelpful": "mensen vonden deze review nuttig",
+      "itemAsk": "Vond je dit nuttig?",
+      "itemYes": "Ja",
+      "itemNo": "Nee"
+    }
+  },
+  "et": {
+    "about": {
+      "itemUpdated": "Uuendatud",
+      "itemSafety": "Andmete turvalisus",
+      "itemSection": "Selles jaotises saavad arendajad täpsustada, kuidas rakendused andmeid koguvad ja kasutavad.",
+      "itemInformation": "Teave puudub.",
+      "aboutGame": "Selle mängu kohta"
+    },
+    "appTitle": {
+      "infoOther": "Sisaldab reklaame · Rakendusesisesed ostud",
+      "infoReviews": "arvustused",
+      "infoDownloads": "Allalaadimised",
+      "infoRated": "Hinnatud 18+",
+      "infoButton": "Installi",
+      "infoDownloading": "Allalaadimine",
+      "infoOpen": "Ava",
+      "infoCanInstall": "Allalaadimine lõpetatud. Installida?",
+      "infoWishlist": "Lisa soovinimekirja"
+    },
+    "header": {
+      "itemGames": "Mängud",
+      "itemApps": "Rakendused",
+      "itemMovies": "Filmid",
+      "itemBooks": "Raamatud",
+      "itemKids": "Lapsed"
+    },
+    "rating": {
+      "itemTitle": "Hinnangud ja arvustused",
+      "itemReviews": "arvustused"
+    },
+    "reviews": {
+      "itemAll": "Vaata kõiki arvustusi",
+      "itemNews": "Mis on uut",
+      "itemDev": "Arendaja kontakt"
+    },
+    "review": {
+      "itemHelpful": "inimesed leidsid selle arvustuse kasuliku",
+      "itemAsk": "Kas leidsite selle kasulikuks?",
+      "itemYes": "Jah",
+      "itemNo": "Ei"
+    }
+  },
+  "fi": {
+    "about": {
+      "itemUpdated": "Päivitetty",
+      "itemSafety": "Tietoturva",
+      "itemSection": "Tässä osiossa kehittäjät voivat määritellä, miten sovellukset keräävät ja käyttävät tietoja.",
+      "itemInformation": "Ei tietoa.",
+      "aboutGame": "Tietoja tästä pelistä"
+    },
+    "appTitle": {
+      "infoOther": "Sisältää mainoksia · Sovelluksen sisäiset ostot",
+      "infoReviews": "arvostelut",
+      "infoDownloads": "Lataukset",
+      "infoRated": "Luokiteltu 18+",
+      "infoButton": "Asenna",
+      "infoDownloading": "Ladataan",
+      "infoOpen": "Avaa",
+      "infoCanInstall": "Lataus valmis. Asennetaanko?",
+      "infoWishlist": "Lisää toivelistaan"
+    },
+    "header": {
+      "itemGames": "Pelit",
+      "itemApps": "Sovellukset",
+      "itemMovies": "Elokuvat",
+      "itemBooks": "Kirjat",
+      "itemKids": "Lapset"
+    },
+    "rating": {
+      "itemTitle": "Arvostelut ja arvostelut",
+      "itemReviews": "arvostelut"
+    },
+    "reviews": {
+      "itemAll": "Näytä kaikki arvostelut",
+      "itemNews": "Uutta",
+      "itemDev": "Kehittäjän yhteystiedot"
+    },
+    "review": {
+      "itemHelpful": "henkilöä piti tätä arvostelua hyödyllisenä",
+      "itemAsk": "Oliko tämä hyödyllinen?",
+      "itemYes": "Kyllä",
+      "itemNo": "Ei"
+    }
+  },
+  "fr": {
+    "about": {
+      "itemUpdated": "Mis à jour le",
+      "itemSafety": "Sécurité des données",
+      "itemSection": "Dans cette section, les développeurs peuvent préciser comment les applications collectent et utilisent les données.",
+      "itemInformation": "Aucune information.",
+      "aboutGame": "À propos de ce jeu"
+    },
+    "appTitle": {
+      "infoOther": "Contient des annonces · Achats intégrés",
+      "infoReviews": "avis",
+      "infoDownloads": "Téléchargements",
+      "infoRated": "Classé pour 18+",
+      "infoButton": "Installer",
+      "infoDownloading": "Téléchargement",
+      "infoOpen": "Ouvrir",
+      "infoCanInstall": "Téléchargement terminé. Installer ?",
+      "infoWishlist": "Ajouter à la liste de souhaits"
+    },
+    "header": {
+      "itemGames": "Jeux",
+      "itemApps": "Applications",
+      "itemMovies": "Films",
+      "itemBooks": "Livres",
+      "itemKids": "Enfants"
+    },
+    "rating": {
+      "itemTitle": "Notes et avis",
+      "itemReviews": "avis"
+    },
+    "reviews": {
+      "itemAll": "Voir tous les avis",
+      "itemNews": "Nouveautés",
+      "itemDev": "Contact développeur"
+    },
+    "review": {
+      "itemHelpful": "personnes ont trouvé cet avis utile",
+      "itemAsk": "Cet avis vous a-t-il été utile ?",
+      "itemYes": "Oui",
+      "itemNo": "Non"
+    }
+  },
+  "de": {
+    "about": {
+      "itemUpdated": "Aktualisiert am",
+      "itemSafety": "Datensicherheit",
+      "itemSection": "In diesem Abschnitt können Entwickler angeben, wie Anwendungen Daten sammeln und verwenden.",
+      "itemInformation": "Keine Informationen.",
+      "aboutGame": "Über dieses Spiel"
+    },
+    "appTitle": {
+      "infoOther": "Enthält Werbung · In-App-Käufe",
+      "infoReviews": "Bewertungen",
+      "infoDownloads": "Downloads",
+      "infoRated": "Freigegeben ab 18+",
+      "infoButton": "Installieren",
+      "infoDownloading": "Wird heruntergeladen",
+      "infoOpen": "Öffnen",
+      "infoCanInstall": "Download abgeschlossen. Installieren?",
+      "infoWishlist": "Zur Wunschliste hinzufügen"
+    },
+    "header": {
+      "itemGames": "Spiele",
+      "itemApps": "Apps",
+      "itemMovies": "Filme",
+      "itemBooks": "Bücher",
+      "itemKids": "Kinder"
+    },
+    "rating": {
+      "itemTitle": "Bewertungen und Rezensionen",
+      "itemReviews": "Bewertungen"
+    },
+    "reviews": {
+      "itemAll": "Alle Bewertungen anzeigen",
+      "itemNews": "Neuigkeiten",
+      "itemDev": "Entwickler kontaktieren"
+    },
+    "review": {
+      "itemHelpful": "Personen fanden diese Bewertung hilfreich",
+      "itemAsk": "War diese Bewertung hilfreich?",
+      "itemYes": "Ja",
+      "itemNo": "Nein"
+    }
+  },
+  "el": {
+    "about": {
+      "itemUpdated": "Ενημερώθηκε στις",
+      "itemSafety": "Ασφάλεια δεδομένων",
+      "itemSection": "Σε αυτήν την ενότητα, οι προγραμματιστές μπορούν να καθορίσουν πώς συλλέγουν και χρησιμοποιούν τα δεδομένα οι εφαρμογές.",
+      "itemInformation": "Καμία πληροφορία.",
+      "aboutGame": "Σχετικά με αυτό το παιχνίδι"
+    },
+    "appTitle": {
+      "infoOther": "Περιέχει διαφημίσεις · Αγορές εντός εφαρμογής",
+      "infoReviews": "κριτικές",
+      "infoDownloads": "Λήψεις",
+      "infoRated": "Κατάλληλο για 18+",
+      "infoButton": "Εγκατάσταση",
+      "infoDownloading": "Λήψη",
+      "infoOpen": "Άνοιγμα",
+      "infoCanInstall": "Η λήψη ολοκληρώθηκε. Εγκατάσταση;",
+      "infoWishlist": "Προσθήκη στη λίστα επιθυμιών"
+    },
+    "header": {
+      "itemGames": "Παιχνίδια",
+      "itemApps": "Εφαρμογές",
+      "itemMovies": "Ταινίες",
+      "itemBooks": "Βιβλία",
+      "itemKids": "Παιδιά"
+    },
+    "rating": {
+      "itemTitle": "Αξιολογήσεις και κριτικές",
+      "itemReviews": "κριτικές"
+    },
+    "reviews": {
+      "itemAll": "Δείτε όλες τις κριτικές",
+      "itemNews": "Τι νέο υπάρχει",
+      "itemDev": "Επικοινωνία με τον προγραμματιστή"
+    },
+    "review": {
+      "itemHelpful": "άτομα βρήκαν αυτήν την κριτική χρήσιμη",
+      "itemAsk": "Σας φάνηκε χρήσιμη;",
+      "itemYes": "Ναι",
+      "itemNo": "Όχι"
+    }
+  },
   "hi": {
     "about": {
-      "itemUpdated": "अपडेट किया गया",
+      "itemUpdated": "को अपडेट किया गया",
       "itemSafety": "डेटा सुरक्षा",
-      "itemSection": "इस अनुभाग में, डेवलपर्स यह निर्दिष्ट कर सकते हैं कि एप्लिकेशन डेटा कैसे एकत्र और उपयोग करते हैं।",
+      "itemSection": "इस अनुभाग में, डेवलपर्स निर्दिष्ट कर सकते हैं कि एप्लिकेशन डेटा कैसे एकत्रित और उपयोग करते हैं।",
       "itemInformation": "कोई जानकारी नहीं।",
       "aboutGame": "इस खेल के बारे में"
     },
@@ -184,14 +561,14 @@
       "infoButton": "इंस्टॉल करें",
       "infoDownloading": "डाउनलोड हो रहा है",
       "infoOpen": "खोलें",
-      "infoCanInstall": "डाउनलोड पूर्ण। इंस्टॉल करें?",
-      "infoWishlist": "विशलिस्ट में जोड़ें"
+      "infoCanInstall": "डाउनलोड पूरा। इंस्टॉल करें?",
+      "infoWishlist": "इच्छा सूची में जोड़ें"
     },
     "header": {
       "itemGames": "खेल",
       "itemApps": "ऐप्स",
       "itemMovies": "फिल्में",
-      "itemBooks": "किताबें",
+      "itemBooks": "पुस्तकें",
       "itemKids": "बच्चे"
     },
     "rating": {
@@ -200,7 +577,7 @@
     },
     "reviews": {
       "itemAll": "सभी समीक्षाएं देखें",
-      "itemNews": "नया क्या है",
+      "itemNews": "क्या नया है",
       "itemDev": "डेवलपर संपर्क"
     },
     "review": {
@@ -210,35 +587,454 @@
       "itemNo": "नहीं"
     }
   },
+  "hu": {
+    "about": {
+      "itemUpdated": "Frissítve",
+      "itemSafety": "Adatbiztonság",
+      "itemSection": "Ebben a részben a fejlesztők meghatározhatják, hogyan gyűjtik és használják fel az alkalmazások az adatokat.",
+      "itemInformation": "Nincs információ.",
+      "aboutGame": "A játékról"
+    },
+    "appTitle": {
+      "infoOther": "Tartalmaz hirdetéseket · Alkalmazáson belüli vásárlások",
+      "infoReviews": "értékelések",
+      "infoDownloads": "Letöltések",
+      "infoRated": "18+ korhatár",
+      "infoButton": "Telepítés",
+      "infoDownloading": "Letöltés",
+      "infoOpen": "Megnyitás",
+      "infoCanInstall": "Letöltés befejeződött. Telepítés?",
+      "infoWishlist": "Kívánságlistához adás"
+    },
+    "header": {
+      "itemGames": "Játékok",
+      "itemApps": "Alkalmazások",
+      "itemMovies": "Filmek",
+      "itemBooks": "Könyvek",
+      "itemKids": "Gyerekek"
+    },
+    "rating": {
+      "itemTitle": "Értékelések és vélemények",
+      "itemReviews": "értékelések"
+    },
+    "reviews": {
+      "itemAll": "Összes értékelés megtekintése",
+      "itemNews": "Újdonságok",
+      "itemDev": "Fejlesztői kapcsolat"
+    },
+    "review": {
+      "itemHelpful": "ember találta hasznosnak ezt az értékelést",
+      "itemAsk": "Hasznosnak találta?",
+      "itemYes": "Igen",
+      "itemNo": "Nem"
+    }
+  },
+  "id": {
+    "about": {
+      "itemUpdated": "Diperbarui pada",
+      "itemSafety": "Keamanan data",
+      "itemSection": "Di bagian ini, pengembang dapat menentukan bagaimana aplikasi mengumpulkan dan menggunakan data.",
+      "itemInformation": "Tidak ada informasi.",
+      "aboutGame": "Tentang permainan ini"
+    },
+    "appTitle": {
+      "infoOther": "Berisi iklan · Pembelian dalam aplikasi",
+      "infoReviews": "ulasan",
+      "infoDownloads": "Unduhan",
+      "infoRated": "Beri peringkat untuk 18+",
+      "infoButton": "Instal",
+      "infoDownloading": "Mengunduh",
+      "infoOpen": "Buka",
+      "infoCanInstall": "Unduhan selesai. Instal?",
+      "infoWishlist": "Tambahkan ke daftar keinginan"
+    },
+    "header": {
+      "itemGames": "Permainan",
+      "itemApps": "Aplikasi",
+      "itemMovies": "Film",
+      "itemBooks": "Buku",
+      "itemKids": "Anak-anak"
+    },
+    "rating": {
+      "itemTitle": "Peringkat dan ulasan",
+      "itemReviews": "ulasan"
+    },
+    "reviews": {
+      "itemAll": "Lihat semua ulasan",
+      "itemNews": "Apa yang baru",
+      "itemDev": "Kontak pengembang"
+    },
+    "review": {
+      "itemHelpful": "orang menganggap ulasan ini berguna",
+      "itemAsk": "Apakah Anda merasa ini bermanfaat?",
+      "itemYes": "Ya",
+      "itemNo": "Tidak"
+    }
+  },
+  "it": {
+    "about": {
+      "itemUpdated": "Aggiornato il",
+      "itemSafety": "Sicurezza dei dati",
+      "itemSection": "In questa sezione, gli sviluppatori possono specificare come le applicazioni raccolgono e utilizzano i dati.",
+      "itemInformation": "Nessuna informazione.",
+      "aboutGame": "Informazioni su questo gioco"
+    },
+    "appTitle": {
+      "infoOther": "Contiene annunci · Acquisti in-app",
+      "infoReviews": "recensioni",
+      "infoDownloads": "Download",
+      "infoRated": "Valutato per 18+",
+      "infoButton": "Installa",
+      "infoDownloading": "Scaricamento",
+      "infoOpen": "Apri",
+      "infoCanInstall": "Download completato. Installare?",
+      "infoWishlist": "Aggiungi alla lista dei desideri"
+    },
+    "header": {
+      "itemGames": "Giochi",
+      "itemApps": "App",
+      "itemMovies": "Film",
+      "itemBooks": "Libri",
+      "itemKids": "Bambini"
+    },
+    "rating": {
+      "itemTitle": "Valutazioni e recensioni",
+      "itemReviews": "recensioni"
+    },
+    "reviews": {
+      "itemAll": "Vedi tutte le recensioni",
+      "itemNews": "Novità",
+      "itemDev": "Contatto sviluppatore"
+    },
+    "review": {
+      "itemHelpful": "persone hanno trovato utile questa recensione",
+      "itemAsk": "L'hai trovato utile?",
+      "itemYes": "Sì",
+      "itemNo": "No"
+    }
+  },
+  "ja": {
+    "about": {
+      "itemUpdated": "更新日",
+      "itemSafety": "データの安全性",
+      "itemSection": "このセクションでは、開発者がアプリケーションのデータ収集と使用方法を指定できます。",
+      "itemInformation": "情報がありません。",
+      "aboutGame": "このゲームについて"
+    },
+    "appTitle": {
+      "infoOther": "広告が含まれています · アプリ内購入",
+      "infoReviews": "レビュー",
+      "infoDownloads": "ダウンロード",
+      "infoRated": "18+ 向け",
+      "infoButton": "インストール",
+      "infoDownloading": "ダウンロード中",
+      "infoOpen": "開く",
+      "infoCanInstall": "ダウンロード完了。インストールしますか？",
+      "infoWishlist": "ウィッシュリストに追加"
+    },
+    "header": {
+      "itemGames": "ゲーム",
+      "itemApps": "アプリ",
+      "itemMovies": "映画",
+      "itemBooks": "書籍",
+      "itemKids": "子供"
+    },
+    "rating": {
+      "itemTitle": "評価とレビュー",
+      "itemReviews": "レビュー"
+    },
+    "reviews": {
+      "itemAll": "すべてのレビューを見る",
+      "itemNews": "新着情報",
+      "itemDev": "デベロッパーへのお問い合わせ"
+    },
+    "review": {
+      "itemHelpful": "人がこのレビューを役立つと評価しました",
+      "itemAsk": "このレビューは役に立ちましたか？",
+      "itemYes": "はい",
+      "itemNo": "いいえ"
+    }
+  },
+  "ko": {
+    "about": {
+      "itemUpdated": "업데이트 날짜",
+      "itemSafety": "데이터 안전",
+      "itemSection": "이 섹션에서는 개발자가 애플리케이션이 데이터를 수집하고 사용하는 방법을 지정할 수 있습니다.",
+      "itemInformation": "정보 없음.",
+      "aboutGame": "이 게임에 대해"
+    },
+    "appTitle": {
+      "infoOther": "광고 포함 · 인앱 구매",
+      "infoReviews": "리뷰",
+      "infoDownloads": "다운로드",
+      "infoRated": "18세 이상 이용가",
+      "infoButton": "설치",
+      "infoDownloading": "다운로드 중",
+      "infoOpen": "열기",
+      "infoCanInstall": "다운로드 완료. 설치할까요?",
+      "infoWishlist": "위시리스트에 추가"
+    },
+    "header": {
+      "itemGames": "게임",
+      "itemApps": "앱",
+      "itemMovies": "영화",
+      "itemBooks": "책",
+      "itemKids": "어린이"
+    },
+    "rating": {
+      "itemTitle": "평점 및 리뷰",
+      "itemReviews": "리뷰"
+    },
+    "reviews": {
+      "itemAll": "모든 리뷰 보기",
+      "itemNews": "새로운 소식",
+      "itemDev": "개발자 연락처"
+    },
+    "review": {
+      "itemHelpful": "명이 이 리뷰를 유용하다고 평가했습니다",
+      "itemAsk": "도움이 되었나요?",
+      "itemYes": "예",
+      "itemNo": "아니요"
+    }
+  },
+  "kk": {
+    "about": {
+      "itemUpdated": "Жаңартылған күні",
+      "itemSafety": "Деректер қауіпсіздігі",
+      "itemSection": "Бұл бөлімде әзірлеушілер қолданбалардың деректерді қалай жинап, пайдаланатынын анықтай алады.",
+      "itemInformation": "Ақпарат жоқ.",
+      "aboutGame": "Ойын туралы"
+    },
+    "appTitle": {
+      "infoOther": "Жарнамаларды қамтиды · Қосымша ішіндегі сатып алулар",
+      "infoReviews": "пікірлер",
+      "infoDownloads": "Жүктеулер",
+      "infoRated": "18+ жастан жоғарыға арналған",
+      "infoButton": "Орнату",
+      "infoDownloading": "Жүктелуде",
+      "infoOpen": "Ашу",
+      "infoCanInstall": "Жүктеу аяқталды. Орнату?",
+      "infoWishlist": "Тілектер тізіміне қосу"
+    },
+    "header": {
+      "itemGames": "Ойындар",
+      "itemApps": "Қосымшалар",
+      "itemMovies": "Фильмдер",
+      "itemBooks": "Кітаптар",
+      "itemKids": "Балалар"
+    },
+    "rating": {
+      "itemTitle": "Бағалар мен пікірлер",
+      "itemReviews": "пікірлер"
+    },
+    "reviews": {
+      "itemAll": "Барлық пікірлерді көру",
+      "itemNews": "Жаңалықтар",
+      "itemDev": "Әзірлеушіге хабарласу"
+    },
+    "review": {
+      "itemHelpful": "адам бұл пікірді пайдалы деп тапты",
+      "itemAsk": "Сізге бұл пайдалы болды ма?",
+      "itemYes": "Иә",
+      "itemNo": "Жоқ"
+    }
+  },
+  "lv": {
+    "about": {
+      "itemUpdated": "Atjaunināts",
+      "itemSafety": "Datu drošība",
+      "itemSection": "Šajā sadaļā izstrādātāji var norādīt, kā lietojumprogrammas vāc un izmanto datus.",
+      "itemInformation": "Nav informācijas.",
+      "aboutGame": "Par šo spēli"
+    },
+    "appTitle": {
+      "infoOther": "Satur reklāmas · Pirkumi lietotnē",
+      "infoReviews": "atsauksmes",
+      "infoDownloads": "Lejupielādes",
+      "infoRated": "Novērtēts kā 18+",
+      "infoButton": "Instalēt",
+      "infoDownloading": "Lejupielādē",
+      "infoOpen": "Atvērt",
+      "infoCanInstall": "Lejupielāde pabeigta. Instalēt?",
+      "infoWishlist": "Pievienot vēlmju sarakstam"
+    },
+    "header": {
+      "itemGames": "Spēles",
+      "itemApps": "Lietotnes",
+      "itemMovies": "Filmas",
+      "itemBooks": "Grāmatas",
+      "itemKids": "Bērni"
+    },
+    "rating": {
+      "itemTitle": "Vērtējumi un atsauksmes",
+      "itemReviews": "atsauksmes"
+    },
+    "reviews": {
+      "itemAll": "Skatīt visas atsauksmes",
+      "itemNews": "Jaunumi",
+      "itemDev": "Izstrādātāja kontakti"
+    },
+    "review": {
+      "itemHelpful": "cilvēki atrada šo atsauksmi noderīgu",
+      "itemAsk": "Vai šī atsauksme bija noderīga?",
+      "itemYes": "Jā",
+      "itemNo": "Nē"
+    }
+  },
+  "lt": {
+    "about": {
+      "itemUpdated": "Atnaujinta",
+      "itemSafety": "Duomenų saugumas",
+      "itemSection": "Šioje dalyje kūrėjai gali nurodyti, kaip programos renka ir naudoja duomenis.",
+      "itemInformation": "Nėra informacijos.",
+      "aboutGame": "Apie šį žaidimą"
+    },
+    "appTitle": {
+      "infoOther": "Yra skelbimų · Pirkimai programoje",
+      "infoReviews": "apžvalgos",
+      "infoDownloads": "Atsisiuntimai",
+      "infoRated": "Įvertintas 18+",
+      "infoButton": "Įdiegti",
+      "infoDownloading": "Atsisiunčiama",
+      "infoOpen": "Atidaryti",
+      "infoCanInstall": "Atsisiuntimas baigtas. Įdiegti?",
+      "infoWishlist": "Pridėti į pageidavimų sąrašą"
+    },
+    "header": {
+      "itemGames": "Žaidimai",
+      "itemApps": "Programos",
+      "itemMovies": "Filmai",
+      "itemBooks": "Knygos",
+      "itemKids": "Vaikai"
+    },
+    "rating": {
+      "itemTitle": "Įvertinimai ir apžvalgos",
+      "itemReviews": "apžvalgos"
+    },
+    "reviews": {
+      "itemAll": "Žiūrėti visas apžvalgas",
+      "itemNews": "Kas naujo",
+      "itemDev": "Kūrėjo kontaktai"
+    },
+    "review": {
+      "itemHelpful": "žmonės rado šią apžvalgą naudingą",
+      "itemAsk": "Ar jums tai buvo naudinga?",
+      "itemYes": "Taip",
+      "itemNo": "Ne"
+    }
+  },
+  "no": {
+    "about": {
+      "itemUpdated": "Oppdatert",
+      "itemSafety": "Datasikkerhet",
+      "itemSection": "I denne delen kan utviklere spesifisere hvordan apper samler inn og bruker data.",
+      "itemInformation": "Ingen informasjon.",
+      "aboutGame": "Om dette spillet"
+    },
+    "appTitle": {
+      "infoOther": "Inneholder annonser · Kjøp i appen",
+      "infoReviews": "anmeldelser",
+      "infoDownloads": "Nedlastinger",
+      "infoRated": "Vurdert for 18+",
+      "infoButton": "Installer",
+      "infoDownloading": "Laster ned",
+      "infoOpen": "Åpne",
+      "infoCanInstall": "Nedlasting fullført. Installere?",
+      "infoWishlist": "Legg til i ønskeliste"
+    },
+    "header": {
+      "itemGames": "Spill",
+      "itemApps": "Apper",
+      "itemMovies": "Filmer",
+      "itemBooks": "Bøker",
+      "itemKids": "Barn"
+    },
+    "rating": {
+      "itemTitle": "Vurderinger og anmeldelser",
+      "itemReviews": "anmeldelser"
+    },
+    "reviews": {
+      "itemAll": "Se alle anmeldelser",
+      "itemNews": "Hva er nytt",
+      "itemDev": "Utviklerkontakt"
+    },
+    "review": {
+      "itemHelpful": "personer syntes denne anmeldelsen var nyttig",
+      "itemAsk": "Fant du dette nyttig?",
+      "itemYes": "Ja",
+      "itemNo": "Nei"
+    }
+  },
+  "pl": {
+    "about": {
+      "itemUpdated": "Zaktualizowano",
+      "itemSafety": "Bezpieczeństwo danych",
+      "itemSection": "W tej sekcji programiści mogą określić, w jaki sposób aplikacje zbierają i wykorzystują dane.",
+      "itemInformation": "Brak informacji.",
+      "aboutGame": "O tej grze"
+    },
+    "appTitle": {
+      "infoOther": "Zawiera reklamy · Zakupy w aplikacji",
+      "infoReviews": "recenzje",
+      "infoDownloads": "Pobrane",
+      "infoRated": "Oceniono na 18+",
+      "infoButton": "Zainstaluj",
+      "infoDownloading": "Pobieranie",
+      "infoOpen": "Otwórz",
+      "infoCanInstall": "Pobieranie zakończone. Zainstalować?",
+      "infoWishlist": "Dodaj do listy życzeń"
+    },
+    "header": {
+      "itemGames": "Gry",
+      "itemApps": "Aplikacje",
+      "itemMovies": "Filmy",
+      "itemBooks": "Książki",
+      "itemKids": "Dzieci"
+    },
+    "rating": {
+      "itemTitle": "Oceny i recenzje",
+      "itemReviews": "recenzje"
+    },
+    "reviews": {
+      "itemAll": "Zobacz wszystkie recenzje",
+      "itemNews": "Co nowego",
+      "itemDev": "Kontakt z deweloperem"
+    },
+    "review": {
+      "itemHelpful": "osoby uznały tę recenzję za pomocną",
+      "itemAsk": "Czy ta recenzja była pomocna?",
+      "itemYes": "Tak",
+      "itemNo": "Nie"
+    }
+  },
   "pt": {
     "about": {
       "itemUpdated": "Atualizado em",
       "itemSafety": "Segurança de dados",
-      "itemSection": "Nesta seção, os desenvolvedores podem especificar como os aplicativos coletam e usam dados.",
-      "itemInformation": "Nenhuma informação.",
-      "aboutGame" : "Sobre este jogo"
+      "itemSection": "Nesta seção, os desenvolvedores podem especificar como os aplicativos coletam e utilizam dados.",
+      "itemInformation": "Sem informações.",
+      "aboutGame": "Sobre este jogo"
     },
     "appTitle": {
       "infoOther": "Contém anúncios · Compras no aplicativo",
       "infoReviews": "avaliações",
-      "infoDownloads": "Transferências",
-      "infoRated": "Classificado para maiores de 18 anos",
+      "infoDownloads": "Downloads",
+      "infoRated": "Classificado para 18+",
       "infoButton": "Instalar",
       "infoDownloading": "Baixando",
-      "infoOpen":"Abrir",
-      "infoCanInstall": "Download completo. Instalar?",
-      "infoWishlist": "Adicionar a lista de desejos"
-      
+      "infoOpen": "Abrir",
+      "infoCanInstall": "Download concluído. Instalar?",
+      "infoWishlist": "Adicionar à lista de desejos"
     },
     "header": {
       "itemGames": "Jogos",
-      "itemApps": "Aplicativas",
+      "itemApps": "Aplicativos",
       "itemMovies": "Filmes",
       "itemBooks": "Livros",
       "itemKids": "Crianças"
     },
     "rating": {
-      "itemTitle": "Avaliações e comentários",
+      "itemTitle": "Avaliações e críticas",
       "itemReviews": "avaliações"
     },
     "reviews": {
@@ -247,53 +1043,304 @@
       "itemDev": "Contato do desenvolvedor"
     },
     "review": {
-      "itemHelpful": "as pessoas acharam esta avaliação útil",
+      "itemHelpful": "pessoas acharam esta avaliação útil",
       "itemAsk": "Você achou isso útil?",
       "itemYes": "Sim",
       "itemNo": "Não"
     }
-
   },
-  "bn": {
+  "ro": {
     "about": {
-      "itemUpdated": "আপডেট করা হয়েছে",
-      "itemSafety": "ডেটা সুরক্ষা",
-      "itemSection": "এই বিভাগে, ডেভেলপাররা উল্লেখ করতে পারেন কিভাবে অ্যাপ্লিকেশনগুলি ডেটা সংগ্রহ এবং ব্যবহার করে।",
-      "itemInformation": "কোন তথ্য নেই।",
-      "aboutGame": "এই গেম সম্পর্কে"
+      "itemUpdated": "Actualizat pe",
+      "itemSafety": "Securitatea datelor",
+      "itemSection": "În această secțiune, dezvoltatorii pot specifica modul în care aplicațiile colectează și utilizează datele.",
+      "itemInformation": "Nu există informații.",
+      "aboutGame": "Despre acest joc"
     },
     "appTitle": {
-      "infoOther": "বিজ্ঞাপন রয়েছে · ইন-অ্যাপ ক্রয়",
-      "infoReviews": "রিভিউ",
-      "infoDownloads": "ডাউনলোড",
-      "infoRated": "১৮+ এর জন্য রেটেড",
-      "infoButton": "ইনস্টল করুন",
-      "infoDownloading": "ডাউনলোড হচ্ছে",
-      "infoOpen": "খুলুন",
-      "infoCanInstall": "ডাউনলোড সম্পন্ন। ইনস্টল করবেন?",
-      "infoWishlist": "উইশলিস্টে যোগ করুন"
+      "infoOther": "Conține anunțuri · Achiziții în aplicație",
+      "infoReviews": "recenzii",
+      "infoDownloads": "Descărcări",
+      "infoRated": "Evaluat pentru 18+",
+      "infoButton": "Instalează",
+      "infoDownloading": "Se descarcă",
+      "infoOpen": "Deschide",
+      "infoCanInstall": "Descărcare completă. Instalați?",
+      "infoWishlist": "Adăugați la lista de dorințe"
     },
     "header": {
-      "itemGames": "গেমস",
-      "itemApps": "অ্যাপস",
-      "itemMovies": "মুভি",
-      "itemBooks": "বই",
-      "itemKids": "বাচ্চারা"
+      "itemGames": "Jocuri",
+      "itemApps": "Aplicații",
+      "itemMovies": "Filme",
+      "itemBooks": "Cărți",
+      "itemKids": "Copii"
     },
     "rating": {
-      "itemTitle": "রেটিং এবং রিভিউ",
-      "itemReviews": "রিভিউ"
+      "itemTitle": "Evaluări și recenzii",
+      "itemReviews": "recenzii"
     },
     "reviews": {
-      "itemAll": "সমস্ত রিভিউ দেখুন",
-      "itemNews": "নতুন কি আছে",
-      "itemDev": "ডেভেলপার যোগাযোগ"
+      "itemAll": "Vezi toate recenziile",
+      "itemNews": "Ce este nou",
+      "itemDev": "Contact dezvoltator"
     },
     "review": {
-      "itemHelpful": "লোকেরা এই রিভিউটি সহায়ক বলে মনে করেছে",
-      "itemAsk": "আপনার কি এটি সহায়ক লেগেছে?",
-      "itemYes": "হ্যাঁ",
-      "itemNo": "না"
+      "itemHelpful": "persoane au considerat această recenzie utilă",
+      "itemAsk": "Ai considerat utilă această recenzie?",
+      "itemYes": "Da",
+      "itemNo": "Nu"
+    }
+  },
+  "ru": {
+    "about": {
+      "itemUpdated": "Обновлено",
+      "itemSafety": "Безопасность данных",
+      "itemSection": "В этом разделе разработчики могут указать, как приложения собирают и используют данные.",
+      "itemInformation": "Нет информации.",
+      "aboutGame": "Об этой игре"
+    },
+    "appTitle": {
+      "infoOther": "Содержит рекламу · Покупки в приложении",
+      "infoReviews": "отзывы",
+      "infoDownloads": "Загрузки",
+      "infoRated": "Рейтинг 18+",
+      "infoButton": "Установить",
+      "infoDownloading": "Загрузка",
+      "infoOpen": "Открыть",
+      "infoCanInstall": "Загрузка завершена. Установить?",
+      "infoWishlist": "Добавить в список желаемого"
+    },
+    "header": {
+      "itemGames": "Игры",
+      "itemApps": "Приложения",
+      "itemMovies": "Фильмы",
+      "itemBooks": "Книги",
+      "itemKids": "Дети"
+    },
+    "rating": {
+      "itemTitle": "Оценки и отзывы",
+      "itemReviews": "отзывы"
+    },
+    "reviews": {
+      "itemAll": "Посмотреть все отзывы",
+      "itemNews": "Что нового",
+      "itemDev": "Контакты разработчика"
+    },
+    "review": {
+      "itemHelpful": "человек сочли этот отзыв полезным",
+      "itemAsk": "Это было полезно?",
+      "itemYes": "Да",
+      "itemNo": "Нет"
+    }
+  },
+  "sk": {
+    "about": {
+      "itemUpdated": "Aktualizované dňa",
+      "itemSafety": "Bezpečnosť údajov",
+      "itemSection": "V tejto sekcii môžu vývojári špecifikovať, ako aplikácie zbierajú a používajú údaje.",
+      "itemInformation": "Žiadne informácie.",
+      "aboutGame": "O tejto hre"
+    },
+    "appTitle": {
+      "infoOther": "Obsahuje reklamy · Nákupy v aplikácii",
+      "infoReviews": "recenzie",
+      "infoDownloads": "Stiahnutia",
+      "infoRated": "Ohodnotené pre 18+",
+      "infoButton": "Inštalovať",
+      "infoDownloading": "Sťahovanie",
+      "infoOpen": "Otvoriť",
+      "infoCanInstall": "Sťahovanie dokončené. Inštalovať?",
+      "infoWishlist": "Pridať do zoznamu prianí"
+    },
+    "header": {
+      "itemGames": "Hry",
+      "itemApps": "Aplikácie",
+      "itemMovies": "Filmy",
+      "itemBooks": "Knihy",
+      "itemKids": "Deti"
+    },
+    "rating": {
+      "itemTitle": "Hodnotenia a recenzie",
+      "itemReviews": "recenzie"
+    },
+    "reviews": {
+      "itemAll": "Zobraziť všetky recenzie",
+      "itemNews": "Čo je nové",
+      "itemDev": "Kontakt na vývojára"
+    },
+    "review": {
+      "itemHelpful": "ľudia považovali túto recenziu za užitočnú",
+      "itemAsk": "Bolo to užitočné?",
+      "itemYes": "Áno",
+      "itemNo": "Nie"
+    }
+  },
+  "sl": {
+    "about": {
+      "itemUpdated": "Posodobljeno dne",
+      "itemSafety": "Varnost podatkov",
+      "itemSection": "V tem razdelku lahko razvijalci določijo, kako aplikacije zbirajo in uporabljajo podatke.",
+      "itemInformation": "Brez informacij.",
+      "aboutGame": "O tej igri"
+    },
+    "appTitle": {
+      "infoOther": "Vsebuje oglase · Nakupi v aplikaciji",
+      "infoReviews": "mnenja",
+      "infoDownloads": "Prenosi",
+      "infoRated": "Ocenjeno za 18+",
+      "infoButton": "Namesti",
+      "infoDownloading": "Prenos",
+      "infoOpen": "Odpri",
+      "infoCanInstall": "Prenos končan. Namestiti?",
+      "infoWishlist": "Dodaj na seznam želja"
+    },
+    "header": {
+      "itemGames": "Igre",
+      "itemApps": "Aplikacije",
+      "itemMovies": "Filmi",
+      "itemBooks": "Knjige",
+      "itemKids": "Otroci"
+    },
+    "rating": {
+      "itemTitle": "Ocene in mnenja",
+      "itemReviews": "mnenja"
+    },
+    "reviews": {
+      "itemAll": "Poglej vse ocene",
+      "itemNews": "Kaj je novega",
+      "itemDev": "Kontakt razvijalca"
+    },
+    "review": {
+      "itemHelpful": "ljudi je menilo, da je ta pregled koristen",
+      "itemAsk": "Ali ste menili, da je to koristno?",
+      "itemYes": "Da",
+      "itemNo": "Ne"
+    }
+  },
+  "es": {
+    "about": {
+      "itemUpdated": "Actualizado el",
+      "itemSafety": "Seguridad de datos",
+      "itemSection": "En esta sección, los desarrolladores pueden especificar cómo las aplicaciones recopilan y usan los datos.",
+      "itemInformation": "Sin información.",
+      "aboutGame": "Sobre este juego"
+    },
+    "appTitle": {
+      "infoOther": "Contiene anuncios · Compras dentro de la aplicación",
+      "infoReviews": "opiniones",
+      "infoDownloads": "Descargas",
+      "infoRated": "Clasificado para mayores de 18 años",
+      "infoButton": "Instalar",
+      "infoDownloading": "Descargando",
+      "infoOpen": "Abrir",
+      "infoCanInstall": "Descarga completa. ¿Instalar?",
+      "infoWishlist": "Agregar a la lista de deseos"
+    },
+    "header": {
+      "itemGames": "Juegos",
+      "itemApps": "Aplicaciones",
+      "itemMovies": "Películas",
+      "itemBooks": "Libros",
+      "itemKids": "Niños"
+    },
+    "rating": {
+      "itemTitle": "Calificaciones y opiniones",
+      "itemReviews": "opiniones"
+    },
+    "reviews": {
+      "itemAll": "Ver todas las opiniones",
+      "itemNews": "Novedades",
+      "itemDev": "Contacto del desarrollador"
+    },
+    "review": {
+      "itemHelpful": "personas encontraron útil esta opinión",
+      "itemAsk": "¿Te ha resultado útil?",
+      "itemYes": "Sí",
+      "itemNo": "No"
+    }
+  },
+  "sv": {
+    "about": {
+      "itemUpdated": "Uppdaterad den",
+      "itemSafety": "Datasäkerhet",
+      "itemSection": "I den här avsnittet kan utvecklare ange hur applikationer samlar in och använder data.",
+      "itemInformation": "Ingen information.",
+      "aboutGame": "Om detta spel"
+    },
+    "appTitle": {
+      "infoOther": "Innehåller annonser · Köp i app",
+      "infoReviews": "recensioner",
+      "infoDownloads": "Nedladdningar",
+      "infoRated": "Rekommenderas för 18+",
+      "infoButton": "Installera",
+      "infoDownloading": "Laddar ner",
+      "infoOpen": "Öppna",
+      "infoCanInstall": "Nedladdningen är klar. Installera?",
+      "infoWishlist": "Lägg till i önskelista"
+    },
+    "header": {
+      "itemGames": "Spel",
+      "itemApps": "Appar",
+      "itemMovies": "Filmer",
+      "itemBooks": "Böcker",
+      "itemKids": "Barn"
+    },
+    "rating": {
+      "itemTitle": "Betyg och recensioner",
+      "itemReviews": "recensioner"
+    },
+    "reviews": {
+      "itemAll": "Visa alla recensioner",
+      "itemNews": "Vad är nytt",
+      "itemDev": "Utvecklarkontakt"
+    },
+    "review": {
+      "itemHelpful": "personer tyckte att denna recension var hjälpsam",
+      "itemAsk": "Tyckte du att detta var hjälpsamt?",
+      "itemYes": "Ja",
+      "itemNo": "Nej"
+    }
+  },
+  "tr": {
+    "about": {
+      "itemUpdated": "Güncellendi",
+      "itemSafety": "Veri güvenliği",
+      "itemSection": "Bu bölümde geliştiriciler, uygulamaların verileri nasıl topladığını ve kullandığını belirtebilir.",
+      "itemInformation": "Bilgi yok.",
+      "aboutGame": "Bu oyun hakkında"
+    },
+    "appTitle": {
+      "infoOther": "Reklam içerir · Uygulama içi satın alımlar",
+      "infoReviews": "incelemeler",
+      "infoDownloads": "İndirmeler",
+      "infoRated": "18+ için derecelendirildi",
+      "infoButton": "Yükle",
+      "infoDownloading": "İndiriliyor",
+      "infoOpen": "Aç",
+      "infoCanInstall": "İndirme tamamlandı. Yüklemek ister misiniz?",
+      "infoWishlist": "İstek listesine ekle"
+    },
+    "header": {
+      "itemGames": "Oyunlar",
+      "itemApps": "Uygulamalar",
+      "itemMovies": "Filmler",
+      "itemBooks": "Kitaplar",
+      "itemKids": "Çocuklar"
+    },
+    "rating": {
+      "itemTitle": "Puanlar ve incelemeler",
+      "itemReviews": "incelemeler"
+    },
+    "reviews": {
+      "itemAll": "Tüm incelemeleri gör",
+      "itemNews": "Yenilikler",
+      "itemDev": "Geliştirici ile iletişime geç"
+    },
+    "review": {
+      "itemHelpful": "kişi bu incelemeyi yararlı buldu",
+      "itemAsk": "Bu yararlı oldu mu?",
+      "itemYes": "Evet",
+      "itemNo": "Hayır"
     }
   }
 }
