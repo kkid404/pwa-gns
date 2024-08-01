@@ -1,7 +1,8 @@
 import "./style/main.scss";
-import React, { useEffect, useState } from 'react';
-import InstallPage from './components/InstallPage';
-import PWAPage from './components/PWAPage';
+import React, { useEffect, useState } from "react";
+// import InstallPage from "./components/InstallPage";
+// import PWAPage from "./components/PWAPage";
+import IosPage from "./components/IosPage";
 
 const App: React.FC = () => {
   const [isPWA, setIsPWA] = useState<boolean | null>(null);
@@ -9,7 +10,7 @@ const App: React.FC = () => {
   useEffect(() => {
     // Определение, является ли приложение PWA
     const checkPWA = () => {
-      const isPWA = window.matchMedia('(display-mode: standalone)').matches;
+      const isPWA = window.matchMedia("(display-mode: standalone)").matches;
       setIsPWA(isPWA);
     };
 
@@ -27,9 +28,10 @@ const App: React.FC = () => {
 
   return (
     <>
-      {isPWA ? <PWAPage /> : <InstallPage />}
-    </> 
-)
+      {/* {isPWA ? <PWAPage /> : <InstallPage />} */}
+      <IosPage ></IosPage>
+    </>
+  );
 };
 
 export default App;

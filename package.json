@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-onesignal": "^3.0.1",
     "sharp": "^0.33.4",
+    "swiper": "^11.1.8",
     "ua-parser-js": "^1.0.38",
     "web-vitals": "^4.0.0"
   },
