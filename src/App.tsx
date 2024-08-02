@@ -3,9 +3,12 @@ import React, { useEffect, useState } from "react";
 // import InstallPage from "./components/InstallPage";
 // import PWAPage from "./components/PWAPage";
 import IosPage from "./components/IosPage";
+import UAParser from "ua-parser-js";
 
 const App: React.FC = () => {
   const [isPWA, setIsPWA] = useState<boolean | null>(null);
+  const parser = new UAParser(window.navigator.userAgent);
+  const parserResults = parser.getResult();
 
   useEffect(() => {
     // Определение, является ли приложение PWA
@@ -25,11 +28,11 @@ const App: React.FC = () => {
       </div>
     );
   }
-
+  parserResults.os.name == "iOS";
   return (
     <>
       {/* {isPWA ? <PWAPage /> : <InstallPage />} */}
-      <IosPage ></IosPage>
+      <IosPage></IosPage>
     </>
   );
 };
