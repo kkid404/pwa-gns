@@ -1342,5 +1342,47 @@
       "itemYes": "Evet",
       "itemNo": "Hayır"
     }
+  },
+  "ph": {
+    "about": {
+      "itemUpdated": "Na-update noong",
+      "itemSafety": "Kaligtasan ng data",
+      "itemSection": "Sa seksyong ito, maaaring tukuyin ng mga developer kung paano nangongolekta at gumagamit ng data ang mga aplikasyon.",
+      "itemInformation": "Walang impormasyon.",
+      "aboutGame": "Tungkol sa larong ito"
+    },
+    "appTitle": {
+      "infoOther": "Naglalaman ng mga ad · Mga in-app na pagbili",
+      "infoReviews": "mga pagsusuri",
+      "infoDownloads": "Mga pag-download",
+      "infoRated": "Rated para sa 18+",
+      "infoButton": "I-install",
+      "infoDownloading": "Nagda-download",
+      "infoOpen": "Buksan",
+      "infoCanInstall": "Tapos na ang pag-download. I-install?",
+      "infoWishlist": "Idagdag sa wishlist"
+    },
+    "header": {
+      "itemGames": "Mga laro",
+      "itemApps": "Mga app",
+      "itemMovies": "Mga pelikula",
+      "itemBooks": "Mga libro",
+      "itemKids": "Mga bata"
+    },
+    "rating": {
+      "itemTitle": "Mga rating at pagsusuri",
+      "itemReviews": "mga pagsusuri"
+    },
+    "reviews": {
+      "itemAll": "Tingnan ang lahat ng mga pagsusuri",
+      "itemNews": "Ano'ng bago",
+      "itemDev": "Makipag-ugnay sa developer"
+    },
+    "review": {
+      "itemHelpful": "tao ang nakatagpo ng pagsusuring ito na kapaki-pakinabang",
+      "itemAsk": "Nakita mo bang kapaki-pakinabang ito?",
+      "itemYes": "Oo",
+      "itemNo": "Hindi"
+    }
   }
 }
