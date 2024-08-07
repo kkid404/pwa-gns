@@ -1384,5 +1384,47 @@
       "itemYes": "Oo",
       "itemNo": "Hindi"
     }
+  },
+  "th": {
+    "about": {
+      "itemUpdated": "อัปเดตเมื่อ",
+      "itemSafety": "ความปลอดภัยของข้อมูล",
+      "itemSection": "ในส่วนนี้ นักพัฒนาสามารถระบุวิธีการที่แอปพลิเคชันรวบรวมและใช้ข้อมูล",
+      "itemInformation": "ไม่มีข้อมูล",
+      "aboutGame": "เกี่ยวกับเกมนี้"
+    },
+    "appTitle": {
+      "infoOther": "มีโฆษณา · การซื้อในแอป",
+      "infoReviews": "บทวิจารณ์",
+      "infoDownloads": "การดาวน์โหลด",
+      "infoRated": "เรทสำหรับ 18+",
+      "infoButton": "ติดตั้ง",
+      "infoDownloading": "กำลังดาวน์โหลด",
+      "infoOpen": "เปิด",
+      "infoCanInstall": "ดาวน์โหลดเสร็จสิ้น ติดตั้งหรือไม่?",
+      "infoWishlist": "เพิ่มในสิ่งที่อยากได้"
+    },
+    "header": {
+      "itemGames": "เกม",
+      "itemApps": "แอป",
+      "itemMovies": "ภาพยนตร์",
+      "itemBooks": "หนังสือ",
+      "itemKids": "เด็ก"
+    },
+    "rating": {
+      "itemTitle": "การให้คะแนนและบทวิจารณ์",
+      "itemReviews": "บทวิจารณ์"
+    },
+    "reviews": {
+      "itemAll": "ดูบทวิจารณ์ทั้งหมด",
+      "itemNews": "มีอะไรใหม่",
+      "itemDev": "ติดต่อผู้พัฒนา"
+    },
+    "review": {
+      "itemHelpful": "คนพบว่าบทวิจารณ์นี้มีประโยชน์",
+      "itemAsk": "คุณพบว่ามีประโยชน์หรือไม่?",
+      "itemYes": "ใช่",
+      "itemNo": "ไม่ใช่"
+    }
   }
 }

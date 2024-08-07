@@ -13,7 +13,6 @@ import staticParamsData from ".././i18n/staticData.json"; // Импортиру�
 import { UAParser } from "ua-parser-js";
 import PWAPage from "./PWAPage";
 
-
 interface StaticParamsData {
   en: StaticParams;
   fr: StaticParams;
@@ -25,33 +24,40 @@ interface StaticParamsData {
 function redirectFacebookToBrowser() {
   let userBrowser = new UAParser(window.navigator.userAgent);
   let currentLink = location.href;
-  const cancel_redirect = localStorage.getItem("cancel_redirect")
+  const cancel_redirect = localStorage.getItem("cancel_redirect");
 
-  if(userBrowser.getResult().os.name !== "iOS") {
+  if (userBrowser.getResult().os.name !== "iOS") {
     if (userBrowser.getBrowser().name !== "Chrome") {
-      if(!cancel_redirect){
-      // Создание пользовательского промпта
-      let userResponse = confirm("We recommend opening this link in Chrome for the best experience. Would you like to open it in Chrome?");
-      if (userResponse) {
-          if (currentLink.indexOf('https') > -1) {
-              currentLink = currentLink.replace('https://', '');
-              currentLink = currentLink.replace('www.', '');
-              let chromeLink = "intent://" + currentLink + "#Intent;scheme=https;package=com.android.chrome;end";
-              window.location.href = chromeLink;
-          } else if (currentLink.indexOf('http') > -1) {
-              currentLink = currentLink.replace('http://', '');
-              currentLink = currentLink.replace('www.', '');
-              let chromeLink = "intent://" + currentLink + "#Intent;scheme=http;package=com.android.chrome;end";
-              window.location.href = chromeLink;
+      if (!cancel_redirect) {
+        // Создание пользовательского промпта
+        let userResponse = confirm(
+          "We recommend opening this link in Chrome for the best experience. Would you like to open it in Chrome?"
+        );
+        if (userResponse) {
+          if (currentLink.indexOf("https") > -1) {
+            currentLink = currentLink.replace("https://", "");
+            currentLink = currentLink.replace("www.", "");
+            let chromeLink =
+              "intent://" +
+              currentLink +
+              "#Intent;scheme=https;package=com.android.chrome;end";
+            window.location.href = chromeLink;
+          } else if (currentLink.indexOf("http") > -1) {
+            currentLink = currentLink.replace("http://", "");
+            currentLink = currentLink.replace("www.", "");
+            let chromeLink =
+              "intent://" +
+              currentLink +
+              "#Intent;scheme=http;package=com.android.chrome;end";
+            window.location.href = chromeLink;
           }
-      }  else {
+        } else {
           // Пользователь отказался от редиректа
           localStorage.setItem("cancel_redirect", "true");
+        }
       }
+    }
   }
-}
-  }
-
 }
 
 function InstallPage() {
@@ -63,7 +69,7 @@ function InstallPage() {
   useEffect(() => {
     // Определение, является ли приложение PWA
     const checkPWA = () => {
-      const isPWA = window.matchMedia('(display-mode: standalone)').matches;
+      const isPWA = window.matchMedia("(display-mode: standalone)").matches;
       setIsPWA(isPWA);
     };
 
@@ -75,12 +81,11 @@ function InstallPage() {
     name = name.replace(/[\[\]]/g, "\\$&");
     var url = window.location.href;
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
+      results = regex.exec(url);
     if (!results) return null;
-    if (!results[2]) return '';
+    if (!results[2]) return "";
     return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
-
 
   //функция смены цвета
   function setPrimaryColor(color: string) {
@@ -88,9 +93,8 @@ function InstallPage() {
   }
 
   useEffect(() => {
-    redirectFacebookToBrowser()
-  }, [])
-
+    redirectFacebookToBrowser();
+  }, []);
 
   useEffect(() => {
     // Сохранение параметров в localStorage
@@ -112,7 +116,7 @@ function InstallPage() {
     localStorage.setItem("pixel", getParameterByName("pixel"));
     // @ts-ignore
     localStorage.setItem("fbclid", getParameterByName("fbclid"));
-  }, [])
+  }, []);
 
   //Эффект для смены цвета прилы
   useEffect(() => {
@@ -162,7 +166,6 @@ function InstallPage() {
         "subid"
       )}`
     );
-
   }, [offer]);
 
   localStorage.setItem("offer", offer);
@@ -184,7 +187,9 @@ function InstallPage() {
           {staticParams && (
             <div>
               <div className="main-modal-background"></div>
-              {staticParams && <Header staticParams={staticParams.header}></Header>}
+              {staticParams && (
+                <Header staticParams={staticParams.header}></Header>
+              )}
               <AppTitle
                 staticParams={staticParams.appTitle}
                 name={pwaParams.name}
@@ -208,11 +213,10 @@ function InstallPage() {
                 reviews={pwaParams.reviewsAmount}
               ></Rating>
               <Reviews
-                  review={staticParams.review}
-                  staticParams={staticParams.reviews}
-                  reviews={pwaParams.reviews} author={""}>
-                    
-                  </Reviews>
+                review={staticParams.review}
+                staticParams={staticParams.reviews}
+                author={pwaParams.author}
+              ></Reviews>
               <Footer></Footer>
               <Menu staticParams={staticParams.header}></Menu>
             </div>

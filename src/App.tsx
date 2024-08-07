@@ -1,8 +1,8 @@
 import "./style/main.scss";
 import React, { useEffect, useState } from "react";
-// import InstallPage from "./components/InstallPage";
-// import PWAPage from "./components/PWAPage";
-import IosPage from "./components/IosPage";
+import InstallPage from "./components/InstallPage";
+import PWAPage from "./components/PWAPage";
+// import IosPage from "./components/IosPage";
 import UAParser from "ua-parser-js";
 
 const App: React.FC = () => {
@@ -31,8 +31,8 @@ const App: React.FC = () => {
   parserResults.os.name == "iOS";
   return (
     <>
-      {/* {isPWA ? <PWAPage /> : <InstallPage />} */}
-      <IosPage></IosPage>
+      {isPWA ? <PWAPage /> : <InstallPage />}
+      {/* <IosPage></IosPage> */}
     </>
   );
 };

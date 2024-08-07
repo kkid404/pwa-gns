@@ -1,5 +1,6 @@
 import paramsData from ".././mock/params.json";
 import { StaticParams } from ".././i18n/StaticParams";
+import staticReviewsData from "../i18n/staticReviewsData.json";
 import staticParamsData from ".././i18n/staticData.json"; // Импортируем JSON-файл напрямую
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,8 +23,47 @@ interface StaticParamsData {
   [key: string]: StaticParams;
 }
 
+interface StaticReviews {
+  map(arg0: (item: StaticReview) => import("react/jsx-runtime").JSX.Element): import("react").ReactNode;
+  photo: string;
+  name: string;
+  score: number;
+  scoreDate: string;
+  review: string;
+  helpful: number;
+  answer?: {
+    author: string;
+    authorAnswer: string;
+  };
+}
+[];
+
+interface StaticReview {
+  photo: string;
+  name: string;
+  score: number;
+  scoreDate: string;
+  review: string;
+  helpful: number;
+  answer?: {
+    author: string;
+    authorAnswer: string;
+  };
+}
+
+interface StaticReviewsData {
+  en: StaticReviews;
+  fr: StaticReviews;
+  es: StaticReviews;
+  ar: StaticReviews;
+  [key: string]: StaticReviews;
+}
+
 function IosPage() {
   const [pwaParams] = useState(paramsData);
+  const [staticReviews, setStaticReviews] = useState<StaticReviews | null>(
+    null
+  );
   const [staticParams, setStaticParams] = useState<StaticParams | null>(null);
   const [fullDescription, setFullDescription] = useState(false);
   const [offer, setOffer] = useState<string>("");
@@ -38,6 +78,8 @@ function IosPage() {
     if (!results[2]) return "";
     return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
+
+  console.log(staticReviews);
 
   useEffect(() => {
     // Сохранение параметров в localStorage
@@ -84,10 +126,16 @@ function IosPage() {
     const lang = navigator.language.slice(0, 2);
     const data: StaticParamsData =
       staticParamsData as unknown as StaticParamsData;
-    if (data[lang]) {
+    const data2: StaticReviewsData =
+      staticReviewsData as unknown as StaticReviewsData;
+    if (data[lang] && data2[lang]) {
       setStaticParams(data[lang]);
+      console.log(data2[lang]);
+
+      setStaticReviews(data2[lang]);
     } else {
       setStaticParams(data.en);
+      setStaticReviews(data2.en);
     }
   }, []);
 
@@ -283,24 +331,26 @@ function IosPage() {
             modules={[FreeMode, Pagination]}
             className="ios-reviews-carousel"
           >
-            {pwaParams.reviews.map((item) => (
-              <SwiperSlide className="ios-reviews-carousel-item">
-                <div className="ios-reviews-carousel-item-stars">
-                  <Star color="#ff9500" width={22} height={22}></Star>
-                  <Star color="#ff9500" width={22} height={22}></Star>
-                  <Star color="#ff9500" width={22} height={22}></Star>
-                  <Star color="#ff9500" width={22} height={22}></Star>
-                  <Star color="#ff9500" width={22} height={22}></Star>
-                </div>
-                <div className="ios-reviews-carousel-item__title">
-                  {item.name} , {dateNow.getDay()}.{dateNow.getMonth()}.
-                  {dateNow.getFullYear()}
-                </div>
-                <div className="ios-reviews-carousel-item__review">
-                  {item.review}
-                </div>
-              </SwiperSlide>
-            ))}
+            {staticReviews
+              ? staticReviews.map((item: StaticReview) => (
+                  <SwiperSlide className="ios-reviews-carousel-item">
+                    <div className="ios-reviews-carousel-item-stars">
+                      <Star color="#ff9500" width={22} height={22}></Star>
+                      <Star color="#ff9500" width={22} height={22}></Star>
+                      <Star color="#ff9500" width={22} height={22}></Star>
+                      <Star color="#ff9500" width={22} height={22}></Star>
+                      <Star color="#ff9500" width={22} height={22}></Star>
+                    </div>
+                    <div className="ios-reviews-carousel-item__title">
+                      {item.name} , {dateNow.getDate()}.{dateNow.getMonth() + 1}
+                      .{dateNow.getFullYear()}
+                    </div>
+                    <div className="ios-reviews-carousel-item__review">
+                      {item.review}
+                    </div>
+                  </SwiperSlide>
+                ))
+              : ""}
           </Swiper>
         </div>
 
