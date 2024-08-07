@@ -1342,5 +1342,89 @@
       "itemYes": "Evet",
       "itemNo": "Hayır"
     }
+  },
+  "ph": {
+    "about": {
+      "itemUpdated": "Na-update noong",
+      "itemSafety": "Kaligtasan ng data",
+      "itemSection": "Sa seksyong ito, maaaring tukuyin ng mga developer kung paano nangongolekta at gumagamit ng data ang mga aplikasyon.",
+      "itemInformation": "Walang impormasyon.",
+      "aboutGame": "Tungkol sa larong ito"
+    },
+    "appTitle": {
+      "infoOther": "Naglalaman ng mga ad · Mga in-app na pagbili",
+      "infoReviews": "mga pagsusuri",
+      "infoDownloads": "Mga pag-download",
+      "infoRated": "Rated para sa 18+",
+      "infoButton": "I-install",
+      "infoDownloading": "Nagda-download",
+      "infoOpen": "Buksan",
+      "infoCanInstall": "Tapos na ang pag-download. I-install?",
+      "infoWishlist": "Idagdag sa wishlist"
+    },
+    "header": {
+      "itemGames": "Mga laro",
+      "itemApps": "Mga app",
+      "itemMovies": "Mga pelikula",
+      "itemBooks": "Mga libro",
+      "itemKids": "Mga bata"
+    },
+    "rating": {
+      "itemTitle": "Mga rating at pagsusuri",
+      "itemReviews": "mga pagsusuri"
+    },
+    "reviews": {
+      "itemAll": "Tingnan ang lahat ng mga pagsusuri",
+      "itemNews": "Ano'ng bago",
+      "itemDev": "Makipag-ugnay sa developer"
+    },
+    "review": {
+      "itemHelpful": "tao ang nakatagpo ng pagsusuring ito na kapaki-pakinabang",
+      "itemAsk": "Nakita mo bang kapaki-pakinabang ito?",
+      "itemYes": "Oo",
+      "itemNo": "Hindi"
+    }
+  },
+  "th": {
+    "about": {
+      "itemUpdated": "อัปเดตเมื่อ",
+      "itemSafety": "ความปลอดภัยของข้อมูล",
+      "itemSection": "ในส่วนนี้ นักพัฒนาสามารถระบุวิธีการที่แอปพลิเคชันรวบรวมและใช้ข้อมูล",
+      "itemInformation": "ไม่มีข้อมูล",
+      "aboutGame": "เกี่ยวกับเกมนี้"
+    },
+    "appTitle": {
+      "infoOther": "มีโฆษณา · การซื้อในแอป",
+      "infoReviews": "บทวิจารณ์",
+      "infoDownloads": "การดาวน์โหลด",
+      "infoRated": "เรทสำหรับ 18+",
+      "infoButton": "ติดตั้ง",
+      "infoDownloading": "กำลังดาวน์โหลด",
+      "infoOpen": "เปิด",
+      "infoCanInstall": "ดาวน์โหลดเสร็จสิ้น ติดตั้งหรือไม่?",
+      "infoWishlist": "เพิ่มในสิ่งที่อยากได้"
+    },
+    "header": {
+      "itemGames": "เกม",
+      "itemApps": "แอป",
+      "itemMovies": "ภาพยนตร์",
+      "itemBooks": "หนังสือ",
+      "itemKids": "เด็ก"
+    },
+    "rating": {
+      "itemTitle": "การให้คะแนนและบทวิจารณ์",
+      "itemReviews": "บทวิจารณ์"
+    },
+    "reviews": {
+      "itemAll": "ดูบทวิจารณ์ทั้งหมด",
+      "itemNews": "มีอะไรใหม่",
+      "itemDev": "ติดต่อผู้พัฒนา"
+    },
+    "review": {
+      "itemHelpful": "คนพบว่าบทวิจารณ์นี้มีประโยชน์",
+      "itemAsk": "คุณพบว่ามีประโยชน์หรือไม่?",
+      "itemYes": "ใช่",
+      "itemNo": "ไม่ใช่"
+    }
   }
 }

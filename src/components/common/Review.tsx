@@ -28,6 +28,7 @@ export default function Review({
   reviewPrototype,
   review,
 }: ReviewsPrototypeDataType) {
+  const dateNow = new Date();
   return (
     <div className="review">
       <div className="review-profile">
@@ -44,8 +45,10 @@ export default function Review({
         </button>
       </div>
       <div className="review-score">
-        <Stars score={reviewPrototype.score} width={12}></Stars>
-        <div className="review-score__date">{reviewPrototype.scoreDate}</div>
+        <Stars score={5} width={12}></Stars>
+        <div className="review-score__date">
+          {dateNow.getDate()}.{dateNow.getMonth() + 1}.{dateNow.getFullYear()}
+        </div>
       </div>
       <div className="review__text">{reviewPrototype.review}</div>
       <div className="review__helpfull">
@@ -61,7 +64,8 @@ export default function Review({
           <div className="review-answer-head">
             <div className="review-answer-head__name">{author}</div>
             <div className="review-answer-head__date">
-              {reviewPrototype.scoreDate}
+              {dateNow.getDate()}.{dateNow.getMonth() + 1}.
+              {dateNow.getFullYear()}
             </div>
           </div>
           <div className="review-answer__text">

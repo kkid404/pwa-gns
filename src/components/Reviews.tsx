@@ -1,20 +1,10 @@
 // Reviews.tsx
+import { useEffect, useState } from "react";
 import Review from "./common/Review";
+import staticReviewsData from "../i18n/staticReviewsData.json";
 
 interface ReviewsDataType {
   author: string;
-  reviews: {
-    photo: string;
-    name: string;
-    score: number;
-    scoreDate: string;
-    review: string;
-    helpful: number;
-    answer?: {
-      author: string;
-      authorAnswer: string;
-    };
-  }[];
   staticParams: {
     itemAll: string;
     itemNews: string;
@@ -27,20 +17,70 @@ interface ReviewsDataType {
     itemNo: string;
   };
 }
+interface StaticReviews {
+  photo: string;
+  name: string;
+  score: number;
+  scoreDate: string;
+  review: string;
+  helpful: number;
+  answer?: {
+    author: string;
+    authorAnswer: string;
+  };
+}
+[];
+
+interface StaticReview {
+  photo: string;
+  name: string;
+  score: number;
+  scoreDate: string;
+  review: string;
+  helpful: number;
+  answer?: {
+    author: string;
+    authorAnswer: string;
+  };
+}
+
+interface StaticReviewsData {
+  en: StaticReviews;
+  fr: StaticReviews;
+  es: StaticReviews;
+  ar: StaticReviews;
+  [key: string]: StaticReviews;
+}
 
 export default function Reviews({
   author,
-  reviews,
   staticParams,
   review,
 }: ReviewsDataType) {
+  const [reviewData, setReviewData] = useState([]);
+
+  useEffect(() => {
+    const lang = navigator.language.slice(0, 2);
+    const data: StaticReviewsData =
+      staticReviewsData as unknown as StaticReviewsData;
+    if (data[lang]) {
+      // @ts-ignore
+      setReviewData(data[lang]);
+    } else {
+      // @ts-ignore
+      setReviewData(data.en);
+    }
+  }, []);
+
+  console.log(reviewData);
+
   return (
     <div className="reviews app-width">
-      {reviews.map((item) => (
+      {reviewData.map((item: StaticReview) => (
         <Review
           author={author}
           review={review}
-          key={item.photo}
+          key={item.name}
           reviewPrototype={item}
         ></Review>
       ))}

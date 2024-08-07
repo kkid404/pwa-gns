@@ -1,0 +1,46 @@
+{
+  "en": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "I've been playing my favorite slot machine for a week.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "It's convenient, withdrawing winnings from the card in 2 minutes.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Thank you for your positive feedback! We're glad you enjoyed our selection of games, bonuses and support. We will be happy to see you again!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "My favorite game, Zeus, I finally managed to find it.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Yes, this game was loved by many. Our casino also has more than 200 licensed slots."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Yesterday I won $2000, I will play today too, it's one of the best casinos.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "May luck smile on you."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Could you add optimization for iOS? I contact support.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "We have accepted your request and will forward it to the technical department."
+      }
+    }
+  ]
+}
