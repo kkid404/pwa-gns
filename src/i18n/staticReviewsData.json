@@ -42,5 +42,1545 @@
         "authorAnswer": "We have accepted your request and will forward it to the technical department."
       }
     }
+  ],
+  "ar": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "ألعب على آلة القمار المفضلة لدي منذ أسبوع.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "من المريح سحب الأرباح من البطاقة في دقيقتين.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "شكرًا لك على ملاحظاتك الإيجابية! نحن سعداء بأنك استمتعت باختيارنا من الألعاب والمكافآت والدعم. سنكون سعداء لرؤيتك مرة أخرى!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "لعبتي المفضلة، زيوس، تمكنت أخيرًا من العثور عليها.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "نعم، هذا اللعبة كانت محبوبة من قبل الكثيرين. كازينونا يحتوي أيضًا على أكثر من 200 آلة قمار مرخصة."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "فزت أمس بـ 2000 دولار، سألعب اليوم أيضًا، إنه أحد أفضل الكازينوهات.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "نتمنى لك حظًا سعيدًا."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "هل يمكنك إضافة تحسين لـ iOS؟ اتصلت بالدعم.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "لقد قبلنا طلبك وسنحيله إلى القسم التقني."
+      }
+    }
+  ],
+  "bn": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "আমি এক সপ্তাহ ধরে আমার প্রিয় স্লট মেশিনে খেলছি।",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "এটি সুবিধাজনক, 2 মিনিটের মধ্যে কার্ড থেকে জেতা তুলে নেওয়া।",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "আপনার ইতিবাচক প্রতিক্রিয়ার জন্য ধন্যবাদ! আমরা আনন্দিত যে আপনি আমাদের গেম, বোনাস এবং সমর্থনের নির্বাচন উপভোগ করেছেন। আমরা আপনাকে আবার দেখার অপেক্ষায় থাকবো!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "আমার প্রিয় খেলা, জিউস, আমি অবশেষে এটি খুঁজে পেয়েছি।",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "হ্যাঁ, এই খেলা অনেকের প্রিয় ছিল। আমাদের ক্যাসিনোতে আরও 200 টিরও বেশি লাইসেন্সপ্রাপ্ত স্লট রয়েছে।"
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "গতকাল আমি $2000 জিতেছি, আজকেও খেলবো, এটি সেরা ক্যাসিনো গুলির মধ্যে একটি।",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "আপনার জন্য শুভকামনা।"
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "আপনি কি iOS-এর জন্য অপ্টিমাইজেশন যোগ করতে পারেন? আমি সাপোর্টের সাথে যোগাযোগ করেছি।",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "আমরা আপনার অনুরোধ গ্রহণ করেছি এবং এটি প্রযুক্তিগত বিভাগে প্রেরণ করবো।"
+      }
+    }
+  ],
+  "bg": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Играх на любимия си слот машина цяла седмица.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Удобно е, тегля печалби от картата за 2 минути.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Благодарим ви за положителния отзив! Радваме се, че харесахте нашия избор на игри, бонуси и поддръжка. Ще се радваме да ви видим отново!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Най-накрая намерих любимата си игра, Зевс.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Да, тази игра беше обичана от много хора. Нашето казино също има над 200 лицензирани слота."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Вчера спечелих $2000, днес ще играя отново, това е едно от най-добрите казина.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Нека късметът ви се усмихне."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Можете ли да добавите оптимизация за iOS? Свързах се с поддръжката.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Приели сме вашето искане и ще го препратим към техническия отдел."
+      }
+    }
+  ],
+  "zh": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "我已经玩我最喜欢的老虎机一个星期了。",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "非常方便，2分钟内从卡中提取奖金。",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "感谢您的积极反馈！我们很高兴您喜欢我们的游戏、奖金和支持的选择。我们期待再次见到您！"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "我终于找到了我最喜欢的游戏宙斯。",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "是的，这款游戏深受许多人喜爱。我们的赌场还拥有200多个授权老虎机。"
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "昨天我赢了2000美元，今天也会继续玩，这是最好的赌场之一。",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "愿好运与你同在。"
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "你能添加iOS优化吗？我联系了支持。",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "我们已收到您的请求，并将其转发至技术部门。"
+      }
+    }
+  ],
+  "cs": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Týden jsem hrál na svém oblíbeném automatu.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Je to pohodlné, výběr výher z karty za 2 minuty.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Děkujeme za vaše pozitivní hodnocení! Jsme rádi, že jste si užil náš výběr her, bonusů a podpory. Rádi vás znovu uvidíme!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Moji oblíbenou hru, Zeus, se mi konečně podařilo najít.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ano, tuto hru milovalo mnoho lidí. Naše kasino má také více než 200 licencovaných automatů."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Včera jsem vyhrál 2000 dolarů, dnes budu hrát znovu, je to jedno z nejlepších kasin.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Ať se vám daří."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Můžete přidat optimalizaci pro iOS? Kontaktoval jsem podporu.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Vaši žádost jsme přijali a předáme ji technickému oddělení."
+      }
+    }
+  ],
+  "da": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Jeg har spillet på min yndlings spillemaskine i en uge.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Det er praktisk, at hæve gevinster fra kortet på 2 minutter.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Tak for din positive feedback! Vi er glade for, at du nød vores udvalg af spil, bonusser og support. Vi ser frem til at se dig igen!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mit yndlingsspil, Zeus, lykkedes det mig endelig at finde.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ja, dette spil var elsket af mange. Vores casino har også mere end 200 licenserede slots."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "I går vandt jeg $2000, jeg vil spille i dag også, det er et af de bedste kasinoer.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Må lykken smile til dig."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Kunne du tilføje optimering til iOS? Jeg kontaktede supporten.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Vi har modtaget din anmodning og vil videresende den til den tekniske afdeling."
+      }
+    }
+  ],
+  "nl": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Ik speel al een week op mijn favoriete gokautomaat.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Het is handig, winsten opnemen van de kaart in 2 minuten.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Bedankt voor je positieve feedback! We zijn blij dat je genoten hebt van ons aanbod van spellen, bonussen en ondersteuning. We zien je graag terug!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mijn favoriete spel, Zeus, heb ik eindelijk gevonden.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ja, dit spel was geliefd bij velen. Ons casino heeft ook meer dan 200 gelicentieerde slots."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Gisteren won ik $2000, ik ga vandaag ook spelen, het is een van de beste casino's.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Moge het geluk je toelachen."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Kunt u optimalisatie voor iOS toevoegen? Ik heb contact opgenomen met de ondersteuning.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "We hebben je verzoek ontvangen en zullen het doorsturen naar de technische afdeling."
+      }
+    }
+  ],
+  "et": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Olen nädala mänginud oma lemmik mänguautomaati.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Mugav on võite kaardilt 2 minutiga välja võtta.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Aitäh positiivse tagasiside eest! Meil on hea meel, et teile meeldis meie mängude, boonuste ja toe valik. Oleme õnnelikud, kui näeme teid uuesti!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mu lemmikmäng, Zeus, õnnestus lõpuks leida.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Jah, see mäng oli paljude poolt armastatud. Meie kasiinos on ka üle 200 litsentseeritud mänguautomaadi."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Eile võitsin 2000 dollarit, mängin täna ka, see on üks parimaid kasiinosid.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Olgu õnn teiega."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Kas saaksite lisada iOS-i optimeerimist? Võtsin ühendust toega.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Oleme teie taotluse vastu võtnud ja edastame selle tehnilisele osakonnale."
+      }
+    }
+  ],
+  "fi": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Olen pelannut suosikkipelikonettani viikon ajan.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "On kätevää, nostaa voitot kortilta 2 minuutissa.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Kiitos positiivisesta palautteestasi! Olemme iloisia, että pidit peliemme, bonusten ja tukemme valikoimasta. Meidän on ilo nähdä sinut uudelleen!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Löysin vihdoin suosikkipelini, Zeuksen.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Kyllä, monet pitivät tästä pelistä. Kasinossamme on myös yli 200 lisensoitua pelikonetta."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Voitin eilen 2000 dollaria, aion pelata tänäänkin, se on yksi parhaista kasinoista.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Onnea matkaan."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Voisitko lisätä iOS-optimointia? Otin yhteyttä tukeen.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Olemme vastaanottaneet pyyntösi ja välitämme sen tekniseen osastoon."
+      }
+    }
+  ],
+  "de": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Ich spiele seit einer Woche an meinem Lieblingsspielautomat.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Es ist praktisch, Gewinne in 2 Minuten von der Karte abzuheben.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Vielen Dank für Ihr positives Feedback! Wir freuen uns, dass Ihnen unsere Auswahl an Spielen, Boni und Support gefallen hat. Wir freuen uns darauf, Sie wiederzusehen!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mein Lieblingsspiel, Zeus, habe ich endlich gefunden.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ja, dieses Spiel wurde von vielen geliebt. Unser Casino hat auch über 200 lizenzierte Spielautomaten."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Gestern habe ich 2000 Dollar gewonnen, heute werde ich auch spielen, es ist eines der besten Casinos.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Viel Glück."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Könnten Sie eine Optimierung für iOS hinzufügen? Ich habe den Support kontaktiert.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Wir haben Ihre Anfrage erhalten und werden sie an die technische Abteilung weiterleiten."
+      }
+    }
+  ],
+  "el": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Παίζω τον αγαπημένο μου κουλοχέρη για μία εβδομάδα.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Είναι βολικό, ανάληψη κερδών από την κάρτα σε 2 λεπτά.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Ευχαριστούμε για τα θετικά σας σχόλια! Είμαστε χαρούμενοι που απολαύσατε την επιλογή παιχνιδιών, μπόνους και υποστήριξης μας. Θα χαρούμε να σας δούμε ξανά!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Το αγαπημένο μου παιχνίδι, ο Δίας, το βρήκα τελικά.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ναι, αυτό το παιχνίδι αγαπήθηκε από πολλούς. Το καζίνο μας έχει επίσης πάνω από 200 αδειοδοτημένα φρουτάκια."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Χθες κέρδισα 2000 δολάρια, θα παίξω και σήμερα, είναι από τα καλύτερα καζίνο.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Ευχόμαστε καλή τύχη."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Μπορείτε να προσθέσετε βελτιστοποίηση για iOS; Επικοινώνησα με την υποστήριξη.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Έχουμε αποδεχθεί το αίτημά σας και θα το προωθήσουμε στο τεχνικό τμήμα."
+      }
+    }
+  ],
+  "hi": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "मैं एक सप्ताह से अपने पसंदीदा स्लॉट मशीन पर खेल रहा हूँ।",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "यह सुविधाजनक है, कार्ड से 2 मिनट में जीत की निकासी।",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "आपकी सकारात्मक प्रतिक्रिया के लिए धन्यवाद! हमें खुशी है कि आपने हमारे खेल, बोनस और समर्थन के चयन का आनंद लिया। हम आपको फिर से देखने के लिए उत्सुक हैं!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "मेरा पसंदीदा खेल, ज़ीउस, अंततः मुझे मिल गया।",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "हाँ, यह खेल बहुतों को पसंद था। हमारे कैसीनो में भी 200 से अधिक लाइसेंस प्राप्त स्लॉट हैं।"
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "कल मैंने $2000 जीते, आज भी खेलूंगा, यह सबसे अच्छे कैसिनो में से एक है।",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "आपको शुभकामनाएँ।"
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "क्या आप iOS के लिए अनुकूलन जोड़ सकते हैं? मैंने समर्थन से संपर्क किया।",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "हमने आपका अनुरोध स्वीकार कर लिया है और इसे तकनीकी विभाग को भेजेंगे।"
+      }
+    }
+  ],
+  "hu": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Egy hete játszom a kedvenc nyerőgépemen.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Kényelmes, nyereményeket kivenni a kártyáról 2 perc alatt.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Köszönjük a pozitív visszajelzést! Örülünk, hogy élvezte a játékok, bónuszok és támogatás választékát. Örömmel várjuk vissza!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Kedvenc játékom, Zeusz, végre sikerült megtalálnom.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Igen, ezt a játékot sokan szerették. Kaszinónkban több mint 200 engedélyezett nyerőgép is található."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Tegnap 2000 dollárt nyertem, ma is játszom, ez az egyik legjobb kaszinó.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Sok szerencsét kívánunk."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Hozzá tudnátok adni iOS optimalizációt? Felvettem a kapcsolatot a támogatással.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Elfogadtuk a kérését és továbbítjuk a műszaki osztálynak."
+      }
+    }
+  ],
+  "id": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Saya telah bermain mesin slot favorit saya selama seminggu.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Sangat nyaman, menarik kemenangan dari kartu dalam 2 menit.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Terima kasih atas tanggapan positif Anda! Kami senang Anda menikmati pilihan permainan, bonus, dan dukungan kami. Kami berharap bisa melihat Anda lagi!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Permainan favorit saya, Zeus, akhirnya berhasil saya temukan.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ya, permainan ini disukai banyak orang. Kasino kami juga memiliki lebih dari 200 slot berlisensi."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Kemarin saya menang $2000, hari ini juga akan bermain, ini adalah salah satu kasino terbaik.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Semoga beruntung."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Bisakah Anda menambahkan optimasi untuk iOS? Saya telah menghubungi dukungan.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Kami telah menerima permintaan Anda dan akan mengirimkannya ke departemen teknis."
+      }
+    }
+  ],
+  "it": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Gioco alla mia slot machine preferita da una settimana.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "È comodo, prelevare le vincite dalla carta in 2 minuti.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Grazie per il tuo feedback positivo! Siamo felici che ti sia piaciuta la nostra selezione di giochi, bonus e supporto. Non vediamo l'ora di rivederti!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Il mio gioco preferito, Zeus, finalmente sono riuscito a trovarlo.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Sì, questo gioco era amato da molti. Il nostro casinò ha anche oltre 200 slot con licenza."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Ieri ho vinto $2000, oggi giocherò di nuovo, è uno dei migliori casinò.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Buona fortuna."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Potete aggiungere l'ottimizzazione per iOS? Ho contattato l'assistenza.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Abbiamo ricevuto la tua richiesta e la inoltreremo al reparto tecnico."
+      }
+    }
+  ],
+  "lv": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Esmu spēlējis savu iecienītāko spēļu automātu vienu nedēļu.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Ir ērti izņemt laimestus no kartes 2 minūšu laikā.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Paldies par pozitīvajām atsauksmēm! Mēs priecājamies, ka jums patika mūsu spēļu, bonusu un atbalsta izvēle. Mēs ceram jūs redzēt vēlreiz!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mans mīļākais spēļu automāts, Zeus, beidzot atradās.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Jā, šī spēle bija mīlēta daudziem. Mūsu kazino ir arī vairāk nekā 200 licencētu spēļu automātu."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Vakar es uzvarēju $2000, šodien spēlēšu vēlreiz, tas ir viens no labākajiem kazino.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Lai veicas."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Vai varat pievienot optimizāciju iOS? Sazinājos ar atbalstu.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Esam saņēmuši jūsu pieprasījumu un nosūtīsim to tehniskajai nodaļai."
+      }
+    }
+  ],
+  "lt": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Aš savaitę žaidžiu savo mėgstamą lošimo automatą.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Patogu, išgryninti laimėjimus iš kortelės per 2 minutes.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Dėkojame už teigiamus atsiliepimus! Džiaugiamės, kad jums patiko mūsų žaidimų, premijų ir palaikymo pasirinkimas. Laukiame jūsų sugrįžimo!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mano mėgstamiausias žaidimas, Zeus, pagaliau rado.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Taip, šį žaidimą mėgo daugelis. Mūsų kazino taip pat turi daugiau nei 200 licencijuotų lošimo automatų."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Vakar laimėjau $2000, šiandien žaisiu dar kartą, tai vienas geriausių kazino.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Linkime sėkmės."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Ar galėtumėte pridėti optimizaciją iOS? Susisiekiau su palaikymo tarnyba.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Gavome jūsų užklausą ir perduosime ją technikos skyriui."
+      }
+    }
+  ],
+  "no": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Jeg har spilt på min favoritt spilleautomat i en uke.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Det er praktisk å ta ut gevinster fra kortet på 2 minutter.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Takk for din positive tilbakemelding! Vi er glade for at du likte utvalget vårt av spill, bonuser og support. Vi ser frem til å se deg igjen!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mitt favorittspill, Zeus, klarte jeg endelig å finne.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ja, dette spillet var elsket av mange. Vårt kasino har også over 200 lisensierte spilleautomater."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "I går vant jeg $2000, jeg skal spille i dag også, det er et av de beste kasinoene.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Måtte lykken smile til deg."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Kan du legge til optimalisering for iOS? Jeg kontaktet supporten.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Vi har mottatt forespørselen din og vil videresende den til den tekniske avdelingen."
+      }
+    }
+  ],
+  "pl": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Od tygodnia gram na mojej ulubionej maszynie do gry.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "To wygodne, wypłacanie wygranych z karty w 2 minuty.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Dziękujemy za pozytywne opinie! Cieszymy się, że podoba Ci się nasz wybór gier, bonusów i wsparcia. Z niecierpliwością czekamy na ponowne spotkanie!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Moja ulubiona gra, Zeus, w końcu udało się ją znaleźć.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Tak, ta gra była uwielbiana przez wielu. Nasze kasyno ma również ponad 200 licencjonowanych automatów do gry."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Wczoraj wygrałem 2000 dolarów, dzisiaj też zagram, to jedno z najlepszych kasyn.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Życzymy powodzenia."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Czy możesz dodać optymalizację dla iOS? Skontaktowałem się z pomocą techniczną.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Otrzymaliśmy Twoją prośbę i przekażemy ją do działu technicznego."
+      }
+    }
+  ],
+  "pt": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Estou jogando minha máquina caça-níqueis favorita há uma semana.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "É conveniente, sacar ganhos do cartão em 2 minutos.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Obrigado pelo seu feedback positivo! Estamos felizes que você tenha gostado da nossa seleção de jogos, bônus e suporte. Esperamos vê-lo novamente!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Meu jogo favorito, Zeus, finalmente encontrei.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Sim, este jogo foi amado por muitos. Nosso cassino também possui mais de 200 caça-níqueis licenciados."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Ontem ganhei $2000, hoje vou jogar também, é um dos melhores cassinos.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Boa sorte."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Você pode adicionar otimização para iOS? Entrei em contato com o suporte.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Recebemos sua solicitação e a encaminharemos para o departamento técnico."
+      }
+    }
+  ],
+  "ro": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Joc la aparatul meu preferat de sloturi de o săptămână.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Este convenabil să retragi câștigurile de pe card în 2 minute.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Mulțumim pentru feedback-ul dvs. pozitiv! Ne bucurăm că v-a plăcut selecția noastră de jocuri, bonusuri și suport. Așteptăm cu nerăbdare să vă revedem!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Jocul meu preferat, Zeus, în sfârșit l-am găsit.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Da, acest joc a fost iubit de mulți. Cazinoul nostru are, de asemenea, peste 200 de sloturi licențiate."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Ieri am câștigat $2000, astăzi voi juca și eu, este unul dintre cele mai bune cazinouri.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Mult noroc."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Puteți adăuga optimizare pentru iOS? Am contactat suportul.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Am primit cererea dvs. și o vom transmite departamentului tehnic."
+      }
+    }
+  ],
+  "sk": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Týždeň hrám na mojom obľúbenom automate.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Je to pohodlné, výber výhier z karty za 2 minúty.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Ďakujeme za vašu pozitívnu spätnú väzbu! Sme radi, že sa vám páčil náš výber hier, bonusov a podpory. Tešíme sa na vašu ďalšiu návštevu!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Moja obľúbená hra, Zeus, sa mi konečne podarilo nájsť.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Áno, túto hru milovalo veľa ľudí. Naše kasíno má tiež viac ako 200 licencovaných automatov."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Včera som vyhral $2000, dnes budem hrať znova, je to jedno z najlepších kasín.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Veľa šťastia."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Môžete pridať optimalizáciu pre iOS? Kontaktoval som podporu.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Prijali sme vašu požiadavku a odovzdáme ju technickému oddeleniu."
+      }
+    }
+  ],
+  "uk": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Я граю на своєму улюбленому ігровому автоматі вже тиждень.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Це зручно, зняття виграшу з картки за 2 хвилини.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Дякуємо за ваш позитивний відгук! Ми раді, що вам сподобався наш вибір ігор, бонусів та підтримки. З нетерпінням чекаємо на вас знову!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Мою улюблену гру, Зевс, нарешті вдалося знайти.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Так, ця гра була улюблена багатьма. У нашому казино також є понад 200 ліцензованих ігрових автоматів."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Вчора я виграв $2000, сьогодні знову гратиму, це одне з найкращих казино.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Бажаємо успіху."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Чи можете ви додати оптимізацію для iOS? Я звернувся в службу підтримки.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Ми отримали ваш запит і надішлемо його до технічного відділу."
+      }
+    }
+  ],
+  "fr": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Je joue à ma machine à sous préférée depuis une semaine.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "C'est pratique, retirer des gains de la carte en 2 minutes.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Merci pour vos commentaires positifs ! Nous sommes heureux que vous ayez apprécié notre sélection de jeux, de bonus et de support. Nous sommes impatients de vous revoir !"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mon jeu préféré, Zeus, enfin trouvé.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Oui, ce jeu était adoré de beaucoup. Notre casino propose également plus de 200 machines à sous sous licence."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Hier, j'ai gagné 2000 $, aujourd'hui je vais rejouer, c'est l'un des meilleurs casinos.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Bonne chance."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Pouvez-vous ajouter une optimisation pour iOS ? J'ai contacté l'assistance.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Nous avons reçu votre demande et nous la transmettrons au service technique."
+      }
+    }
+  ],
+  "hr": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Igram svoj omiljeni automat za igre već tjedan dana.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Praktično je, isplata dobitaka s kartice u 2 minute.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Hvala vam na pozitivnim povratnim informacijama! Drago nam je da vam se svidio naš izbor igara, bonusa i podrške. Veselimo se ponovnom susretu!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Moja omiljena igra, Zeus, konačno je pronađena.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Da, ovu igru su voljeli mnogi. Naš kasino također ima više od 200 licenciranih automata."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Jučer sam osvojio 2000 dolara, danas ću opet igrati, ovo je jedan od najboljih kasina.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Sretno."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Možete li dodati optimizaciju za iOS? Kontaktirao sam podršku.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Primili smo vaš zahtjev i proslijedit ćemo ga tehničkom odjelu."
+      }
+    }
+  ],
+  "ja": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "お気に入りのスロットマシンを1週間プレイしています。",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "便利です。カードから2分で出金できます。",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "ポジティブなフィードバックをありがとうございます！ゲーム、ボーナス、サポートの選択を楽しんでいただけて嬉しいです。またお会いできるのを楽しみにしています！"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "お気に入りのゲーム、ゼウス、ついに見つけました。",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "はい、このゲームは多くの人に愛されています。当カジノには200以上のライセンス付きスロットもあります。"
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "昨日$2000を獲得しました。今日もプレイします。これは最高のカジノの一つです。",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "幸運を祈ります。"
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "iOSの最適化を追加できますか？サポートに連絡しました。",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "リクエストを受け付けました。技術部門に転送します。"
+      }
+    }
+  ],
+  "ko": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "좋아하는 슬롯 머신을 일주일 동안 플레이하고 있습니다.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "편리해요, 2분 안에 카드에서 출금할 수 있습니다.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "긍정적인 피드백 감사합니다! 게임, 보너스, 지원의 선택을 즐기셨다니 기쁩니다. 다시 만나기를 기대합니다!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "좋아하는 게임, 제우스, 드디어 찾았습니다.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "네, 이 게임은 많은 사람들이 좋아했습니다. 저희 카지노에는 200개 이상의 라이선스 슬롯도 있습니다."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "어제 2000달러를 땄습니다. 오늘도 플레이할 것입니다. 이 카지노는 최고의 카지노 중 하나입니다.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "행운을 빕니다."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "iOS 최적화를 추가할 수 있나요? 지원팀에 연락했습니다.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "요청을 수락했고 기술 부서에 전달할 것입니다."
+      }
+    }
+  ],
+  "kk": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Мен сүйікті слот машинамды бір апта бойы ойнап жүрмін.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Бұл ыңғайлы, ұтыстарды карточкадан 2 минут ішінде шығарып алуға болады.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Позитивті пікіріңіз үшін рахмет! Біз сіздің ойын, бонус және қолдау таңдауын ұнатқаныңызға қуаныштымыз. Сізді қайтадан көруге қуаныштымыз!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Менің сүйікті ойыным Зевс, оны ақыры таптым.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Иә, бұл ойынды көптеген адамдар ұнатты. Біздің казинода 200-ден астам лицензияланған слоттар да бар."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Кеше мен $2000 ұттым, бүгін де ойнаймын, бұл ең жақсы казинолардың бірі.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Сәттілік тілеймін."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "iOS үшін оңтайландыруды қоса аласыз ба? Мен қолдау қызметіне хабарластым.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Сіздің сұрауыңызды қабылдадық және оны техникалық бөлімге жібереміз."
+      }
+    }
+  ],
+  "ru": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Я играю на своем любимом игровом автомате уже неделю.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Удобно, выводить выигрыш с карты за 2 минуты.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Спасибо за положительный отзыв! Мы рады, что вам понравился наш выбор игр, бонусов и поддержка. Будем рады видеть вас снова!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Моя любимая игра, Зевс, наконец-то нашлась.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Да, эту игру многие полюбили. В нашем казино также более 200 лицензированных автоматов."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Вчера я выиграл $2000, сегодня тоже буду играть, это одно из лучших казино.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Пусть удача вам улыбается."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Могли бы вы добавить оптимизацию для iOS? Я связался с поддержкой.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Мы приняли ваш запрос и передадим его в технический отдел."
+      }
+    }
+  ],
+  "sl": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Teden dni igram na svojem najljubšem igralnem avtomatu.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Priročno je, dobitke s kartice dvignete v 2 minutah.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Hvala za vaše pozitivne povratne informacije! Veseli smo, da ste uživali v naši izbiri iger, bonusov in podpore. Veselimo se vašega ponovnega obiska!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Moja najljubša igra, Zeus, končno sem jo našel.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Da, to igro so mnogi oboževali. Naše igralnice imajo tudi več kot 200 licenciranih igralnih avtomatov."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Včeraj sem zmagal 2000 $, danes bom spet igral, to je ena najboljših igralnic.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Naj vam sreča nasmehne."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Ali lahko dodate optimizacijo za iOS? Kontaktiral sem podporo.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Prejeli smo vašo zahtevo in jo bomo posredovali tehničnemu oddelku."
+      }
+    }
+  ],
+  "es": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "He estado jugando a mi máquina tragamonedas favorita durante una semana.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Es conveniente, retirar las ganancias de la tarjeta en 2 minutos.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "¡Gracias por tus comentarios positivos! Nos alegra que hayas disfrutado de nuestra selección de juegos, bonos y soporte. ¡Esperamos verte de nuevo!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mi juego favorito, Zeus, finalmente lo encontré.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Sí, este juego fue amado por muchos. Nuestro casino también cuenta con más de 200 tragamonedas con licencia."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Ayer gané $2000, hoy también jugaré, es uno de los mejores casinos.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Que la suerte te sonría."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "¿Podrían añadir optimización para iOS? Contacté con el soporte.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Hemos recibido tu solicitud y la enviaremos al departamento técnico."
+      }
+    }
+  ],
+  "sv": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Jag har spelat på min favoritspelautomat i en vecka.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Det är bekvämt, tar ut vinster från kortet på 2 minuter.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Tack för din positiva feedback! Vi är glada att du gillade vårt urval av spel, bonusar och support. Vi ser fram emot att se dig igen!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Mitt favoritspel, Zeus, hittade jag äntligen.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Ja, det här spelet älskades av många. Vårt kasino har också över 200 licensierade slots."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Igår vann jag $2000, idag ska jag spela igen, det är ett av de bästa kasinon.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Må lyckan le mot dig."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Kan ni lägga till optimering för iOS? Jag kontaktade support.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Vi har mottagit din förfrågan och kommer att vidarebefordra den till teknikavdelningen."
+      }
+    }
+  ],
+  "tr": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Bir haftadır favori slot makinemi oynuyorum.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Bu kullanışlı, kazançları 2 dakika içinde karttan çekmek.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Olumlu geri bildiriminiz için teşekkür ederiz! Oyun, bonus ve destek seçimimizi beğenmenize sevindik. Sizi tekrar görmeyi dört gözle bekliyoruz!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Favori oyunum Zeus, sonunda buldum.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Evet, bu oyun birçok kişi tarafından sevildi. Kumarhanemizde ayrıca 200'den fazla lisanslı slot bulunmaktadır."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Dün 2000 $ kazandım, bugün de oynayacağım, bu en iyi kumarhanelerden biri.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Şansınız yaver gitsin."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "iOS için optimizasyon ekleyebilir misiniz? Destek ile iletişime geçtim.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Talebinizi aldık ve teknik departmana ileteceğiz."
+      }
+    }
+  ],
+  "tl": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "Matagal ko nang nilalaro ang paborito kong slot machine ng isang linggo.",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "Madali, binabawi ang mga panalo mula sa card sa loob ng 2 minuto.",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "Salamat sa iyong positibong feedback! Natutuwa kaming nagustuhan mo ang aming pagpili ng mga laro, bonus at suporta. Inaasahan naming makita kang muli!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "Ang paborito kong laro, Zeus, sa wakas nahanap ko na.",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "Oo, maraming nagmamahal sa larong ito. Mayroon din kaming higit sa 200 lisensyadong slot sa aming casino."
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "Kahapon nanalo ako ng $2000, maglalaro ulit ako ngayon, isa ito sa mga pinakamahusay na casino.",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "Sana palarin ka."
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "Maaari mo bang idagdag ang pag-optimize para sa iOS? Nakipag-ugnayan ako sa suporta.",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "Natanggap namin ang iyong kahilingan at ipapasa ito sa teknikal na departamento."
+      }
+    }
+  ],
+  "th": [
+    {
+      "photo": "./imgs/r1.jpg",
+      "name": "CatLover",
+      "review": "ฉันเล่นเครื่องสล็อตที่ชื่นชอบของฉันมาเป็นเวลาหนึ่งสัปดาห์แล้ว",
+      "helpful": 521
+    },
+    {
+      "photo": "./imgs/r2.jpg",
+      "name": "XENON",
+      "review": "สะดวก ถอนเงินรางวัลจากบัตรใน 2 นาที",
+      "helpful": 501,
+      "answer": {
+        "authorAnswer": "ขอบคุณสำหรับความคิดเห็นเชิงบวกของคุณ! เรายินดีที่คุณสนุกกับการเลือกเกม โบนัส และการสนับสนุนของเรา เราหวังว่าจะได้พบคุณอีกครั้ง!"
+      }
+    },
+    {
+      "photo": "./imgs/r3.jpg",
+      "name": "MrRacer",
+      "review": "เกมโปรดของฉัน, Zeus, ฉันในที่สุดก็เจอมันแล้ว",
+      "helpful": 154,
+      "answer": {
+        "authorAnswer": "ใช่ เกมนี้ได้รับความนิยมจากหลายคน คาสิโนของเรายังมีสล็อตที่ได้รับใบอนุญาตมากกว่า 200 รายการ"
+      }
+    },
+    {
+      "photo": "./imgs/r4.jpg",
+      "name": "brightfuture0",
+      "review": "เมื่อวานนี้ฉันชนะ $2000 ฉันจะเล่นอีกครั้งในวันนี้ มันเป็นหนึ่งในคาสิโนที่ดีที่สุด",
+      "helpful": 521,
+      "answer": {
+        "authorAnswer": "ขอให้โชคดี"
+      }
+    },
+    {
+      "photo": "./imgs/r5.jpg",
+      "name": "blackrubik",
+      "review": "คุณสามารถเพิ่มการเพิ่มประสิทธิภาพสำหรับ iOS ได้หรือไม่ ฉันติดต่อฝ่ายสนับสนุน",
+      "helpful": 321,
+      "answer": {
+        "authorAnswer": "เราได้รับคำขอของคุณและจะส่งต่อไปยังฝ่ายเทคนิค"
+      }
+    }
   ]
 }
