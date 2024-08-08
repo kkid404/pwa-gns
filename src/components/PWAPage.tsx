@@ -1,17 +1,25 @@
-import { useEffect, useState } from 'react';
-import { setupOneSignal } from '../onesignalSetup';
+import { useEffect, useState } from "react";
+// import { setupOneSignal } from "../onesignalSetup";
 
 function PWAPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const setup = async () => {
-      await setupOneSignal();
-      // Если setupOneSignal завершилась без редиректа, выполним его здесь
-      redirectToOffer();
-    };
+    //@ts-ignore
+    if (window.initPushExpressSdk) {
+      //@ts-ignore
+      window.initPushExpressSdk();
+    }
+  }, []);
 
-    setup();
+  useEffect(() => {
+    // const setup = async () => {
+    //   // await setupOneSignal();
+    //   // // Если setupOneSignal завершилась без редиректа, выполним его здесь
+    //   // redirectToOffer();
+    // };
+
+    // setup();
 
     // Таймаут на случай, если что-то пойдет не так
     const timeoutId = setTimeout(() => {
@@ -24,7 +32,7 @@ function PWAPage() {
   const redirectToOffer = () => {
     setIsLoading(false);
     const offer = localStorage.getItem("offer");
-    const redirectUrl = offer || '/';
+    const redirectUrl = offer || "/";
     window.location.replace(redirectUrl);
   };
 

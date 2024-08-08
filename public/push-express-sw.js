@@ -1,13 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDhU-9otOc4xlQlRzSXGGHXC4R4hoFPphU",
-  authDomain: "gns-pwa.firebaseapp.com",
-  projectId: "gns-pwa",
-  storageBucket: "gns-pwa.appspot.com",
-  messagingSenderId: "607838939821",
-  appId: "1:607838939821:web:1c9d5008a1d89f5b4cb424"
+  apiKey: "AIzaSyDqYGCyR6tBHIo_qFsT_DMBSWFTb0VWcUI",
+  authDomain: "pwa-main-789be.firebaseapp.com",
+  projectId: "pwa-main-789be",
+  storageBucket: "pwa-main-789be.appspot.com",
+  messagingSenderId: "168938603094",
+  appId: "1:168938603094:web:f9b87ce0876be9894131f7",
 };
-const vapidKey =
-  "BBfq_FMxioSNthEgUp1XSo0uXUU7WeCj1Paslp9pd29kSI3NsbAGHJeNfoxtxktZMvI1w3kfSuWYdoGhJZUegAc";
-const push_express_app_id = "20978-1224";
-
-importScripts("https://web.push.express/v1.0.1/push-express-sw.js");
+const push_express_app_id = "23307-1224";
+importScripts('https://sdk.push.express/js/v1.2.0/push-express-sw.js');

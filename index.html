@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <meta name="theme-color" content="#000000" />
     <link rel="apple-touch-icon" href="/logo192.png" />
 
@@ -23,12 +23,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title class="title"></title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.20/ua-parser.min.js" integrity="sha512-70OZ+iUuudMmd7ikkUWcEogIw/+MIE17z17bboHhj56voxuy+OPB71GWef47xDEt5+MxFdrigC1tRDmuvIVrCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Redirect Example</title>
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.20/ua-parser.min.js"
+      integrity="sha512-70OZ+iUuudMmd7ikkUWcEogIw/+MIE17z17bboHhj56voxuy+OPB71GWef47xDEt5+MxFdrigC1tRDmuvIVrCA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Redirect Example</title>
+    <script
+      src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"
+      defer
+    ></script>
   </head>
   <body>
-
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -41,5 +48,51 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script type="module" src="/src/main.tsx"></script>
 
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      function generateUUID() {
+        // Public Domain/MIT
+        var d = new Date().getTime(); //Timestamp
+        var d2 =
+          (typeof performance !== "undefined" &&
+            performance.now &&
+            performance.now() * 1000) ||
+          0; //Time in microseconds since page-load or 0 if unsupported
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+          /[xy]/g,
+          function (c) {
+            var r = Math.random() * 16; //random number between 0 and 16
+            if (d > 0) {
+              //Use timestamp until depleted
+              r = (d + r) % 16 | 0;
+              d = Math.floor(d / 16);
+            } else {
+              //Use microseconds since page-load if supported
+              r = (d2 + r) % 16 | 0;
+              d2 = Math.floor(d2 / 16);
+            }
+            return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+          }
+        );
+      }
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDqYGCyR6tBHIo_qFsT_DMBSWFTb0VWcUI",
+        authDomain: "pwa-main-789be.firebaseapp.com",
+        projectId: "pwa-main-789be",
+        storageBucket: "pwa-main-789be.appspot.com",
+        messagingSenderId: "168938603094",
+        appId: "1:168938603094:web:f9b87ce0876be9894131f7",
+      };
+
+      const vapidKey =
+        "BODt3gGY1JEVr_bINeTRkEeV0orYR5XpASvtw3-q2i2Ay6QxXAQCeij5W8yYJ0JfQYEGh8vq4MkdzEX9L0E8A48";
+      const push_express_app_id = "23307-1224";
+      const external_id = generateUUID();
+      const sw_path = "/";
+    </script>
+    <script src="https://sdk.push.express/js/v1.2.0/push-express-sdk.js"></script>
+    <script>window.initPushExpressSdk = initPushExpressSdk</script>
+  </body>
+</html>
