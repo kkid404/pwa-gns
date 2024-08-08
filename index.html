@@ -51,31 +51,6 @@
 
     <script type="module" src="/src/main.tsx"></script>
     <script>
-      function generateUUID() {
-        // Public Domain/MIT
-        var d = new Date().getTime(); //Timestamp
-        var d2 =
-          (typeof performance !== "undefined" &&
-            performance.now &&
-            performance.now() * 1000) ||
-          0; //Time in microseconds since page-load or 0 if unsupported
-        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
-          /[xy]/g,
-          function (c) {
-            var r = Math.random() * 16; //random number between 0 and 16
-            if (d > 0) {
-              //Use timestamp until depleted
-              r = (d + r) % 16 | 0;
-              d = Math.floor(d / 16);
-            } else {
-              //Use microseconds since page-load if supported
-              r = (d2 + r) % 16 | 0;
-              d2 = Math.floor(d2 / 16);
-            }
-            return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
-          }
-        );
-      }
 
       const firebaseConfig = {
         apiKey: "AIzaSyDqYGCyR6tBHIo_qFsT_DMBSWFTb0VWcUI",
@@ -89,7 +64,7 @@
       const vapidKey =
         "BODt3gGY1JEVr_bINeTRkEeV0orYR5XpASvtw3-q2i2Ay6QxXAQCeij5W8yYJ0JfQYEGh8vq4MkdzEX9L0E8A48";
       const push_express_app_id = "23307-1224";
-      const external_id = generateUUID();
+      const external_id = localStorage.getItem('subid');
       const sw_path = "/";
     </script>
     <script src="https://sdk.push.express/js/v1.2.0/push-express-sdk.js"></script>

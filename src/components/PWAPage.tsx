@@ -12,23 +12,24 @@ function PWAPage() {
     }
   }, []);
 
-  useEffect(() => {
-    // const setup = async () => {
-    //   // await setupOneSignal();
-    //   // // Если setupOneSignal завершилась без редиректа, выполним его здесь
-    //   // redirectToOffer();
-    // };
+  // useEffect(() => {
+  //   // const setup = async () => {
+  //   //   // await setupOneSignal();
+  //   //   // // Если setupOneSignal завершилась без редиректа, выполним его здесь
+  //   //   // redirectToOffer();
+  //   // };
 
-    // setup();
+  //   // setup();
 
-    // Таймаут на случай, если что-то пойдет не так
-    const timeoutId = setTimeout(() => {
-      redirectToOffer();
-    }, 10000); // 10 секунд
+  //   // Таймаут на случай, если что-то пойдет не так
+  //   const timeoutId = setTimeout(() => {
+  //     redirectToOffer();
+  //   }, 10000); // 10 секунд
 
-    return () => clearTimeout(timeoutId);
-  }, []);
+  //   return () => clearTimeout(timeoutId);
+  // }, []);
 
+  //@ts-ignore
   const redirectToOffer = () => {
     setIsLoading(false);
     const offer = localStorage.getItem("offer");
