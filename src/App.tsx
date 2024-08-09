@@ -4,6 +4,7 @@ import InstallPage from "./components/InstallPage";
 import PWAPage from "./components/PWAPage";
 // import IosPage from "./components/IosPage";
 import UAParser from "ua-parser-js";
+import IosPage from "./components/IosPage";
 
 const App: React.FC = () => {
   const [isPWA, setIsPWA] = useState<boolean | null>(null);
@@ -28,13 +29,17 @@ const App: React.FC = () => {
       </div>
     );
   }
-  parserResults.os.name == "iOS";
+  const isIOS = parserResults.os.name === "iOS";
+
   return (
     <>
-      {isPWA ? <PWAPage /> : <InstallPage />}
-      {/* <IosPage></IosPage> */}
+      {isIOS ? (
+        <IosPage />
+      ) : (
+        isPWA ? <PWAPage /> : <InstallPage />
+      )}
     </>
   );
-};
+}
 
 export default App;

@@ -152,15 +152,18 @@ function IosPage() {
 
   async function handleInstallClick() {
     const subid = localStorage.getItem("subid");
-    setTimeout(() => {
-      if (subid) {
-        sendPostback(subid, "reject", "cancel_redirect");
+    if (subid) {
+      try {
+        await sendPostback(subid, "reject", "IOS");
         localStorage.setItem("isInstalled", "true");
+      } catch (error) {
+        console.error("Failed to send postback:", error);
       }
-      window.location.replace(offer);
-    }, 500);
+    }
+    window.location.replace(offer);
   }
 
+  
   return (
     <div className="ios">
       <div className="ios-wrapper">
