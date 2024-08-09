@@ -128,11 +128,15 @@ function InstallPage() {
     }
   }, []);
 
-  // подтянуть язык для статики
+  // Основной код
   useEffect(() => {
-    const lang = navigator.language.slice(0, 2);
-    const data: StaticParamsData =
-      staticParamsData as unknown as StaticParamsData;
+    // Получаем параметр hl из URL, если он существует
+    const queryLang = getParameterByName('hl');
+    console.log(queryLang)
+    const lang = queryLang ? queryLang : navigator.language.slice(0, 2);
+
+    const data: StaticParamsData = staticParamsData as unknown as StaticParamsData;
+
     if (data[lang]) {
       setStaticParams(data[lang]);
     } else {

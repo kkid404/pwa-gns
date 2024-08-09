@@ -52,6 +52,12 @@ interface StaticReviewsData {
   [key: string]: StaticReviews;
 }
 
+// Функция для получения параметра из URL
+function getQueryParam(param: string): string | null {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
 export default function Reviews({
   author,
   staticParams,
@@ -60,9 +66,13 @@ export default function Reviews({
   const [reviewData, setReviewData] = useState([]);
 
   useEffect(() => {
-    const lang = navigator.language.slice(0, 2);
+    // Получаем параметр hl из URL, если он существует
+    const queryLang = getQueryParam('hl');
+    const lang = queryLang ? queryLang : navigator.language.slice(0, 2);
+
     const data: StaticReviewsData =
       staticReviewsData as unknown as StaticReviewsData;
+
     if (data[lang]) {
       // @ts-ignore
       setReviewData(data[lang]);
